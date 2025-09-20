@@ -64,12 +64,11 @@ title: Nervous System Study Map
 
 ---
 
-## 🧠 Interactive 3D Nervous System
+## 🧠 Interactive 3D Nervous System (click to explore)
 
 <div class="embed-wrap center">
-  <h3>Explore the Model (clickable)</h3>
-  <p><i>Tip:</i> Click parts to focus, use toolbar to toggle layers and labels.</p>
   <div class="embed-16x9">
+    <!-- Your share link, no extra params -->
     <iframe 
       src="https://human.biodigital.com/view?id=6RRx&lang=en&ref=share"
       allowfullscreen
