@@ -1,32 +1,49 @@
-PNS
+# Nervous System Study Hub
+
+---
+
+## 🧠 Interactive Brain (Primary View)
+
+<div align="center">
+  <iframe
+    title="Motor and Sensory Areas of the Cerebral Cortex"
+    src="https://sketchfab.com/models/300c488c013f4d41ad5acab9ef08e50a/embed"
+    width="95%" height="600"
+    frameborder="0"
+    allow="autoplay; fullscreen; xr-spatial-tracking"
+    mozallowfullscreen="true"
+    webkitallowfullscreen="true">
+  </iframe>
+</div>
+
+---
+
+## 📚 Concept Maps
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+<details open>
+<summary><b>🧩 Central Nervous System (CNS)</b></summary>
+
+```text
+CNS
 │
-├── Development
-│   ├─ Ectoderm → CNS, PNS, epidermis, sensory organs
-│   ├─ Neural tube → CNS
-│   └─ Neural crest → DRG, Schwann cells, autonomic ganglia
+├── Motor (Descending Tracts)
+│   ├── Lateral corticospinal → 🔴 decussates medulla → 🔵 synapse anterior horn → fine limb movement
+│   ├── Anterior corticospinal → 🔴 decussates spinal cord → axial/postural muscles
+│   ├── Medial corticospinal → bilateral → trunk, neck, shoulders
+│   ├── Rubrospinal → red nucleus → 🔴 decussates midbrain → 🔵 synapse anterior horn → UE flexors
+│   ├── Reticulospinal → posture, locomotion, reflexes
+│   ├── Vestibulospinal → balance, head position; activates extensors
+│   └── Tectospinal → superior colliculus → 🔴 decussates midbrain → head/eye reflex
 │
-├── Distal spinal anatomy
-│   ├─ Conus medullaris → end of cord (≈L1–L2)
-│   ├─ Cauda equina → lumbosacral roots
-│   └─ Filum terminale → pia tether
-│
-├── Sensory (Afferent)
-│   ├─ Receptors → mechanoreceptors, thermoreceptors, nociceptors, chemoreceptors, proprioceptors
-│   ├─ Fibers → Alpha-alpha (fastest proprioception), Alpha-beta (touch/vibration), Alpha-delta (sharp pain/cold), C fibers (dull pain/warm)
-│   ├─ Coding → tonic (constant), phasic (adapt quickly)
-│   └─ Pathway → DRG → 🔵 synapse dorsal horn/brainstem → CNS
-│
-├── Motor (Efferent)
-│   ├─ LMN → anterior horn → axon → NMJ (ACh → nicotinic receptor)
-│   ├─ Reflex arc → receptor → afferent → 🔵 synapse cord → efferent → effector
-│   ├─ LMN lesion → flaccid, fasciculations, atrophy, ↓ reflexes
-│   └─ UMN lesion → spasticity, hyperreflexia, Babinski
-│
-├── Autonomic
-│   ├─ Sympathetic → pre ACh → 🔵 synapse ganglion → post NE (fight/flight)
-│   └─ Parasympathetic → pre ACh → 🔵 synapse ganglion → post ACh (rest/digest)
-│
-├── Neurotransmitters → ACh, NE, glutamate, Substance P, GABA, endorphins
-├── Synaptic physiology → EPSP (Na⁺/Ca²⁺), IPSP (Cl⁻/K⁺), Gate theory (Aβ touch inhibits pain)
-├── Support cells → Schwann (PNS myelin), Satellite, vs Oligodendrocytes (CNS myelin)
-└── Clinical → Cauda equina syndrome, Guillain–Barré, Myasthenia gravis, Lambert–Eaton, Peripheral neuropathy, ALS
+└── Sensory (Ascending Tracts)
+    ├── DCML → DRG → 🔵 synapse medulla → 🔴 decussates (internal arcuate) → VPL → cortex
+    ├── Spinothalamic
+    │     ├─ Fast pain (Aδ, glutamate) → DRG → 🔵 synapse dorsal horn → 🔴 decussates anterior white commissure → VPL → cortex
+    │     └─ Slow pain (C, Substance P) → DRG → 🔵 synapse dorsal horn → 🔴 decussates in cord → limbic/thalamic targets
+    ├── Divergent → spinomesencephalic (PAG), spinoreticular (arousal), spino-emotional (limbic)
+    ├── Spinocerebellar → posterior, cuneo-, anterior (double 🔴 decussation → ipsilateral), rostro-
+    └── Trigeminal → trigeminothalamic (🔴 decussates pons → 🔵 synapse VPM → cortex), trigeminoreticulolimbic (slow pain → reticular/limbic)
