@@ -5,7 +5,7 @@ title: Nervous System Study Map
 <style>
   .section { margin: 24px 0; }
   .center { text-align: center; }
-  .embed-wrap { margin: 24px auto 24px; max-width: 1200px; }
+  .embed-wrap { margin: 24px auto 32px; max-width: 1200px; }
   .embed-16x9 { position: relative; width: 100%; padding-bottom: 56.25%; }
   .embed-16x9 iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
   .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
@@ -13,28 +13,37 @@ title: Nervous System Study Map
   details { margin: 8px 0 14px 0; }
   summary { cursor: pointer; font-size: 1.05rem; }
   h2, h3 { margin: 8px 0 12px; }
-  .btn { display:inline-block; padding:10px 14px; border-radius:8px; border:1px solid #e5e7eb; text-decoration:none; }
+  .attrib { font-size: 12px; color: #4A4A4A; margin-top: 6px; }
+  .attrib a { color: #1CAAD9; text-decoration: none; font-weight: 600; }
 </style>
 
 # Nervous System Study Map
 
-<!-- =================== 3D VIEWER (TOP) =================== -->
+<!-- =================== 3D BRAIN (SKETCHFAB) =================== -->
 <div class="embed-wrap center">
+  <h3>🧠 Motor & Sensory Areas of the Cerebral Cortex (Interactive)</h3>
   <div class="embed-16x9">
-    <!-- ORIGINAL public viewer link (works without auth) -->
     <iframe 
-      src="https://human.biodigital.com/viewer/?be=4Mwk&disable-scroll=false&initial.hand=true&load-rotate=10&uaid=ACD8V&ui-anatomy-descriptions=false&ui-anatomy-labels=true&ui-chapter-list=false&ui-fullscreen=true&ui-help=true&ui-info=true&ui-label-list=true&ui-layers=true&ui-loader=circle&ui-nav=true&ui-search=true&ui-tools=true&ui-tutorial=false&ui-undo=true&ui-whiteboard=true"
-      allowfullscreen
-      loading="lazy">
+      title="Motor and Sensory Areas of the Cerebral Cortex"
+      src="https://sketchfab.com/models/300c488c013f4d41ad5acab9ef08e50a/embed"
+      frameborder="0"
+      allow="autoplay; fullscreen; xr-spatial-tracking"
+      mozallowfullscreen="true"
+      webkitallowfullscreen="true"
+      xr-spatial-tracking
+      execution-while-out-of-viewport
+      execution-while-not-rendered
+      web-share>
     </iframe>
   </div>
-  <p class="center" style="margin-top:10px;">
-    Prefer just the brain? &nbsp;
-    <a class="btn" href="https://human.biodigital.com/view?id=production/maleAdult/brain&lang=en&ref=share" target="_blank" rel="noopener">Open Brain-Only View</a>
+  <p class="attrib">
+    Model: <a href="https://sketchfab.com/3d-models/motor-and-sensory-areas-of-the-cerebral-cortex-300c488c013f4d41ad5acab9ef08e50a" target="_blank" rel="nofollow">Motor and Sensory Areas of the Cerebral Cortex</a> by 
+    <a href="https://sketchfab.com/anatomy_dundee" target="_blank" rel="nofollow">University of Dundee, CAHID</a> on 
+    <a href="https://sketchfab.com" target="_blank" rel="nofollow">Sketchfab</a>.
   </p>
 </div>
 
-<!-- ============ MAPS SIDE BY SIDE (CNS | PNS) ============ -->
+<!-- =================== MAPS: CNS | PNS =================== -->
 <div class="two-col">
 
   <!-- ===================== LEFT: CNS ===================== -->
