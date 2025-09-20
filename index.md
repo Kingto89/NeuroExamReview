@@ -68,12 +68,11 @@ title: Nervous System Study Map
 
 <div class="embed-wrap center">
   <p style="margin:-8px 0 10px 0; font-size:.95rem;">
-    Tip: click the <b>layers</b> icon to toggle systems; use <b>labels</b> to show gyri/sulci. Click structures to focus.
+    Tip: this loads your saved brain angle with labels. Click structures to highlight and explore.
   </p>
   <div class="embed-16x9">
-    <!-- Your share link, kept simple to avoid lockouts; UI trimmed to reduce clutter -->
     <iframe 
-      src="https://human.biodigital.com/view?id=6RRx&lang=en&ref=share&ui-nav=false&ui-info=false&ui-layers=true&ui-anatomy-labels=true&ui-tools=true&dk=light"
+      src="https://human.biodigital.com/view?id=6RRx&lang=en&ref=share&ui-layers=true&ui-anatomy-labels=true&ui-tools=true&ui-info=false&ui-nav=false"
       allowfullscreen
       loading="lazy">
     </iframe>
