@@ -1,6 +1,22 @@
-<table>
-<tr>
-<td width="50%" valign="top">
+---
+title: Nervous System Study Map
+---
+
+<style>
+  /* Simple page polish */
+  .ns-section { margin: 24px 0; }
+  .divider { margin: 36px 0; border: 0; height: 1px; background: #e5e7eb; }
+  .center { text-align: center; }
+  details { margin: 8px 0 16px 0; }
+  summary { cursor: pointer; font-size: 1.05rem; }
+  .embed-wrap { margin: 40px auto; max-width: 1200px; }
+  .embed-16x9 { position: relative; width: 100%; padding-bottom: 56.25%; }
+  .embed-16x9 iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+</style>
+
+# Nervous System Study Map
+
+<div class="ns-section">
 
 <details open>
   <summary><b>Central Nervous System (CNS)</b></summary>
@@ -124,8 +140,37 @@
 
 </details>
 
-</td>
-<td width="50%" valign="top">
+</div>
+
+<hr class="divider" />
+
+<!-- ===================================== -->
+<!--    EMBEDDED 3D MODEL (BioDigital)     -->
+<!-- ===================================== -->
+
+<div class="embed-wrap center">
+  <h3>🧠 Interactive 3D Nervous System</h3>
+  <p><i>Tip:</i> Click/drag to rotate. Use toolbar to zoom and show labels.</p>
+  <div class="embed-16x9">
+    <iframe 
+      src="https://human.biodigital.com/viewer/?id=YOUR_MODEL_ID_OR_URL
+&ui-zoom=true
+&ui-2d3d=true
+&ui-fullscreen=true
+&ui-info=true
+&ui-tools=true
+&ui-share=false
+&ui-layers=true
+&dk=light" 
+      allowfullscreen
+      loading="lazy">
+    </iframe>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div class="ns-section">
 
 <details open>
   <summary><b>Peripheral Nervous System (PNS)</b></summary>
@@ -246,6 +291,4 @@
 
 </details>
 
-</td>
-</tr>
-</table>
+</div>
