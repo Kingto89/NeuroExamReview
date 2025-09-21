@@ -150,15 +150,7 @@
 - Posterior spinocerebellar → proprioception lower extremity (ipsilateral)  
 - Cuneocerebellar → proprioception upper extremity  
 - Anterior spinocerebellar → double 🔴 decussation → functionally ipsilateral  
-- Rostrospinocerebellar → coordination upper extremity  
-
----
-
-**Fiber Types**  
-- **A-alpha - Aα (I)** → large (13–20 μm), myelinated → muscle spindle, Golgi tendon organ → proprioception  
-- **A-beta - Aβ (II)** → medium (6–12 μm), myelinated → Meissner’s corpuscle, Merkel’s receptor, Pacinian corpuscle, Ruffini ending, hair receptor → superficial touch, deep touch, vibration  
-- **A-delta - Aδ (III)** → small (1–5 μm), myelinated → bare nerve endings → fast pain, cool temperature  
-- **C fibers (IV)** → very small (0.2–1.5 μm), unmyelinated → bare nerve endings → slow pain, warm temperature, itch  
+- Rostrospinocerebellar → coordination upper extremity   
 
 ---
 
