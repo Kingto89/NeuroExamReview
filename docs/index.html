@@ -135,3 +135,142 @@
   </script>
 </body>
 </html>
+<!-- ===== Exam Bank ===== -->
+<details open>
+  <summary><b>📝 Exam Bank (interactive)</b></summary>
+  <div style="margin:12px 0; padding:10px; border:1px solid #e5e7eb; border-radius:10px">
+    <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center">
+      <label>Mode:
+        <select id="qb-mode">
+          <option value="mcq">MCQ</option>
+          <option value="fill">Fill-in</option>
+          <option value="mix">Mixed</option>
+        </select>
+      </label>
+      <label>Level:
+        <select id="qb-level">
+          <option value="ALL">All</option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+        </select>
+      </label>
+      <label>Number:
+        <select id="qb-count">
+          <option value="10">10</option>
+          <option value="25" selected>25</option>
+          <option value="50">50</option>
+          <option value="150">All</option>
+        </select>
+      </label>
+      <button id="qb-start">Start Quiz</button>
+    </div>
+    <div id="qb-status" style="margin:8px 0; color:#6b7280"></div>
+    <div id="qb-area" style="margin-top:10px"></div>
+  </div>
+</details>
+
+<script>
+(function(){
+  const area = document.getElementById('qb-area');
+  const statusEl = document.getElementById('qb-status');
+  const btn = document.getElementById('qb-start');
+  const selMode = document.getElementById('qb-mode');
+  const selLevel = document.getElementById('qb-level');
+  const selCount = document.getElementById('qb-count');
+
+  let BANK = [];
+  let quiz = null;
+
+  function shuffle(a){ for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
+
+  function pickQuestions(level, count){
+    let pool = (level==='ALL') ? BANK : BANK.filter(q=>q.level===level);
+    pool = shuffle(pool.slice());
+    if(count>pool.length) count = pool.length;
+    return pool.slice(0, count);
+  }
+
+  function renderMCQ(q, idx){
+    const opts = q.options.map((t,i)=>`
+      <label style="display:block;margin:6px 0">
+        <input type="radio" name="q${idx}" value="${i}"> ${String.fromCharCode(65+i)}. ${t}
+      </label>`).join('');
+    return `<div class="q" data-id="${q.id}" data-ans="${q.answer}">
+      <div><b>Q${idx+1}.</b> ${q.stem}</div>
+      <div style="margin-top:6px">${opts}</div>
+    </div>`;
+  }
+
+  function renderFill(q, idx){
+    return `<div class="q" data-id="${q.id}" data-ans="${q.answer}">
+      <div><b>Q${idx+1}.</b> ${q.stem}</div>
+      <div style="margin-top:6px">
+        <input type="text" name="q${idx}" placeholder="Type your answer…" style="width:100%;max-width:520px">
+        <div style="color:#6b7280;font-size:.9rem;margin-top:4px">Hint: type the correct option text (case-insensitive).</div>
+      </div>
+    </div>`;
+  }
+
+  function startQuiz(){
+    const mode = selMode.value;           // mcq | fill | mix
+    const level = selLevel.value;         // ALL | A | B | C
+    const req = parseInt(selCount.value,10);
+
+    const qs = pickQuestions(level, req);
+    quiz = { mode, level, qs, started: Date.now() };
+
+    statusEl.textContent = `Loaded ${qs.length} questions (Level: ${level}, Mode: ${mode}).`;
+    const blocks = qs.map((q,i)=>{
+      const m = (mode==='mix') ? (Math.random()<0.5?'mcq':'fill') : mode;
+      return (m==='mcq') ? renderMCQ(q,i) : renderFill(q,i);
+    }).join('<hr>');
+    area.innerHTML = blocks + `
+      <div style="margin-top:12px">
+        <button id="qb-submit">Submit</button>
+        <span id="qb-score" style="margin-left:12px;color:#6b7280"></span>
+      </div>
+    `;
+
+    document.getElementById('qb-submit').onclick = gradeQuiz;
+  }
+
+  function gradeQuiz(){
+    if(!quiz) return;
+    const blocks = Array.from(area.querySelectorAll('.q'));
+    let correct = 0;
+    blocks.forEach((b, idx)=>{
+      const ans = parseInt(b.dataset.ans,10);
+      const q = quiz.qs[idx];
+      const radios = b.querySelectorAll('input[type=radio]');
+      const text = b.querySelector('input[type=text]');
+      let ok = false;
+      if(radios.length){
+        const chosen = Array.from(radios).find(r=>r.checked);
+        ok = chosen && parseInt(chosen.value,10)===ans;
+      }else if(text){
+        const want = q.options[ans].trim().toLowerCase();
+        const got = (text.value||'').trim().toLowerCase();
+        ok = (got===want);
+      }
+      if(ok){ correct++; b.style.background='#ecfdf5'; } else { b.style.background='#fef2f2'; }
+    });
+    const pct = Math.round(100*correct/blocks.length);
+    document.getElementById('qb-score').textContent = `Score: ${correct}/${blocks.length} (${pct}%)`;
+    statusEl.textContent = `Finished. You scored ${pct}%.`;
+  }
+
+  btn.onclick = startQuiz;
+
+  // Load questions.json (relative to /docs)
+  fetch('questions.json', {cache:'no-store'})
+    .then(r=>r.json())
+    .then(j=>{
+      BANK = j.questions || [];
+      statusEl.textContent = `Question bank loaded: ${BANK.length} items. Choose options above and click “Start Quiz”.`;
+    })
+    .catch(e=>{
+      statusEl.textContent = 'Failed to load questions.json: '+e.message;
+    });
+})();
+</script>
