@@ -78,12 +78,12 @@
 
 
 **Cutaneous Receptors **  
-- Hair follicle endings  
-- Meissner’s corpuscle  
-- Merkel cell  
-- Pacinian corpuscle  
-- Ruffini’s corpuscle  
-- Free nerve endings  
+- Hair follicle endings - minor hair movements perceived as touch  
+- Meissner’s corpuscle - low-frequency vibration 
+- Merkel cell - sensitive to sustained light touch, pressure, and shape.   
+- Pacinian corpuscle - rapidly adapting receptors (deep pressure) 
+- Ruffini’s corpuscle - slowly adapting receptors (deep pressure)   
+- Free nerve endings - unspecialized receptors (pain, temp, touch, itch)  
 
 </details>
 
