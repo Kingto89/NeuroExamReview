@@ -1,22 +1,43 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>NeuroExamReview — Home</title>
+  <title>NeuroExamReview — Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: sans-serif; max-width: 800px; margin: 2rem auto; line-height: 1.5; }
+    details { margin: 1rem 0; }
+    summary { font-weight: bold; cursor: pointer; }
+    .md { padding: .5rem; border-left: 3px solid #ccc; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-  <h1>NeuroExamReview — Home</h1>
+  <h1>NeuroExamReview — Minimal Test</h1>
 
-  <h2>Interactive 3D Brain (top view)</h2>
-  <iframe title="Motor and Sensory Areas of the Cerebral Cortex"
-          src="https://sketchfab.com/models/300c488c013f4d41ad5acab9ef08e50a/embed"
-          width="100%" height="520" frameborder="0"
-          allow="autoplay; fullscreen" allowfullscreen></iframe>
+  <details open>
+    <summary>CNS Notes</summary>
+    <div id="cns" class="md">Loading CNS.md …</div>
+  </details>
 
-  <h2>Study Maps</h2>
-  <ul>
-    <li><a href="cns.md">Central Nervous System (CNS)</a></li>
-    <li><a href="pns.md">Peripheral Nervous System (PNS)</a></li>
-  </ul>
+  <details>
+    <summary>PNS Notes</summary>
+    <div id="pns" class="md">Loading PNS.md …</div>
+  </details>
+
+  <script>
+    async function loadMD(url, targetId) {
+      const el = document.getElementById(targetId);
+      try {
+        const res = await fetch(url, {cache: "no-store"});
+        const text = await res.text();
+        el.innerHTML = marked.parse(text);
+      } catch (err) {
+        el.innerHTML = "❌ Error: " + err;
+      }
+    }
+    loadMD("https://raw.githubusercontent.com/Kingto89/NeuroExamReview/main/cns.md", "cns");
+    loadMD("https://raw.githubusercontent.com/Kingto89/NeuroExamReview/main/pns.md", "pns");
+  </script>
 </body>
 </html>
