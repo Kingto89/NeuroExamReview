@@ -4,147 +4,87 @@
   <meta charset="utf-8">
   <title>Neuro Exam Review</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#ffffff">
   <style>
-    :root{
-      --card:#ffffff; --line:#e5e7eb; --text:#111827; --muted:#6b7280;
-      --radius:12px;
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#fafafa;color:#111}
+    .container{max-width:1100px;margin:0 auto;padding:16px}
+    h1,h2{margin:0 0 12px}
+    section{margin:20px 0}
+    details>summary{cursor:pointer;font-weight:600;list-style:none}
+    details>summary::-webkit-details-marker{display:none}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:12px}
+    .grid-two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .map-frame{position:relative;height:72vh;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden}
+    .map-frame>iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .iframe-wrap{position:relative;padding-top:56.25%;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;background:#fff}
+    .iframe-wrap>iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    @media(max-width:900px){
+      .grid-two{grid-template-columns:1fr}
+      .map-frame{height:85vh}
+      .iframe-wrap{padding-top:80%}
     }
-    body{ margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; color:var(--text); background:#fafafa;}
-    .container{ max-width:1100px; margin:0 auto; padding:16px; }
-    h1,h2{ margin:0 0 10px; }
-    section{ margin:18px 0 26px; }
-    details>summary{ cursor:pointer; font-weight:600; list-style:none; }
-    details>summary::-webkit-details-marker{ display:none; }
-    .card{ background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:12px; }
-    /* Responsive iframe wrapper: 16:9 by default */
-    .iframe-16x9{ position:relative; padding-top:56.25%; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:#fff; }
-    .iframe-16x9 > iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; display:block; pointer-events:auto; }
-    /* Concept maps side-by-side, stack on mobile */
-    .grid-two{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
-    .map-frame{ position:relative; height:72vh; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:#fff; }
-    .map-frame > iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; display:block; }
-    .small-note{ color:var(--muted); font-size:.92rem; margin-top:6px; }
-    /* Mobile adjustments */
-    @media (max-width: 900px){
-      .grid-two{ grid-template-columns:1fr; }
-      .map-frame{ height:78vh; }           /* larger tap target on phones */
-      .iframe-16x9{ padding-top:62%; }     /* slightly taller hero on phones */
-    }
-    /* Ensure nothing invisible blocks taps */
-    *{ pointer-events:auto; }
-    .spacer{ height:10px; }
-    a.button{ display:inline-block; padding:8px 10px; border:1px solid var(--line); border-radius:10px; text-decoration:none; }
   </style>
 </head>
 <body>
   <div class="container">
 
-    <!-- ===== Top: Brain 3D model (mobile friendly) ===== -->
-    <section id="brain3d">
+    <!-- ===== Top 3D Brain ===== -->
+    <section id="brain">
       <h1>Motor &amp; Sensory — Brain Overview</h1>
-      <div class="iframe-16x9" aria-label="Motor and Sensory Areas of the Cerebral Cortex (3D)">
+      <div class="iframe-wrap">
         <iframe
           title="Motor and Sensory Areas of the Cerebral Cortex"
           src="https://sketchfab.com/models/300c488c013f4d41ad5acab9ef08e50a/embed"
-          allow="autoplay; fullscreen; xr-spatial-tracking; gyroscope; accelerometer; web-share"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <div class="small-note">
-        Trouble tapping on a phone?&nbsp;
-        <a class="button" href="https://sketchfab.com/3d-models/motor-and-sensory-areas-of-the-cerebral-cortex-300c488c013f4d41ad5acab9ef08e50a"
-           target="_blank" rel="noopener">🔗 Open full-screen</a>
+          allow="autoplay; fullscreen; xr-spatial-tracking"
+          allowfullscreen>
+        </iframe>
       </div>
     </section>
 
-    <div class="spacer"></div>
-
-    <!-- ===== CNS & PNS Concept Maps ===== -->
+    <!-- ===== CNS & PNS ===== -->
     <section id="maps">
       <h2>🧠 Concept Maps</h2>
       <div class="grid-two">
-        <!-- CNS -->
         <div class="card">
           <details open>
             <summary>Central Nervous System (CNS)</summary>
-            <div class="map-frame" style="margin-top:8px">
-              <!-- IMPORTANT: this points to rendered Jekyll page -->
-              <iframe src="cns.html" title="CNS Map"></iframe>
-            </div>
+            <div class="map-frame"><iframe src="cns.html" title="CNS Map"></iframe></div>
           </details>
         </div>
-        <!-- PNS -->
         <div class="card">
           <details open>
             <summary>Peripheral Nervous System (PNS)</summary>
-            <div class="map-frame" style="margin-top:8px">
-              <iframe src="pns.html" title="PNS Map"></iframe>
-            </div>
+            <div class="map-frame"><iframe src="pns.html" title="PNS Map"></iframe></div>
           </details>
         </div>
       </div>
-      <div class="small-note">Tip: on phones these stack; on desktop they sit side-by-side.</div>
     </section>
 
-    <!-- ===== Extra 3D Models (collapsed on load) ===== -->
+    <!-- ===== Exam Section ===== -->
+    <section id="exam">
+      <h2>📝 Exam Practice</h2>
+      <div class="card">
+        <details>
+          <summary>Open Question Bank (150 items)</summary>
+          <div class="map-frame"><iframe src="exam.html" title="Exam Bank"></iframe></div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===== Extra 3D Models (collapsed) ===== -->
     <section id="extras">
       <details>
-        <summary>🧊 Extra 3D Models (tap to expand)</summary>
+        <summary>🧊 Extra 3D Models</summary>
         <div class="card" style="margin-top:10px">
-          <div class="iframe-16x9">
-            <iframe title="Detailed Labeled Surface Structures"
-              src="https://sketchfab.com/models/d91080b5af91497b822728c08804f33c/embed"
-              allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>
-          </div>
-          <p class="small-note"><a class="button" target="_blank" href="https://sketchfab.com/3d-models/detailed-labeled-surface-structures-d91080b5af91497b822728c08804f33c">🔗 Open full-screen</a></p>
-
-          <div class="iframe-16x9">
-            <iframe title="Spinal cord lesions & clinical signs & symptoms"
-              src="https://sketchfab.com/models/bf086ab152a94273837b12a1702cf644/embed"
-              allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>
-          </div>
-          <p class="small-note"><a class="button" target="_blank" href="https://sketchfab.com/3d-models/spinal-cord-lesions-clinical-signs-symptoms-bf086ab152a94273837b12a1702cf644">🔗 Open full-screen</a></p>
-
-          <div class="iframe-16x9">
-            <iframe title="Cerebral sulci and gyri"
-              src="https://sketchfab.com/models/afe2aed1d91b4b52be3c842a63aa69b1/embed"
-              allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>
-          </div>
-          <p class="small-note"><a class="button" target="_blank" href="https://sketchfab.com/3d-models/cerebral-sulci-and-gyri-afe2aed1d91b4b52be3c842a63aa69b1">🔗 Open full-screen</a></p>
-
-          <div class="iframe-16x9">
-            <iframe title="Spinothalamic Tract"
-              src="https://sketchfab.com/models/9754d81f54df426aafa25b3799b5ce65/embed"
-              allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>
-          </div>
-          <p class="small-note"><a class="button" target="_blank" href="https://sketchfab.com/3d-models/spinothalamic-tract-101321-9754d81f54df426aafa25b3799b5ce65">🔗 Open full-screen</a></p>
-
-          <div class="iframe-16x9">
-            <iframe title="Corticospinal Tract"
-              src="https://sketchfab.com/models/51d7d61024bf4ecb88f85a35f0041960/embed"
-              allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>
-          </div>
-          <p class="small-note"><a class="button" target="_blank" href="https://sketchfab.com/3d-models/corticospinal-tract-51d7d61024bf4ecb88f85a35f0041960">🔗 Open full-screen</a></p>
-
-          <div class="iframe-16x9">
-            <iframe title="Sagittal head section"
-              src="https://sketchfab.com/models/19378ae104f74bb186c3cb9bd90e16f0/embed"
-              allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>
-          </div>
-          <p class="small-note"><a class="button" target="_blank" href="https://sketchfab.com/3d-models/corte-sagital-de-cabezasagittal-head-section-19378ae104f74bb186c3cb9bd90e16f0">🔗 Open full-screen</a></p>
+          <div class="iframe-wrap"><iframe src="https://sketchfab.com/models/d91080b5af91497b822728c08804f33c/embed" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe></div>
+          <div class="iframe-wrap"><iframe src="https://sketchfab.com/models/bf086ab152a94273837b12a1702cf644/embed" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe></div>
+          <div class="iframe-wrap"><iframe src="https://sketchfab.com/models/afe2aed1d91b4b52be3c842a63aa69b1/embed" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe></div>
+          <div class="iframe-wrap"><iframe src="https://sketchfab.com/models/9754d81f54df426aafa25b3799b5ce65/embed" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe></div>
+          <div class="iframe-wrap"><iframe src="https://sketchfab.com/models/51d7d61024bf4ecb88f85a35f0041960/embed" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe></div>
+          <div class="iframe-wrap"><iframe src="https://sketchfab.com/models/19378ae104f74bb186c3cb9bd90e16f0/embed" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe></div>
         </div>
       </details>
     </section>
 
   </div>
-
-  <!-- Tiny helper: ensures iframes get focus on tap on some Android browsers -->
-  <script>
-    document.addEventListener('touchstart', function(e){
-      const f = e.target.closest('iframe');
-      if(f){ f.focus && f.focus(); }
-    }, {passive:true});
-  </script>
 </body>
 </html>
