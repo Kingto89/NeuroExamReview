@@ -76,10 +76,8 @@
   Receptors: free (bare) nerve endings  
   Modality: **slow pain**, warm temperature, itch
 
-</details>
 
-
-**Cutaneous Receptors (image aligned)**  
+**Cutaneous Receptors **  
 - Hair follicle endings  
 - Meissner’s corpuscle  
 - Merkel cell  
