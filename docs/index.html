@@ -333,6 +333,7 @@
         <button id="qb-restart" style="margin-left:8px">Restart</button>
         <span id="qb-score" style="margin-left:12px;color:#6b7280"></span>
       </div>
+       <div id="qb-key" style="margin-top:12px"></div>
     `;
 
     document.getElementById('qb-submit').onclick = gradeQuiz;
@@ -372,6 +373,22 @@
     const pct = Math.round(100*correct/blocks.length);
     document.getElementById('qb-score').textContent = `Score: ${correct}/${blocks.length} (${pct}%)`;
     statusEl.textContent = `Finished. You scored ${pct}%.`;
+    // Show Answer Key
+const keyBox = document.getElementById('qb-key');
+if (keyBox && quiz && quiz.qs?.length) {
+  const items = quiz.qs.map((q, i) => {
+    const ansIdx = q.answer;
+    const letter = String.fromCharCode(65 + ansIdx);
+    const text = q.options[ansIdx];
+    return `<li><b>Q${i+1}</b> — <b>${letter}</b>. ${text}</li>`;
+  }).join('');
+  keyBox.innerHTML = `
+    <div style="padding:10px;border:1px solid #e5e7eb;border-radius:10px">
+      <div style="font-weight:600;margin-bottom:6px">Answer Key (this attempt)</div>
+      <ol style="margin:0;padding-left:20px">${items}</ol>
+    </div>`;
+}
+
 
     // Save best (per current mode + level) in this browser only
     setBest(selMode.value, selLevel.value, pct);
