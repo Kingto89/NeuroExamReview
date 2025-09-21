@@ -21,6 +21,11 @@
     .bar{display:flex; gap:8px; align-items:center; margin:10px 0}
     button{padding:6px 10px; border:1px solid #d1d5db; border-radius:8px; background:#fff; cursor:pointer}
     button:hover{background:#f3f4f6}
+
+    /* Touch fixes for Sketchfab API viewers */
+    .skf-wrap { width:100%; height:420px; border-radius:10px; overflow:hidden; background:#000; }
+    .skf-wrap iframe { width:100%; height:100%; pointer-events:auto; touch-action:manipulation; }
+    details > summary { z-index: 1; }
   </style>
   <!-- Markdown renderer -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -29,13 +34,13 @@
   <h1>NeuroExamReview</h1>
   <p class="muted">Interactive brain model + collapsible CNS/PNS study maps</p>
 
-  <!-- 3D brain at the top -->
+  <!-- 3D brain at the top (kept as iframe) -->
   <h2>Brain 3D (motor & sensory areas)</h2>
   <div class="embed">
     <iframe title="Motor and Sensory Areas of the Cerebral Cortex"
             src="https://sketchfab.com/models/300c488c013f4d41ad5acab9ef08e50a/embed"
             width="100%" height="520" frameborder="0"
-            allow="autoplay; fullscreen" allowfullscreen></iframe>
+            allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>
   </div>
 
   <!-- Controls -->
@@ -63,94 +68,85 @@
     </div>
   </div>
 
-<!-- ===== Extra 3D models (mobile-friendly via Sketchfab Viewer API) ===== -->
-<style>
-  /* Touch fixes so the inner iframe actually receives taps/drags on Android */
-  .skf-wrap { width:100%; height:420px; border-radius:10px; overflow:hidden; background:#000; }
-  .skf-wrap iframe { width:100%; height:100%; pointer-events:auto; touch-action:manipulation; }
-  details > summary { z-index: 1; }
-</style>
+  <!-- ===== Extra 3D models (mobile-friendly via Sketchfab Viewer API) ===== -->
+  <details>
+    <summary>Extra 3D models (click to expand)</summary>
 
-<details>
-  <summary>Extra 3D models (click to expand)</summary>
+    <!-- Each viewer gets a DIV + data-uid with the Sketchfab model ID -->
+    <div class="embed skf-wrap" data-uid="d91080b5af91497b822728c08804f33c" title="Detailed Labeled Surface Structures"></div>
+    <div class="embed skf-wrap" data-uid="bf086ab152a94273837b12a1702cf644" title="Spinal cord lesions & clinical signs & symptoms"></div>
+    <div class="embed skf-wrap" data-uid="afe2aed1d91b4b52be3c842a63aa69b1" title="Cerebral sulci and gyri"></div>
+    <div class="embed skf-wrap" data-uid="9754d81f54df426aafa25b3799b5ce65" title="Spinothalamic Tract 10/13/21"></div>
+    <div class="embed skf-wrap" data-uid="51d7d61024bf4ecb88f85a35f0041960" title="Corticospinal Tract"></div>
+    <div class="embed skf-wrap" data-uid="3d7e233edbb94cd8b9e1b4047bead951" title="Ascending tracts"></div>
+    <div class="embed skf-wrap" data-uid="19378ae104f74bb186c3cb9bd90e16f0" title="Sagittal head section"></div>
+  </details>
 
-  <!-- Each viewer gets a simple DIV + data-uid with the Sketchfab model ID -->
-  <div class="embed skf-wrap" id="sf-d9108" data-uid="d91080b5af91497b822728c08804f33c" title="Detailed Labeled Surface Structures"></div>
-  <div class="embed skf-wrap" id="sf-bf086" data-uid="bf086ab152a94273837b12a1702cf644" title="Spinal cord lesions & clinical signs & symptoms"></div>
-  <div class="embed skf-wrap" id="sf-afe2a" data-uid="afe2aed1d91b4b52be3c842a63aa69b1" title="Cerebral sulci and gyri"></div>
-  <div class="embed skf-wrap" id="sf-9754d" data-uid="9754d81f54df426aafa25b3799b5ce65" title="Spinothalamic Tract 10/13/21"></div>
-  <div class="embed skf-wrap" id="sf-51d7d" data-uid="51d7d61024bf4ecb88f85a35f0041960" title="Corticospinal Tract"></div>
-  <div class="embed skf-wrap" id="sf-3d7e2" data-uid="3d7e233edbb94cd8b9e1b4047bead951" title="Ascending tracts"></div>
-  <div class="embed skf-wrap" id="sf-19378" data-uid="19378ae104f74bb186c3cb9bd90e16f0" title="Sagittal head section"></div>
-</details>
+  <!-- Sketchfab Viewer API (once) -->
+  <script src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"></script>
 
-<script>
-  // Expand/collapse helper
-  function toggleAll(open){
-    document.querySelectorAll('details').forEach(d => d.open = open);
-  }
-
-  // Load a markdown file from /docs and render with marked
-  async function loadMD(file, target){
-    const el = document.getElementById(target);
-    try {
-      const res = await fetch(file, {cache: "no-store"});
-      if(!res.ok) throw new Error(res.status + " " + res.statusText);
-      const md = await res.text();
-      el.innerHTML = marked.parse(md);
-    } catch (err) {
-      el.innerHTML = `<p class="error">Failed to load ${file}: ${err.message}</p>`;
-    }
-  }
-</script>
-
-<!-- Sketchfab Viewer API (once) -->
-<script src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"></script>
-
-<script>
-  // Initialize all Sketchfab viewers listed above
-  (function initSketchfabViewers(){
-    const containers = Array.from(document.querySelectorAll('.skf-wrap[data-uid]'));
-
-    function mount(el){
-      const uid = el.getAttribute('data-uid');
-      if(!uid) return;
-
-      const client = new Sketchfab(el);
-      const opts = {
-        autostart: 1,
-        preload: 1,
-        ui_controls: 1,
-        ui_infos: 0,
-        ui_watermark: 0,
-        dnt: 1,
-        camera: 0,        // allow user orbit
-        transparent: 0
-      };
-
-      client.init(uid, {
-        ...opts,
-        success: function(api){
-          api.start();
-          api.addEventListener('viewerready', function(){
-            api.setEnableCameraControls(true);
-          });
-        },
-        error: function(e){ console.error('Sketchfab init failed:', e); }
-      });
-
-      // Ensure the inner iframe grabs focus/touch on Android
-      el.addEventListener('touchstart', function(){
-        const ifr = el.querySelector('iframe');
-        if (ifr) { ifr.setAttribute('tabindex','0'); ifr.style.pointerEvents='auto'; ifr.focus(); }
-      }, { passive:true });
+  <!-- App scripts (single, ordered block) -->
+  <script>
+    // Expand/collapse helper
+    function toggleAll(open){
+      document.querySelectorAll('details').forEach(d => d.open = open);
     }
 
-    containers.forEach(mount);
-  })();
-</script>
+    // Load a markdown file from /docs and render with marked
+    async function loadMD(file, target){
+      const el = document.getElementById(target);
+      try {
+        const res = await fetch(file, {cache: "no-store"});
+        if(!res.ok) throw new Error(res.status + " " + res.statusText);
+        const md = await res.text();
+        el.innerHTML = marked.parse(md);
+      } catch (err) {
+        el.innerHTML = `<p class="error">Failed to load ${file}: ${err.message}</p>`;
+      }
+    }
 
-    // Since index.html lives in /docs, these are simple relative paths:
+    // Initialize all Sketchfab viewers listed above
+    (function initSketchfabViewers(){
+      const containers = Array.from(document.querySelectorAll('.skf-wrap[data-uid]'));
+
+      function mount(el){
+        const uid = el.getAttribute('data-uid');
+        if(!uid) return;
+
+        const client = new Sketchfab(el);
+        const opts = {
+          autostart: 1,
+          preload: 1,
+          ui_controls: 1,
+          ui_infos: 0,
+          ui_watermark: 0,
+          dnt: 1,
+          camera: 0,        // allow user orbit
+          transparent: 0
+        };
+
+        client.init(uid, {
+          ...opts,
+          success: function(api){
+            api.start();
+            api.addEventListener('viewerready', function(){
+              api.setEnableCameraControls(true);
+            });
+          },
+          error: function(e){ console.error('Sketchfab init failed:', e); }
+        });
+
+        // Ensure the inner iframe grabs focus/touch on Android
+        el.addEventListener('touchstart', function(){
+          const ifr = el.querySelector('iframe');
+          if (ifr) { ifr.setAttribute('tabindex','0'); ifr.style.pointerEvents='auto'; ifr.focus(); }
+        }, { passive:true });
+      }
+
+      containers.forEach(mount);
+    })();
+
+    // Kick off markdown loads (must be inside a <script>, not loose)
     loadMD("cns.md", "cns");
     loadMD("pns.md", "pns");
   </script>
