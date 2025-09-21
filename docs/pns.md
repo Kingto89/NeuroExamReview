@@ -34,11 +34,13 @@
   - More Ca2+ = more NT release; less Ca2+ = less NT release  
 
 - **AP Phases**  
-  1. Rapid depolarization: Na+ influx  (+30mV peak membrane potention)
-  2. Na+ inactivation  
-  3. Repolarization: K+ efflux
-  Resting potential: –70 mV (maintained by Na⁺/K⁺ ATPase → 3 Na⁺ out, 2 K⁺ in)
-  Threshold: –55 mV → Na⁺ channels open 
+  1. Rapid depolarization: Na⁺ influx (+30 mV peak membrane potential)  
+  2. Na⁺ inactivation  
+  3. Repolarization: K⁺ efflux  
+
+  **Resting potential**: –70 mV (maintained by Na⁺/K⁺ ATPase → 3 Na⁺ out, 2 K⁺ in)  
+
+  **Threshold**: –55 mV → Na⁺ channels open  
 
 - **Refractory Periods**  
   - Absolute → no AP possible (Na+ channels inactivated)  
@@ -156,14 +158,17 @@
   - Cauda equina = lumbar/sacral roots descending  
 
 - **Primary Brain Vesicles**  
-- Forebrain (Prosencephalon):
-Telencephalon → cerebrum (cerebral cortex, basal ganglia, hippocampus, amygdala, olfactory bulb, lateral ventricles)
-Diencephalon → thalamus, hypothalamus, epithalamus (pineal), retina, third ventricle
-- Midbrain (Mesencephalon):
-Mesencephalon → midbrain structures (tectum, tegmentum, cerebral peduncles, superior & inferior colliculi, cerebral aqueduct)
--Hindbrain (Rhombencephalon):
-Metencephalon → pons, cerebellum, upper part of 4th ventricle
-Myelencephalon → medulla oblongata, lower part of 4th ventricle  
+
+  - **Forebrain (Prosencephalon):**  
+    - Telencephalon → cerebrum (cerebral cortex, basal ganglia, hippocampus, amygdala, olfactory bulb, lateral ventricles)  
+    - Diencephalon → thalamus, hypothalamus, epithalamus (pineal), retina, third ventricle  
+
+  - **Midbrain (Mesencephalon):**  
+    - Mesencephalon → midbrain structures (tectum, tegmentum, cerebral peduncles, superior & inferior colliculi, cerebral aqueduct)  
+
+  - **Hindbrain (Rhombencephalon):**  
+    - Metencephalon → pons, cerebellum, upper part of 4th ventricle  
+    - Myelencephalon → medulla oblongata, lower part of 4th ventricle  
 
 </details>
 
