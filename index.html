@@ -2,42 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>NeuroExamReview — Test</title>
+  <title>NeuroExamReview — Plain Test</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body { font-family: sans-serif; max-width: 800px; margin: 2rem auto; line-height: 1.5; }
-    details { margin: 1rem 0; }
-    summary { font-weight: bold; cursor: pointer; }
-    .md { padding: .5rem; border-left: 3px solid #ccc; }
   </style>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-  <h1>NeuroExamReview — Minimal Test</h1>
-
-  <details open>
-    <summary>CNS Notes</summary>
-    <div id="cns" class="md">Loading CNS.md …</div>
-  </details>
-
-  <details>
-    <summary>PNS Notes</summary>
-    <div id="pns" class="md">Loading PNS.md …</div>
-  </details>
-
-  <script>
-    async function loadMD(url, targetId) {
-      const el = document.getElementById(targetId);
-      try {
-        const res = await fetch(url, {cache: "no-store"});
-        const text = await res.text();
-        el.innerHTML = marked.parse(text);
-      } catch (err) {
-        el.innerHTML = "❌ Error: " + err;
-      }
-    }
-    loadMD("https://raw.githubusercontent.com/Kingto89/NeuroExamReview/main/cns.md", "cns");
-    loadMD("https://raw.githubusercontent.com/Kingto89/NeuroExamReview/main/pns.md", "pns");
-  </script>
+  <h1>NeuroExamReview — Plain Test</h1>
+  <p>If you can see this text, GitHub Pages is working and serving <code>index.html</code>.</p>
+  <p>If you <strong>still see 404</strong>, the issue is not the code — it’s a Pages setup problem (branch, folder, or filename).</p>
 </body>
 </html>
