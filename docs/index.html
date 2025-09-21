@@ -1,280 +1,107 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title>NeuroExamReview</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- ===== CNS & PNS (side-by-side, rendered pages) ===== -->
+<section id="maps" style="margin:20px 0">
+  <h2 style="margin:0 0 10px">🧠 Concept Maps</h2>
+
+  <div class="grid-two" style="
+    display:grid; gap:14px;
+    grid-template-columns: 1fr 1fr;
+  ">
+    <!-- CNS -->
+    <div>
+      <details open>
+        <summary style="font-weight:600; cursor:pointer">Central Nervous System (CNS)</summary>
+        <div class="iframe-wrap" style="position:relative; width:100%; height:70vh; margin-top:8px; border:1px solid #e3e3e3; border-radius:8px; overflow:hidden">
+          <!-- IMPORTANT: point to the rendered HTML page -->
+          <iframe
+            src="cns.html"
+            title="CNS Map"
+            style="position:absolute; inset:0; width:100%; height:100%; border:0; background:#fff"
+          ></iframe>
+        </div>
+      </details>
+    </div>
+
+    <!-- PNS -->
+    <div>
+      <details open>
+        <summary style="font-weight:600; cursor:pointer">Peripheral Nervous System (PNS)</summary>
+        <div class="iframe-wrap" style="position:relative; width:100%; height:70vh; margin-top:8px; border:1px solid #e3e3e3; border-radius:8px; overflow:hidden">
+          <iframe
+            src="pns.html"
+            title="PNS Map"
+            style="position:absolute; inset:0; width:100%; height:100%; border:0; background:#fff"
+          ></iframe>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- Mobile: stack instead of side-by-side -->
   <style>
-    :root { --maxw: 1100px; }
-    body{font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-         max-width: var(--maxw); margin: 24px auto; padding: 0 16px; line-height: 1.55;}
-    h1{margin: 0 0 8px}
-    h2{margin: 18px 0 8px}
-    .embed{margin:16px 0}
-    details{margin:18px 0; border:1px solid #e5e7eb; border-radius:10px; padding:10px 12px;}
-    summary{cursor:pointer; font-weight:700}
-    .md{padding:10px 0}
-    .muted{color:#6b7280; font-size:.92rem}
-    .error{color:#b00020}
-    .row{display:flex; gap:16px; flex-wrap:wrap}
-    .col{flex:1 1 460px}
-    .bar{display:flex; gap:8px; align-items:center; margin:10px 0}
-    button{padding:6px 10px; border:1px solid #d1d5db; border-radius:8px; background:#fff; cursor:pointer}
-    button:hover{background:#f3f4f6}
+    @media (max-width: 900px) {
+      .grid-two { grid-template-columns: 1fr; }
+      .iframe-wrap { height: 78vh; } /* taller for taps */
+    }
   </style>
-  <!-- Markdown renderer -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-</head>
-<body>
-  <h1>NeuroExamReview</h1>
-  <p class="muted">Interactive brain model + collapsible CNS/PNS study maps</p>
+</section>
 
-  <!-- 3D brain at the top -->
-  <h2>Brain 3D (motor & sensory areas)</h2>
-  <div class="embed">
-    <iframe title="Motor and Sensory Areas of the Cerebral Cortex"
-            src="https://sketchfab.com/models/300c488c013f4d41ad5acab9ef08e50a/embed"
-            width="100%" height="520" frameborder="0"
-            allow="autoplay; fullscreen" allowfullscreen></iframe>
-  </div>
+<!-- ===== Extra 3D Models (collapsed on load, responsive, with full-screen links) ===== -->
+<section id="extras" style="margin:24px 0">
+  <details>
+    <summary style="font-weight:600; cursor:pointer">🧊 Extra 3D Models (tap to expand)</summary>
 
-  <!-- Controls -->
-  <div class="bar">
-    <button onclick="toggleAll(true)">Expand all</button>
-    <button onclick="toggleAll(false)">Collapse all</button>
-    <span class="muted">CNS and PNS content loads from <code>/docs/cns.md</code> and <code>/docs/pns.md</code>.</span>
-  </div>
-
-  <!-- Two collapsibles side-by-side on large screens -->
-  <div class="row">
-    <div class="col">
-      <details open id="d-cns">
-        <summary>Central Nervous System (CNS) — concept map & notes</summary>
-        <div id="cns" class="md"><p class="muted">Loading cns.md…</p></div>
-        <p class="muted">Open as its own page: <a href="cns.md">cns.md</a></p>
-      </details>
+    <div class="sketchfab-embed-wrapper" style="position:relative;padding-top:56.25%;margin:12px 0">
+      <iframe title="Detailed Labeled Surface Structures"
+        src="https://sketchfab.com/models/d91080b5af91497b822728c08804f33c/embed"
+        style="position:absolute;inset:0;width:100%;height:100%;border:0"
+        allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>
     </div>
-    <div class="col">
-      <details open id="d-pns">
-        <summary>Peripheral Nervous System (PNS) — concept map & notes</summary>
-        <div id="pns" class="md"><p class="muted">Loading pns.md…</p></div>
-        <p class="muted">Open as its own page: <a href="pns.md">pns.md</a></p>
-      </details>
+    <p><a href="https://sketchfab.com/3d-models/detailed-labeled-surface-structures-d91080b5af91497b822728c08804f33c" target="_blank" style="font-weight:bold;color:#1CAAD9">🔗 Open full-screen</a></p>
+
+    <div class="sketchfab-embed-wrapper" style="position:relative;padding-top:56.25%;margin:12px 0">
+      <iframe title="Spinal cord lesions & clinical signs & symptoms"
+        src="https://sketchfab.com/models/bf086ab152a94273837b12a1702cf644/embed"
+        style="position:absolute;inset:0;width:100%;height:100%;border:0"
+        allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>
     </div>
-  </div>
+    <p><a href="https://sketchfab.com/3d-models/spinal-cord-lesions-clinical-signs-symptoms-bf086ab152a94273837b12a1702cf644" target="_blank" style="font-weight:bold;color:#1CAAD9">🔗 Open full-screen</a></p>
 
-<!-- ========== Extra 3D Models (mobile friendly) ========== -->
-<details close>
-  <summary><b>🧊 Extra 3D Models (tap to expand)</b></summary>
-
-  <div class="sketchfab-embed-wrapper" style="position:relative;padding-top:56.25%;margin:12px 0">
-    <iframe title="Detailed Labeled Surface Structures"
-      src="https://sketchfab.com/models/d91080b5af91497b822728c08804f33c/embed"
-      style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
-      allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen>
-    </iframe>
-  </div>
-  <p><a href="https://sketchfab.com/3d-models/detailed-labeled-surface-structures-d91080b5af91497b822728c08804f33c" 
-        target="_blank" style="font-weight:bold;color:#1CAAD9">🔗 Open full-screen</a></p>
-
-  <div class="sketchfab-embed-wrapper" style="position:relative;padding-top:56.25%;margin:12px 0">
-    <iframe title="Spinal cord lesions & clinical signs & symptoms"
-      src="https://sketchfab.com/models/bf086ab152a94273837b12a1702cf644/embed"
-      style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
-      allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen>
-    </iframe>
-  </div>
-  <p><a href="https://sketchfab.com/3d-models/spinal-cord-lesions-clinical-signs-symptoms-bf086ab152a94273837b12a1702cf644" 
-        target="_blank" style="font-weight:bold;color:#1CAAD9">🔗 Open full-screen</a></p>
-
-  <div class="sketchfab-embed-wrapper" style="position:relative;padding-top:56.25%;margin:12px 0">
-    <iframe title="Cerebral sulci and gyri"
-      src="https://sketchfab.com/models/afe2aed1d91b4b52be3c842a63aa69b1/embed"
-      style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
-      allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen>
-    </iframe>
-  </div>
-  <p><a href="https://sketchfab.com/3d-models/cerebral-sulci-and-gyri-afe2aed1d91b4b52be3c842a63aa69b1" 
-        target="_blank" style="font-weight:bold;color:#1CAAD9">🔗 Open full-screen</a></p>
-
-  <div class="sketchfab-embed-wrapper" style="position:relative;padding-top:56.25%;margin:12px 0">
-    <iframe title="Spinothalamic Tract"
-      src="https://sketchfab.com/models/9754d81f54df426aafa25b3799b5ce65/embed"
-      style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
-      allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen>
-    </iframe>
-  </div>
-  <p><a href="https://sketchfab.com/3d-models/spinothalamic-tract-101321-9754d81f54df426aafa25b3799b5ce65" 
-        target="_blank" style="font-weight:bold;color:#1CAAD9">🔗 Open full-screen</a></p>
-
-  <div class="sketchfab-embed-wrapper" style="position:relative;padding-top:56.25%;margin:12px 0">
-    <iframe title="Corticospinal Tract"
-      src="https://sketchfab.com/models/51d7d61024bf4ecb88f85a35f0041960/embed"
-      style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
-      allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen>
-    </iframe>
-  </div>
-  <p><a href="https://sketchfab.com/3d-models/corticospinal-tract-51d7d61024bf4ecb88f85a35f0041960" 
-        target="_blank" style="font-weight:bold;color:#1CAAD9">🔗 Open full-screen</a></p>
-
-  <div class="sketchfab-embed-wrapper" style="position:relative;padding-top:56.25%;margin:12px 0">
-    <iframe title="Ascending tracts"
-      src="https://sketchfab.com/models/3d7e233edbb94cd8b9e1b4047bead951/embed"
-      style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
-      allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen>
-    </iframe>
-  </div>
-  <p><a href="https://sketchfab.com/3d-models/ascending-tracts-3d7e233edbb94cd8b9e1b4047bead951" 
-        target="_blank" style="font-weight:bold;color:#1CAAD9">🔗 Open full-screen</a></p>
-
-  <div class="sketchfab-embed-wrapper" style="position:relative;padding-top:56.25%;margin:12px 0">
-    <iframe title="Sagittal head section"
-      src="https://sketchfab.com/models/19378ae104f74bb186c3cb9bd90e16f0/embed"
-      style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
-      allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen>
-    </iframe>
-  </div>
-  <p><a href="https://sketchfab.com/3d-models/corte-sagital-de-cabezasagittal-head-section-19378ae104f74bb186c3cb9bd90e16f0" 
-        target="_blank" style="font-weight:bold;color:#1CAAD9">🔗 Open full-screen</a></p>
-
-</details>
-
-<!-- ===== Exam Bank ===== -->
-<details open>
-  <summary><b>📝 Exam Bank (interactive)</b></summary>
-  <div style="margin:12px 0; padding:10px; border:1px solid #e5e7eb; border-radius:10px">
-    <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center">
-      <label>Mode:
-        <select id="qb-mode">
-          <option value="mcq">MCQ</option>
-          <option value="fill">Fill-in</option>
-          <option value="mix">Mixed</option>
-        </select>
-      </label>
-      <label>Level:
-        <select id="qb-level">
-          <option value="ALL">All</option>
-          <option value="A">A</option>
-          <option value="B">B</option>
-          <option value="C">C</option>
-        </select>
-      </label>
-      <label>Number:
-        <select id="qb-count">
-          <option value="10">10</option>
-          <option value="25" selected>25</option>
-          <option value="50">50</option>
-          <option value="150">All</option>
-        </select>
-      </label>
-      <button id="qb-start">Start Quiz</button>
+    <div class="sketchfab-embed-wrapper" style="position:relative;padding-top:56.25%;margin:12px 0">
+      <iframe title="Cerebral sulci and gyri"
+        src="https://sketchfab.com/models/afe2aed1d91b4b52be3c842a63aa69b1/embed"
+        style="position:absolute;inset:0;width:100%;height:100%;border:0"
+        allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>
     </div>
-    <div id="qb-status" style="margin:8px 0; color:#6b7280"></div>
-    <div id="qb-area" style="margin-top:10px"></div>
-  </div>
-</details>
+    <p><a href="https://sketchfab.com/3d-models/cerebral-sulci-and-gyri-afe2aed1d91b4b52be3c842a63aa69b1" target="_blank" style="font-weight:bold;color:#1CAAD9">🔗 Open full-screen</a></p>
 
-<script>
-(function(){
-  const area = document.getElementById('qb-area');
-  const statusEl = document.getElementById('qb-status');
-  const btn = document.getElementById('qb-start');
-  const selMode = document.getElementById('qb-mode');
-  const selLevel = document.getElementById('qb-level');
-  const selCount = document.getElementById('qb-count');
+    <div class="sketchfab-embed-wrapper" style="position:relative;padding-top:56.25%;margin:12px 0">
+      <iframe title="Spinothalamic Tract"
+        src="https://sketchfab.com/models/9754d81f54df426aafa25b3799b5ce65/embed"
+        style="position:absolute;inset:0;width:100%;height:100%;border:0"
+        allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>
+    </div>
+    <p><a href="https://sketchfab.com/3d-models/spinothalamic-tract-101321-9754d81f54df426aafa25b3799b5ce65" target="_blank" style="font-weight:bold;color:#1CAAD9">🔗 Open full-screen</a></p>
 
-  let BANK = [];
-  let quiz = null;
+    <div class="sketchfab-embed-wrapper" style="position:relative;padding-top:56.25%;margin:12px 0">
+      <iframe title="Corticospinal Tract"
+        src="https://sketchfab.com/models/51d7d61024bf4ecb88f85a35f0041960/embed"
+        style="position:absolute;inset:0;width:100%;height:100%;border:0"
+        allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>
+    </div>
+    <p><a href="https://sketchfab.com/3d-models/corticospinal-tract-51d7d61024bf4ecb88f85a35f0041960" target="_blank" style="font-weight:bold;color:#1CAAD9">🔗 Open full-screen</a></p>
 
-  function shuffle(a){ for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
+    <div class="sketchfab-embed-wrapper" style="position:relative;padding-top:56.25%;margin:12px 0">
+      <iframe title="Sagittal head section"
+        src="https://sketchfab.com/models/19378ae104f74bb186c3cb9bd90e16f0/embed"
+        style="position:absolute;inset:0;width:100%;height:100%;border:0"
+        allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>
+    </div>
+    <p><a href="https://sketchfab.com/3d-models/corte-sagital-de-cabezasagittal-head-section-19378ae104f74bb186c3cb9bd90e16f0" target="_blank" style="font-weight:bold;color:#1CAAD9">🔗 Open full-screen</a></p>
+  </details>
+</section>
 
-  function pickQuestions(level, count){
-    let pool = (level==='ALL') ? BANK : BANK.filter(q=>q.level===level);
-    pool = shuffle(pool.slice());
-    if(count>pool.length) count = pool.length;
-    return pool.slice(0, count);
-  }
-
-  function renderMCQ(q, idx){
-    const opts = q.options.map((t,i)=>`
-      <label style="display:block;margin:6px 0">
-        <input type="radio" name="q${idx}" value="${i}"> ${String.fromCharCode(65+i)}. ${t}
-      </label>`).join('');
-    return `<div class="q" data-id="${q.id}" data-ans="${q.answer}">
-      <div><b>Q${idx+1}.</b> ${q.stem}</div>
-      <div style="margin-top:6px">${opts}</div>
-    </div>`;
-  }
-
-  function renderFill(q, idx){
-    return `<div class="q" data-id="${q.id}" data-ans="${q.answer}">
-      <div><b>Q${idx+1}.</b> ${q.stem}</div>
-      <div style="margin-top:6px">
-        <input type="text" name="q${idx}" placeholder="Type your answer…" style="width:100%;max-width:520px">
-        <div style="color:#6b7280;font-size:.9rem;margin-top:4px">Hint: type the correct option text (case-insensitive).</div>
-      </div>
-    </div>`;
-  }
-
-  function startQuiz(){
-    const mode = selMode.value;           // mcq | fill | mix
-    const level = selLevel.value;         // ALL | A | B | C
-    const req = parseInt(selCount.value,10);
-
-    const qs = pickQuestions(level, req);
-    quiz = { mode, level, qs, started: Date.now() };
-
-    statusEl.textContent = `Loaded ${qs.length} questions (Level: ${level}, Mode: ${mode}).`;
-    const blocks = qs.map((q,i)=>{
-      const m = (mode==='mix') ? (Math.random()<0.5?'mcq':'fill') : mode;
-      return (m==='mcq') ? renderMCQ(q,i) : renderFill(q,i);
-    }).join('<hr>');
-    area.innerHTML = blocks + `
-      <div style="margin-top:12px">
-        <button id="qb-submit">Submit</button>
-        <span id="qb-score" style="margin-left:12px;color:#6b7280"></span>
-      </div>
-    `;
-
-    document.getElementById('qb-submit').onclick = gradeQuiz;
-  }
-
-  function gradeQuiz(){
-    if(!quiz) return;
-    const blocks = Array.from(area.querySelectorAll('.q'));
-    let correct = 0;
-    blocks.forEach((b, idx)=>{
-      const ans = parseInt(b.dataset.ans,10);
-      const q = quiz.qs[idx];
-      const radios = b.querySelectorAll('input[type=radio]');
-      const text = b.querySelector('input[type=text]');
-      let ok = false;
-      if(radios.length){
-        const chosen = Array.from(radios).find(r=>r.checked);
-        ok = chosen && parseInt(chosen.value,10)===ans;
-      }else if(text){
-        const want = q.options[ans].trim().toLowerCase();
-        const got = (text.value||'').trim().toLowerCase();
-        ok = (got===want);
-      }
-      if(ok){ correct++; b.style.background='#ecfdf5'; } else { b.style.background='#fef2f2'; }
-    });
-    const pct = Math.round(100*correct/blocks.length);
-    document.getElementById('qb-score').textContent = `Score: ${correct}/${blocks.length} (${pct}%)`;
-    statusEl.textContent = `Finished. You scored ${pct}%.`;
-  }
-
-  btn.onclick = startQuiz;
-
-  // Load questions.json (relative to /docs)
-  fetch('questions.json', {cache:'no-store'})
-    .then(r=>r.json())
-    .then(j=>{
-      BANK = j.questions || [];
-      statusEl.textContent = `Question bank loaded: ${BANK.length} items. Choose options above and click “Start Quiz”.`;
-    })
-    .catch(e=>{
-      statusEl.textContent = 'Failed to load questions.json: '+e.message;
-    });
-})();
-</script>
+<!-- Extra protection so nothing sits on top of iframes on mobile -->
+<style>
+  iframe { pointer-events:auto; }
+  summary::-webkit-details-marker { display:none; }
+</style>
