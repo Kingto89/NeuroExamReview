@@ -206,27 +206,22 @@
   let timer = {secs:0, id:null, running:false};
 
   function shuffle(a){
-    for(let i=a.length-1;i>0;i--){
-      const j=Math.floor(Math.random()*(i+1));
-      [a[i],a[j]]=[a[j],a[i]];
-    }
+    for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
     return a;
   }
 
   function shuffleOptions(q){
-    // returns a copy with options shuffled and answer reindexed
     const idxs = q.options.map((_,i)=>i);
     shuffle(idxs);
     const newOptions = idxs.map(i=>q.options[i]);
-    const newAnswer = idxs.indexOf(q.answer);
+    const newAnswer  = idxs.indexOf(q.answer);
     return {...q, options:newOptions, answer:newAnswer};
   }
 
   function pickQuestions(level, count){
     let pool = (level==='ALL') ? BANK : BANK.filter(q=>q.level===level);
-    pool = shuffle(pool.slice()); // shuffle question order
+    pool = shuffle(pool.slice());
     if(count>pool.length) count = pool.length;
-    // shuffle options for each q
     return pool.slice(0, count).map(shuffleOptions);
   }
 
@@ -251,35 +246,16 @@
     </div>`;
   }
 
-  function keyForBest(mode, level){
-    return `best_${mode}_${level}`;
-  }
-
-  function loadScores(){
-    try { return JSON.parse(localStorage.getItem(STORE_KEY)||'{}'); }
-    catch(e){ return {}; }
-  }
-  function saveScores(obj){
-    localStorage.setItem(STORE_KEY, JSON.stringify(obj));
-  }
-  function getBest(mode, level){
-    const s = loadScores();
-    return s[keyForBest(mode, level)] || null;
-  }
+  function keyForBest(mode, level){ return `best_${mode}_${level}`; }
+  function loadScores(){ try { return JSON.parse(localStorage.getItem(STORE_KEY)||'{}'); } catch(e){ return {}; } }
+  function saveScores(obj){ localStorage.setItem(STORE_KEY, JSON.stringify(obj)); }
+  function getBest(mode, level){ const s = loadScores(); return s[keyForBest(mode, level)] || null; }
   function setBest(mode, level, pct){
-    const s = loadScores();
-    const key = keyForBest(mode, level);
-    if(!s[key] || pct > s[key].pct){
-      s[key] = { pct, at: Date.now() };
-      saveScores(s);
-    }
+    const s = loadScores(); const k = keyForBest(mode, level);
+    if(!s[k] || pct > s[k].pct){ s[k] = { pct, at: Date.now() }; saveScores(s); }
   }
   function resetBest(){
-    const s = loadScores();
-    const keys = Object.keys(s).filter(k=>k.startsWith('best_'));
-    keys.forEach(k=>delete s[k]);
-    saveScores(s);
-    updateBestDisplay();
+    const s = loadScores(); Object.keys(s).filter(k=>k.startsWith('best_')).forEach(k=>delete s[k]); saveScores(s); updateBestDisplay();
   }
   function updateBestDisplay(){
     const b = getBest(selMode.value, selLevel.value);
@@ -289,30 +265,18 @@
   function startTimer(seconds){
     stopTimer();
     if(seconds<=0){ timerReadout.textContent = ''; return; }
-    timer.secs = seconds;
-    timer.running = true;
+    timer.secs = seconds; timer.running = true;
     timerReadout.textContent = fmt(timer.secs);
     timer.id = setInterval(()=>{
-      timer.secs--;
-      timerReadout.textContent = fmt(timer.secs);
-      if(timer.secs<=0){
-        stopTimer();
-        autoSubmit();
-      }
+      timer.secs--; timerReadout.textContent = fmt(timer.secs);
+      if(timer.secs<=0){ stopTimer(); autoSubmit(); }
     }, 1000);
   }
-  function stopTimer(){
-    if(timer.id){ clearInterval(timer.id); timer.id=null; }
-    timer.running=false;
-  }
-  function fmt(s){
-    const m = Math.floor(s/60), ss = s%60;
-    return `⏳ ${m}:${ss.toString().padStart(2,'0')}`;
-  }
+  function stopTimer(){ if(timer.id){ clearInterval(timer.id); timer.id=null; } timer.running=false; }
+  function fmt(s){ const m = Math.floor(s/60), ss = s%60; return `⏳ ${m}:${ss.toString().padStart(2,'0')}`; }
 
   function startQuiz(){
-    const mode = selMode.value;           // mcq | fill | mix
-    const level = selLevel.value;         // ALL | A | B | C
+    const mode = selMode.value, level = selLevel.value;
     const req = parseInt(selCount.value,10);
     const sec = parseInt(selTimer.value,10);
 
@@ -333,12 +297,10 @@
         <button id="qb-restart" style="margin-left:8px">Restart</button>
         <span id="qb-score" style="margin-left:12px;color:#6b7280"></span>
       </div>
-       <div id="qb-key" style="margin-top:12px"></div>
     `;
 
     document.getElementById('qb-submit').onclick = gradeQuiz;
     document.getElementById('qb-restart').onclick = startQuiz;
-
     startTimer(sec);
   }
 
@@ -354,12 +316,17 @@
 
     const blocks = Array.from(area.querySelectorAll('.q'));
     let correct = 0;
+
     blocks.forEach((b, idx)=>{
       const ans = parseInt(b.dataset.ans,10);
       const q = quiz.qs[idx];
       const radios = b.querySelectorAll('input[type=radio]');
       const text = b.querySelector('input[type=text]');
       let ok = false;
+
+      // clear any prior badges if user re-submits without restart
+      b.querySelectorAll('.tag-correct,.tag-yours,.tag-fill').forEach(n=>n.remove());
+
       if(radios.length){
         const chosen = Array.from(radios).find(r=>r.checked);
         ok = chosen && parseInt(chosen.value,10)===ans;
@@ -368,29 +335,46 @@
         const got = (text.value||'').trim().toLowerCase();
         ok = (got===want);
       }
-      if(ok){ correct++; b.style.background='#ecfdf5'; } else { b.style.background='#fef2f2'; }
+
+      // background color feedback
+      b.style.background = ok ? '#ecfdf5' : '#fef2f2';
+      if(ok) correct++;
+
+      // === INLINE ANNOTATIONS ===
+      if(radios.length){
+        const labels = Array.from(b.querySelectorAll('label'));
+        const correctLabel = labels[ans];
+        if(correctLabel){
+          const tag = document.createElement('span');
+          tag.className = 'tag-correct';
+          tag.style.marginLeft = '6px';
+          tag.style.color = '#059669';
+          tag.textContent = '(correct)';
+          correctLabel.appendChild(tag);
+        }
+        const chosen = Array.from(radios).find(r=>r.checked);
+        if(!ok && chosen){
+          const tag = document.createElement('span');
+          tag.className = 'tag-yours';
+          tag.style.marginLeft = '6px';
+          tag.style.color = '#b91c1c';
+          tag.textContent = '(your choice)';
+          chosen.closest('label')?.appendChild(tag);
+        }
+      } else if (text){
+        const info = document.createElement('div');
+        info.className = 'tag-fill';
+        info.style.marginTop = '4px';
+        info.style.color = ok ? '#059669' : '#b91c1c';
+        info.textContent = ok ? '(correct)' : `Correct: ${q.options[ans]}`;
+        b.appendChild(info);
+      }
     });
+
     const pct = Math.round(100*correct/blocks.length);
     document.getElementById('qb-score').textContent = `Score: ${correct}/${blocks.length} (${pct}%)`;
     statusEl.textContent = `Finished. You scored ${pct}%.`;
-    // Show Answer Key
-const keyBox = document.getElementById('qb-key');
-if (keyBox && quiz && quiz.qs?.length) {
-  const items = quiz.qs.map((q, i) => {
-    const ansIdx = q.answer;
-    const letter = String.fromCharCode(65 + ansIdx);
-    const text = q.options[ansIdx];
-    return `<li><b>Q${i+1}</b> — <b>${letter}</b>. ${text}</li>`;
-  }).join('');
-  keyBox.innerHTML = `
-    <div style="padding:10px;border:1px solid #e5e7eb;border-radius:10px">
-      <div style="font-weight:600;margin-bottom:6px">Answer Key (this attempt)</div>
-      <ol style="margin:0;padding-left:20px">${items}</ol>
-    </div>`;
-}
 
-
-    // Save best (per current mode + level) in this browser only
     setBest(selMode.value, selLevel.value, pct);
     updateBestDisplay();
   }
@@ -410,7 +394,6 @@ if (keyBox && quiz && quiz.qs?.length) {
       statusEl.textContent = 'Failed to load questions.json: '+e.message;
     });
 
-  // Update displayed "Best" when selectors change
   [selMode, selLevel].forEach(el=>el.addEventListener('change', updateBestDisplay));
 })();
 </script>
