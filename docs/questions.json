@@ -93,7 +93,7 @@
     { "id":"B19","level":"B","stem":"Which tracts respond to gravity and head position?","options":["Medial/lateral vestibulospinal","Corticobrainstem","Rubrospinal","Spinocerebellar"],"answer":0 },
     { "id":"B20","level":"B","stem":"Ceruleospinal tract’s key transmitter:","options":["Norepinephrine","Serotonin","Dopamine","ACh"],"answer":0 },
     { "id":"B21","level":"B","stem":"Raphespinal tract’s key transmitter:","options":["Serotonin","Norepinephrine","Dopamine","ACh"],"answer":0 },
-    { "id":"B22","level":"B","stem":"UMN lesion sign most typical:","options":["Spasticity (velocity-dependent hypertonia)","Fasciculations only","Profound atrophy immediately","Hyporeflexia"],"answer":0 },
+    { "id":"B22","level":"B","stem":"UMN lesion sign most typical:","options":["Spasticity","Fasciculations only","Profound atrophy immediately","Hyporeflexia"],"answer":0 },
     { "id":"B23","level":"B","stem":"LMN lesion sign NOT typical:","options":["Hypertonicity","Atrophy","Decreased reflexes","Paralysis"],"answer":0 },
     { "id":"B24","level":"B","stem":"Positive Babinski indicates involvement of:","options":["Upper motor neuron","Lower motor neuron","Cerebellum only","Basal ganglia only"],"answer":0 },
     { "id":"B25","level":"B","stem":"Decerebrate rigidity posture includes:","options":["UE extension, LE extension with plantarflexion","UE flexion, LE extension with dorsiflexion","All limbs flexed","All limbs flaccid"],"answer":0 },
