@@ -63,78 +63,82 @@
     </div>
   </div>
 
-  <!-- Extra 3D models (optional) -->
-  <details>
-    <summary>Extra 3D models (click to expand)</summary>
-    <div class="embed">
-      <iframe title="Detailed Labeled Surface Structures"
-              src="https://sketchfab.com/models/d91080b5af91497b822728c08804f33c/embed"
-              width="100%" height="420" frameborder="0"
-              allow="autoplay; fullscreen" allowfullscreen></iframe>
-    </div>
-    <div class="embed">
-      <iframe title="Spinal cord lesions &amp; clinical signs &amp; symptoms"
-              src="https://sketchfab.com/models/bf086ab152a94273837b12a1702cf644/embed"
-              width="100%" height="420" frameborder="0"
-              allow="autoplay; fullscreen" allowfullscreen></iframe>
-    </div>
-    <div class="embed">
-      <iframe title="Cerebral sulci and gyri"
-              src="https://sketchfab.com/models/afe2aed1d91b4b52be3c842a63aa69b1/embed"
-              width="100%" height="420" frameborder="0"
-              allow="autoplay; fullscreen" allowfullscreen></iframe>
-    </div>
-    <div class="embed">
-      <iframe title="Spinothalamic Tract 10/13/21"
-              src="https://sketchfab.com/models/9754d81f54df426aafa25b3799b5ce65/embed"
-              width="100%" height="420" frameborder="0"
-              allow="autoplay; fullscreen" allowfullscreen></iframe>
-    </div>
-    <div class="embed">
-      <iframe title="Corticospinal Tract"
-              src="https://sketchfab.com/models/51d7d61024bf4ecb88f85a35f0041960/embed"
-              width="100%" height="420" frameborder="0"
-              allow="autoplay; fullscreen" allowfullscreen></iframe>
-    </div>
-    <div class="embed">
-      <iframe title="Ascending tracts"
-              src="https://sketchfab.com/models/3d7e233edbb94cd8b9e1b4047bead951/embed"
-              width="100%" height="420" frameborder="0"
-              allow="autoplay; fullscreen" allowfullscreen></iframe>
-    </div>
-    <div class="embed">
-      <iframe title="Sagittal head section"
-              src="https://sketchfab.com/models/19378ae104f74bb186c3cb9bd90e16f0/embed"
-              width="100%" height="420" frameborder="0"
-              allow="autoplay; fullscreen" allowfullscreen></iframe>
-    </div>
-  </details>
+<!-- ========== Extra 3D Models (mobile friendly) ========== -->
+<details open>
+  <summary><b>🧊 Extra 3D Models (tap to expand)</b></summary>
 
-  <script>
-    // Expand/collapse helper
-    function toggleAll(open){
-      document.querySelectorAll('details').forEach(d => d.open = open);
-    }
+  <div class="sketchfab-embed-wrapper" style="position:relative;padding-top:56.25%;margin:12px 0">
+    <iframe title="Detailed Labeled Surface Structures"
+      src="https://sketchfab.com/models/d91080b5af91497b822728c08804f33c/embed"
+      style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
+      allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen>
+    </iframe>
+  </div>
+  <p><a href="https://sketchfab.com/3d-models/detailed-labeled-surface-structures-d91080b5af91497b822728c08804f33c" 
+        target="_blank" style="font-weight:bold;color:#1CAAD9">🔗 Open full-screen</a></p>
 
-    // Load a markdown file from /docs and render with marked
-    async function loadMD(file, target){
-      const el = document.getElementById(target);
-      try {
-        const res = await fetch(file, {cache: "no-store"});
-        if(!res.ok) throw new Error(res.status + " " + res.statusText);
-        const md = await res.text();
-        el.innerHTML = marked.parse(md);
-      } catch (err) {
-        el.innerHTML = `<p class="error">Failed to load ${file}: ${err.message}</p>`;
-      }
-    }
+  <div class="sketchfab-embed-wrapper" style="position:relative;padding-top:56.25%;margin:12px 0">
+    <iframe title="Spinal cord lesions & clinical signs & symptoms"
+      src="https://sketchfab.com/models/bf086ab152a94273837b12a1702cf644/embed"
+      style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
+      allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen>
+    </iframe>
+  </div>
+  <p><a href="https://sketchfab.com/3d-models/spinal-cord-lesions-clinical-signs-symptoms-bf086ab152a94273837b12a1702cf644" 
+        target="_blank" style="font-weight:bold;color:#1CAAD9">🔗 Open full-screen</a></p>
 
-    // Since index.html lives in /docs, these are simple relative paths:
-    loadMD("cns.md", "cns");
-    loadMD("pns.md", "pns");
-  </script>
-</body>
-</html>
+  <div class="sketchfab-embed-wrapper" style="position:relative;padding-top:56.25%;margin:12px 0">
+    <iframe title="Cerebral sulci and gyri"
+      src="https://sketchfab.com/models/afe2aed1d91b4b52be3c842a63aa69b1/embed"
+      style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
+      allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen>
+    </iframe>
+  </div>
+  <p><a href="https://sketchfab.com/3d-models/cerebral-sulci-and-gyri-afe2aed1d91b4b52be3c842a63aa69b1" 
+        target="_blank" style="font-weight:bold;color:#1CAAD9">🔗 Open full-screen</a></p>
+
+  <div class="sketchfab-embed-wrapper" style="position:relative;padding-top:56.25%;margin:12px 0">
+    <iframe title="Spinothalamic Tract"
+      src="https://sketchfab.com/models/9754d81f54df426aafa25b3799b5ce65/embed"
+      style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
+      allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen>
+    </iframe>
+  </div>
+  <p><a href="https://sketchfab.com/3d-models/spinothalamic-tract-101321-9754d81f54df426aafa25b3799b5ce65" 
+        target="_blank" style="font-weight:bold;color:#1CAAD9">🔗 Open full-screen</a></p>
+
+  <div class="sketchfab-embed-wrapper" style="position:relative;padding-top:56.25%;margin:12px 0">
+    <iframe title="Corticospinal Tract"
+      src="https://sketchfab.com/models/51d7d61024bf4ecb88f85a35f0041960/embed"
+      style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
+      allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen>
+    </iframe>
+  </div>
+  <p><a href="https://sketchfab.com/3d-models/corticospinal-tract-51d7d61024bf4ecb88f85a35f0041960" 
+        target="_blank" style="font-weight:bold;color:#1CAAD9">🔗 Open full-screen</a></p>
+
+  <div class="sketchfab-embed-wrapper" style="position:relative;padding-top:56.25%;margin:12px 0">
+    <iframe title="Ascending tracts"
+      src="https://sketchfab.com/models/3d7e233edbb94cd8b9e1b4047bead951/embed"
+      style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
+      allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen>
+    </iframe>
+  </div>
+  <p><a href="https://sketchfab.com/3d-models/ascending-tracts-3d7e233edbb94cd8b9e1b4047bead951" 
+        target="_blank" style="font-weight:bold;color:#1CAAD9">🔗 Open full-screen</a></p>
+
+  <div class="sketchfab-embed-wrapper" style="position:relative;padding-top:56.25%;margin:12px 0">
+    <iframe title="Sagittal head section"
+      src="https://sketchfab.com/models/19378ae104f74bb186c3cb9bd90e16f0/embed"
+      style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
+      allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen>
+    </iframe>
+  </div>
+  <p><a href="https://sketchfab.com/3d-models/corte-sagital-de-cabezasagittal-head-section-19378ae104f74bb186c3cb9bd90e16f0" 
+        target="_blank" style="font-weight:bold;color:#1CAAD9">🔗 Open full-screen</a></p>
+
+</details>
+
 <!-- ===== Exam Bank ===== -->
 <details open>
   <summary><b>📝 Exam Bank (interactive)</b></summary>
