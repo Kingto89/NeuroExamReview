@@ -1,90 +1,321 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Neuro Exam Review</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <style>
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#fafafa;color:#111}
-    .container{max-width:1100px;margin:0 auto;padding:16px}
-    h1,h2{margin:0 0 12px}
-    section{margin:20px 0}
-    details>summary{cursor:pointer;font-weight:600;list-style:none}
-    details>summary::-webkit-details-marker{display:none}
-    .card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:12px}
-    .grid-two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    .map-frame{position:relative;height:72vh;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden}
-    .map-frame>iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-    .iframe-wrap{position:relative;padding-top:56.25%;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;background:#fff}
-    .iframe-wrap>iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-    @media(max-width:900px){
-      .grid-two{grid-template-columns:1fr}
-      .map-frame{height:85vh}
-      .iframe-wrap{padding-top:80%}
-    }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NeuroExamReview</title>
+
+<style>
+  :root{
+    --card:#ffffff; --ink:#0f172a; --muted:#475569; --ring:#e2e8f0; --accent:#111827; --ok:#16a34a; --bad:#dc2626;
+  }
+  html,body{margin:0;padding:0;background:#f8fafc;color:var(--ink);font:16px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Inter,"Helvetica Neue",Arial;}
+  a{color:#2563eb;text-decoration:none}
+  h1{font-size:clamp(20px,3.2vw,30px);margin:18px 16px}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 12px 28px}
+
+  /* 3D */
+  .model-card{background:var(--card);border:1px solid var(--ring);border-radius:14px;padding:10px}
+  .sketchfab{width:100%;height:min(68vh,560px);border:0;border-radius:10px}
+
+  /* Panels */
+  .grid{display:grid;gap:14px;margin-top:16px}
+  @media (min-width:960px){ .grid{grid-template-columns:1fr 1fr} }
+  .panel{background:var(--card);border:1px solid var(--ring);border-radius:14px;padding:6px 10px}
+  details{border:1px solid var(--ring);border-radius:12px;background:#fff}
+  summary{cursor:pointer;list-style:none;padding:10px 12px;font-weight:700}
+  summary::marker, summary::-webkit-details-marker{display:none}
+  .mdbox{max-height:68vh;overflow:auto;border-top:1px solid var(--ring);padding:12px 14px}
+  .md{white-space:pre-wrap}
+  .md p{margin:.4rem 0}
+  .md ul,.md ol{padding-left:1.25rem;margin:.35rem 0}
+  .md li{margin:.25rem 0}
+  .md h1,.md h2,.md h3{margin:.7rem 0 .35rem}
+  .hint{color:var(--muted);font-size:12px;margin:8px 2px}
+
+  /* Exam */
+  .exam{background:var(--card);border:1px solid var(--ring);border-radius:14px;padding:6px 10px;margin-top:18px}
+  .row{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0}
+  .row > *{flex:1 1 150px}
+  .btn{cursor:pointer;display:inline-flex;align-items:center;gap:8px;border:1px solid var(--ring);background:#fff;border-radius:10px;padding:8px 12px;font-weight:600}
+  .btn.primary{background:#111827;color:#fff;border-color:#111827}
+  .btn.ghost{background:#fff}
+  .btn:disabled{opacity:.6;cursor:not-allowed}
+  .badge{display:inline-block;padding:2px 8px;border-radius:999px;background:#eef;border:1px solid #dde;font-size:12px}
+  .q{border:1px solid var(--ring);border-radius:10px;padding:10px;margin:10px 0}
+  .q h4{margin:0 0 6px}
+  .choice{display:block;margin:6px 0}
+  .ans{margin-top:6px;font-size:14px}
+  .ok{color:var(--ok)}
+  .bad{color:var(--bad)}
+  .score{font-weight:800}
+  .timer{font-weight:700}
+</style>
 </head>
 <body>
-  <div class="container">
+  <h1>🧠 NeuroExamReview</h1>
+  <div class="wrap">
 
-    <!-- ===== Top 3D Brain ===== -->
-    <section id="brain">
-      <h1>Motor &amp; Sensory — Brain Overview</h1>
-      <div class="iframe-wrap">
-        <iframe
-          title="Motor and Sensory Areas of the Cerebral Cortex"
-          src="https://sketchfab.com/models/300c488c013f4d41ad5acab9ef08e50a/embed"
-          allow="autoplay; fullscreen; xr-spatial-tracking"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </section>
+    <!-- 3D BRAIN -->
+    <div class="model-card">
+      <iframe
+        class="sketchfab"
+        title="Motor and Sensory Areas of the Cerebral Cortex"
+        src="https://sketchfab.com/models/300c488c013f4d41ad5acab9ef08e50a/embed"
+        allow="autoplay; fullscreen; xr-spatial-tracking"
+        webkitallowfullscreen mozallowfullscreen allowfullscreen>
+      </iframe>
+      <div class="hint">Tip: pinch-zoom & drag inside the model to explore.</div>
+    </div>
 
-    <!-- ===== CNS & PNS ===== -->
-    <section id="maps">
-      <h2>🧠 Concept Maps</h2>
-      <div class="grid-two">
-        <div class="card">
-          <details open>
-            <summary>Central Nervous System (CNS)</summary>
-            <div class="map-frame"><iframe src="cns.html" title="CNS Map"></iframe></div>
-          </details>
-        </div>
-        <div class="card">
-          <details open>
-            <summary>Peripheral Nervous System (PNS)</summary>
-            <div class="map-frame"><iframe src="pns.html" title="PNS Map"></iframe></div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Exam Section ===== -->
-    <section id="exam">
-      <h2>📝 Exam Practice</h2>
-      <div class="card">
-        <details>
-          <summary>Open Question Bank (150 items)</summary>
-          <div class="map-frame"><iframe src="exam.html" title="Exam Bank"></iframe></div>
+    <!-- CONCEPT MAPS -->
+    <h2 style="margin:18px 6px 8px">🧩 Concept Maps</h2>
+    <div class="grid">
+      <div class="panel">
+        <details id="cnsBox">
+          <summary>Central Nervous System (CNS)</summary>
+          <div class="mdbox"><div id="cns" class="md">Loading…</div></div>
         </details>
       </div>
-    </section>
 
-    <!-- ===== Extra 3D Models (collapsed) ===== -->
-    <section id="extras">
-      <details>
-        <summary>🧊 Extra 3D Models</summary>
-        <div class="card" style="margin-top:10px">
-          <div class="iframe-wrap"><iframe src="https://sketchfab.com/models/d91080b5af91497b822728c08804f33c/embed" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe></div>
-          <div class="iframe-wrap"><iframe src="https://sketchfab.com/models/bf086ab152a94273837b12a1702cf644/embed" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe></div>
-          <div class="iframe-wrap"><iframe src="https://sketchfab.com/models/afe2aed1d91b4b52be3c842a63aa69b1/embed" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe></div>
-          <div class="iframe-wrap"><iframe src="https://sketchfab.com/models/9754d81f54df426aafa25b3799b5ce65/embed" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe></div>
-          <div class="iframe-wrap"><iframe src="https://sketchfab.com/models/51d7d61024bf4ecb88f85a35f0041960/embed" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe></div>
-          <div class="iframe-wrap"><iframe src="https://sketchfab.com/models/19378ae104f74bb186c3cb9bd90e16f0/embed" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe></div>
+      <div class="panel">
+        <details id="pnsBox">
+          <summary>Peripheral Nervous System (PNS)</summary>
+          <div class="mdbox"><div id="pns" class="md">Loading…</div></div>
+        </details>
+      </div>
+    </div>
+    <p class="hint">On phones these stack; on desktops they sit side-by-side.</p>
+
+    <!-- EXAM WIDGET -->
+    <div class="exam">
+      <details id="examBox">
+        <summary>📝 Exam Practice</summary>
+
+        <div class="row">
+          <label>Questions
+            <select id="count">
+              <option value="10">10</option>
+              <option value="25">25</option>
+              <option value="50">50</option>
+              <option value="all">All</option>
+            </select>
+          </label>
+
+          <label>Level
+            <select id="level">
+              <option value="all">All</option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+            </select>
+          </label>
+
+          <label>Mode
+            <select id="mode">
+              <option value="mcq">MCQ</option>
+              <option value="fill">Fill-in</option>
+              <option value="mix">Mix</option>
+            </select>
+          </label>
+
+          <label><input type="checkbox" id="shuffle" checked> Shuffle</label>
+
+          <label><input type="checkbox" id="useTimer"> Timer</label>
+          <label id="tWrap" style="display:none">Minutes
+            <select id="minutes">
+              <option>5</option><option>10</option><option>15</option>
+              <option>20</option><option>30</option><option>45</option>
+            </select>
+          </label>
+
+          <div style="flex:0 0 auto;display:flex;gap:8px">
+            <button class="btn primary" id="startBtn">Start Quiz</button>
+            <button class="btn ghost" id="resetBtn" disabled>Reset</button>
+          </div>
         </div>
+
+        <div id="examInfo" class="hint"></div>
+        <div id="timer" class="timer"></div>
+        <div id="quiz"></div>
+
+        <div style="display:flex;gap:8px;margin-top:10px">
+          <button class="btn primary" id="submitBtn" disabled>Submit</button>
+          <button class="btn ghost" id="showAnsBtn" disabled>Show Answers</button>
+        </div>
+
+        <div id="result" style="margin-top:12px"></div>
       </details>
-    </section>
+    </div>
 
   </div>
+
+  <!-- Markdown renderer -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    /* ---------- Markdown loading ---------- */
+    marked.setOptions({ gfm:true, breaks:true, smartLists:true });
+
+    async function loadMD(id, file){
+      const el = document.getElementById(id);
+      try{
+        const res = await fetch(file, {cache:'no-store'});
+        const txt = await res.text();
+        el.innerHTML = marked.parse(txt);
+      }catch(e){ el.textContent = 'Failed to load '+file; }
+    }
+    loadMD('cns','cns.md');
+    loadMD('pns','pns.md');
+
+    /* ---------- Exam widget ---------- */
+    const qsEl = document.getElementById('quiz');
+    const resultEl = document.getElementById('result');
+    const infoEl = document.getElementById('examInfo');
+    const startBtn = document.getElementById('startBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const showAnsBtn = document.getElementById('showAnsBtn');
+    const useTimer = document.getElementById('useTimer');
+    const tWrap = document.getElementById('tWrap');
+    const timerEl = document.getElementById('timer');
+
+    useTimer.addEventListener('change',()=> tWrap.style.display = useTimer.checked ? 'block':'none');
+
+    let QUESTION_BANK = [];
+    let active = [];
+    let timer = null, timeLeft = 0;
+
+    function shuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]] } return a; }
+
+    async function loadQuestions(){
+      const res = await fetch('questions.json', {cache:'no-store'});
+      QUESTION_BANK = await res.json();
+    }
+
+    function pickQuestions(){
+      const level = document.getElementById('level').value;
+      const count = document.getElementById('count').value;
+      let pool = QUESTION_BANK.filter(q => level==='all' ? true : q.difficulty===level);
+      if(document.getElementById('shuffle').checked) shuffle(pool);
+      if(count !== 'all') pool = pool.slice(0, Number(count));
+      return pool;
+    }
+
+    function renderQuiz(list){
+      qsEl.innerHTML = '';
+      const mode = document.getElementById('mode').value;
+
+      list.forEach((q,idx)=>{
+        const mcq = (mode==='mcq') || (mode==='mix' && q.choices && q.choices.length);
+        const box = document.createElement('div');
+        box.className = 'q';
+        box.dataset.id = q.id ?? ('q'+idx);
+
+        const title = document.createElement('h4');
+        title.textContent = (idx+1)+'. '+q.text;
+        box.appendChild(title);
+
+        if(mcq && q.choices){
+          q.choices.forEach((c,i)=>{
+            const id = `q${idx}_c${i}`;
+            const label = document.createElement('label'); label.className='choice';
+            const input = document.createElement('input');
+            input.type='radio'; input.name='q'+idx; input.value=c; input.id=id;
+            label.appendChild(input);
+            const span = document.createElement('span'); span.textContent = ' '+c;
+            label.appendChild(document.createTextNode(' '));
+            label.appendChild(span);
+            box.appendChild(label);
+          });
+        }else{
+          const inp = document.createElement('input');
+          inp.type='text'; inp.placeholder='Type your answer…'; inp.style='width:100%;padding:8px;border:1px solid var(--ring);border-radius:8px';
+          inp.name='q'+idx;
+          box.appendChild(inp);
+        }
+
+        const ans = document.createElement('div');
+        ans.className = 'ans';
+        box.appendChild(ans);
+
+        qsEl.appendChild(box);
+      });
+
+      submitBtn.disabled = false;
+      resetBtn.disabled = false;
+      showAnsBtn.disabled = true;
+      resultEl.textContent = '';
+    }
+
+    function norm(s){ return String(s ?? '').trim().toLowerCase(); }
+
+    function grade(){
+      let correct = 0;
+      const mode = document.getElementById('mode').value;
+
+      [...qsEl.querySelectorAll('.q')].forEach((box,idx)=>{
+        const q = active[idx];
+        const ansEl = box.querySelector('.ans'); ansEl.innerHTML='';
+        let user = '';
+
+        if((mode==='mcq') || (mode==='mix' && q.choices && q.choices.length)){
+          const picked = box.querySelector('input[type=radio]:checked');
+          user = picked ? picked.value : '';
+        }else{
+          user = box.querySelector('input[type=text]').value;
+        }
+
+        const isRight = norm(user) === norm(q.answer);
+        if(isRight) { correct++; ansEl.innerHTML = `<span class="ok">✔ Correct</span>`; }
+        else { ansEl.innerHTML = `<span class="bad">✖</span> Correct: <b>${q.answer}</b>`; }
+      });
+
+      const pct = Math.round(correct/active.length*100);
+      resultEl.innerHTML = `<div class="score">Score: ${correct}/${active.length} (${pct}%)</div>`;
+      showAnsBtn.disabled = false;
+      submitBtn.disabled = true;
+      stopTimer();
+    }
+
+    function showAnswers(){
+      [...qsEl.querySelectorAll('.q')].forEach((box,idx)=>{
+        const q = active[idx];
+        const ansEl = box.querySelector('.ans');
+        if(!ansEl.textContent.includes('Correct:')) ansEl.innerHTML += ` &nbsp; <span class="badge">Answer: ${q.answer}</span>`;
+      });
+    }
+
+    function startTimer(mins){
+      timeLeft = mins*60;
+      timerEl.textContent = fmt(timeLeft);
+      timer = setInterval(()=>{
+        timeLeft--; timerEl.textContent = fmt(timeLeft);
+        if(timeLeft<=0){ stopTimer(); grade(); }
+      },1000);
+    }
+    function stopTimer(){ if(timer){ clearInterval(timer); timer=null; } timerEl.textContent=''; }
+    function fmt(s){ const m=Math.floor(s/60), r=s%60; return `⏱ ${String(m).padStart(2,'0')}:${String(r).padStart(2,'0')}`; }
+
+    // Hooks
+    startBtn.addEventListener('click', async ()=>{
+      submitBtn.disabled = true; resultEl.textContent='';
+      if(!QUESTION_BANK.length) await loadQuestions();
+
+      active = pickQuestions();
+      renderQuiz(active);
+
+      infoEl.textContent = `Loaded ${active.length} question(s).`;
+      if(useTimer.checked){ startTimer(Number(document.getElementById('minutes').value)); }
+      document.getElementById('examBox').open = true;
+    });
+
+    submitBtn.addEventListener('click', grade);
+    showAnsBtn.addEventListener('click', showAnswers);
+    resetBtn.addEventListener('click', ()=>{
+      stopTimer();
+      qsEl.innerHTML=''; resultEl.textContent=''; infoEl.textContent='';
+      submitBtn.disabled = true; showAnsBtn.disabled = true; resetBtn.disabled = true;
+    });
+  </script>
 </body>
 </html>
