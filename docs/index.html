@@ -102,42 +102,76 @@
       }
     }
 
-    // Initialize a single Sketchfab container
+    // Mount one container with API; fallback to plain iframe if anything goes wrong
     function mountSketchfab(el){
       if (!el || el.dataset.mounted) return;
+
       const uid = el.getAttribute('data-uid');
       if (!uid) return;
 
-      const client = new Sketchfab('1.12.1', el);
-      client.init(uid, {
-        autostart: 1,
-        preload: 1,
-        ui_controls: 1,
-        ui_infos: 0,
-        ui_watermark: 0,
-        dnt: 1,
-        camera: 0,
-        transparent: 0,
-        success: function(api){
-          api.start();
-          api.addEventListener('viewerready', function(){
-            api.setEnableCameraControls(true);
-            el.dataset.mounted = '1';
-          });
-        },
-        error: function(e){ console.error('Sketchfab init failed:', e); }
-      });
+      let mounted = false;
+      function fallbackIframe(){
+        if (mounted) return;
+        mounted = true;
+        el.dataset.mounted = '1';
+        el.innerHTML =
+          `<iframe
+             title="${el.getAttribute('title')||'Sketchfab model'}"
+             src="https://sketchfab.com/models/${uid}/embed?autostart=1&ui_infos=0&ui_watermark=0"
+             style="width:100%;height:100%;border:0;border-radius:10px"
+             allow="autoplay; fullscreen; xr-spatial-tracking"
+             allowfullscreen loading="lazy"></iframe>`;
+      }
 
-      el.addEventListener('touchstart', function(){
-        const ifr = el.querySelector('iframe');
-        if (ifr) { ifr.setAttribute('tabindex','0'); ifr.style.pointerEvents='auto'; ifr.focus(); }
-      }, { passive:true });
+      try {
+        const client = new Sketchfab('1.12.1', el);
+        client.init(uid, {
+          autostart: 1,
+          preload: 1,
+          ui_controls: 1,
+          ui_infos: 0,
+          ui_watermark: 0,
+          dnt: 1,
+          camera: 0,
+          transparent: 0,
+          success: function(api){
+            api.start();
+            api.addEventListener('viewerready', function(){
+              mounted = true;
+              el.dataset.mounted = '1';
+              const ifr = el.querySelector('iframe');
+              if (ifr) {
+                ifr.setAttribute('tabindex','0');
+                ifr.style.pointerEvents = 'auto';
+              }
+            });
+            // Fallback if nothing shows in 3.5s
+            setTimeout(() => { if (!mounted) fallbackIframe(); }, 3500);
+          },
+          error: function(){ fallbackIframe(); }
+        });
+      } catch(e){
+        console.error('Sketchfab API error:', e);
+        fallbackIframe();
+      }
     }
 
-    // Lazy mount when details are opened
+    // Lazy init: when a viewer becomes visible
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          mountSketchfab(entry.target);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { root: null, rootMargin: '0px', threshold: 0.1 });
+
+    document.querySelectorAll('.skf-wrap[data-uid]').forEach(el => io.observe(el));
+
+    // Re-observe when details open
     document.querySelectorAll('details').forEach(d => {
       d.addEventListener('toggle', () => {
-        if (d.open) d.querySelectorAll('.skf-wrap[data-uid]').forEach(mountSketchfab);
+        if (d.open) d.querySelectorAll('.skf-wrap[data-uid]:not([data-mounted])').forEach(el => io.observe(el));
       });
     });
 
