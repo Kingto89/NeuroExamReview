@@ -78,7 +78,6 @@
 
 </details>
 
-<details>
 
 **Cutaneous Receptors (image aligned)**  
 - Hair follicle endings  
