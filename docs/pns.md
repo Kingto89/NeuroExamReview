@@ -1,6 +1,4 @@
 ---
-title: PNS Map
----
 
 <details open>
 <summary><b>🌐 Peripheral Nervous System (PNS)</b></summary>
