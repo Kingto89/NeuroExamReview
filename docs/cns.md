@@ -1,6 +1,4 @@
 ---
-title: CNS Map
----
 
 <details open>
 <summary><b>🌐 Central Nervous System (CNS)</b></summary>
