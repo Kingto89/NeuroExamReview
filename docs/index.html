@@ -34,7 +34,7 @@
   <h1>NeuroExamReview</h1>
   <p class="muted">Interactive brain model + collapsible CNS/PNS study maps</p>
 
-  <!-- 3D brain at the top (kept as iframe) -->
+  <!-- 3D brain at the top -->
   <h2>Brain 3D (motor & sensory areas)</h2>
   <div class="embed">
     <iframe title="Motor and Sensory Areas of the Cerebral Cortex"
@@ -71,8 +71,6 @@
   <!-- ===== Extra 3D models (mobile-friendly via Sketchfab Viewer API) ===== -->
   <details>
     <summary>Extra 3D models (click to expand)</summary>
-
-    <!-- Each viewer gets a DIV + data-uid with the Sketchfab model ID -->
     <div class="embed skf-wrap" data-uid="d91080b5af91497b822728c08804f33c" title="Detailed Labeled Surface Structures"></div>
     <div class="embed skf-wrap" data-uid="bf086ab152a94273837b12a1702cf644" title="Spinal cord lesions & clinical signs & symptoms"></div>
     <div class="embed skf-wrap" data-uid="afe2aed1d91b4b52be3c842a63aa69b1" title="Cerebral sulci and gyri"></div>
@@ -82,10 +80,9 @@
     <div class="embed skf-wrap" data-uid="19378ae104f74bb186c3cb9bd90e16f0" title="Sagittal head section"></div>
   </details>
 
-  <!-- Sketchfab Viewer API (once) -->
+  <!-- Sketchfab Viewer API -->
   <script src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"></script>
 
-  <!-- App scripts (single, ordered block) -->
   <script>
     // Expand/collapse helper
     function toggleAll(open){
@@ -105,53 +102,52 @@
       }
     }
 
-    // Initialize all Sketchfab viewers listed above
-    (function initSketchfabViewers(){
-      const containers = Array.from(document.querySelectorAll('.skf-wrap[data-uid]'));
+    // Initialize a single Sketchfab container
+    function mountSketchfab(el){
+      if (!el || el.dataset.mounted) return;
+      const uid = el.getAttribute('data-uid');
+      if (!uid) return;
 
-      function mount(el){
-        const uid = el.getAttribute('data-uid');
-        if(!uid) return;
+      const client = new Sketchfab('1.12.1', el);
+      client.init(uid, {
+        autostart: 1,
+        preload: 1,
+        ui_controls: 1,
+        ui_infos: 0,
+        ui_watermark: 0,
+        dnt: 1,
+        camera: 0,
+        transparent: 0,
+        success: function(api){
+          api.start();
+          api.addEventListener('viewerready', function(){
+            api.setEnableCameraControls(true);
+            el.dataset.mounted = '1';
+          });
+        },
+        error: function(e){ console.error('Sketchfab init failed:', e); }
+      });
 
-        const client = new Sketchfab(el);
-        const opts = {
-          autostart: 1,
-          preload: 1,
-          ui_controls: 1,
-          ui_infos: 0,
-          ui_watermark: 0,
-          dnt: 1,
-          camera: 0,        // allow user orbit
-          transparent: 0
-        };
+      el.addEventListener('touchstart', function(){
+        const ifr = el.querySelector('iframe');
+        if (ifr) { ifr.setAttribute('tabindex','0'); ifr.style.pointerEvents='auto'; ifr.focus(); }
+      }, { passive:true });
+    }
 
-        client.init(uid, {
-          ...opts,
-          success: function(api){
-            api.start();
-            api.addEventListener('viewerready', function(){
-              api.setEnableCameraControls(true);
-            });
-          },
-          error: function(e){ console.error('Sketchfab init failed:', e); }
-        });
+    // Lazy mount when details are opened
+    document.querySelectorAll('details').forEach(d => {
+      d.addEventListener('toggle', () => {
+        if (d.open) d.querySelectorAll('.skf-wrap[data-uid]').forEach(mountSketchfab);
+      });
+    });
 
-        // Ensure the inner iframe grabs focus/touch on Android
-        el.addEventListener('touchstart', function(){
-          const ifr = el.querySelector('iframe');
-          if (ifr) { ifr.setAttribute('tabindex','0'); ifr.style.pointerEvents='auto'; ifr.focus(); }
-        }, { passive:true });
-      }
-
-      containers.forEach(mount);
-    })();
-
-    // Kick off markdown loads (must be inside a <script>, not loose)
+    // Kick off CNS/PNS loads
     loadMD("cns.md", "cns");
     loadMD("pns.md", "pns");
   </script>
 </body>
 </html>
+
 
 <!-- ===== Exam Bank (shuffled + timer + saved scores) ===== -->
 <details open>
