@@ -24,7 +24,6 @@
     button{padding:6px 10px; border:1px solid #d1d5db; border-radius:8px; background:#fff; cursor:pointer}
     button:hover{background:#f3f4f6}
 
-    /* Mobile fixes for iframe interaction */
     .skf-frame-wrap{
       width:100%; height:420px; border-radius:10px; overflow:hidden; background:#000;
       isolation:isolate;
@@ -45,12 +44,12 @@
   <h1>NeuroExamReview</h1>
   <p class="muted">Interactive brain model + collapsible CNS/PNS study maps</p>
 
-  <!-- 3D brain at the top (BioDigital embed, no auto-spin) -->
-  <h2>Brain 3D (motor & sensory areas)</h2>
+  <!-- 3D brain at the top (BioDigital Healthline embed) -->
+  <h2>Brain 3D (interactive model)</h2>
   <div class="embed skf-frame-wrap" style="height:520px">
     <iframe
       title="BioDigital Human Viewer"
-      src="https://human.biodigital.com/viewer/?be=4IX9&ui-info=false&ui-search=false&ui-undo=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=false&ui-label-list=true&ui-anatomy-descriptions=false&ui-tutorial=false&ui-loader=circle&ui-whiteboard=false&ui-layers=false&ui-anatomy-labels=true&auto-load=true&disable-scroll=true&load-rotate=0&dk=0cee566e934542c2920e47214e317818fd61ae4e&bypass-analytics=true"
+      src="https://human.biodigital.com/widgets/healthline/?be=3KnN&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=false&ui-label-list=true&ui-anatomy-descriptions=false&disable-scroll=false&uaid=51km3"
       allow="fullscreen; xr-spatial-tracking"
       allowfullscreen
       loading="eager"
@@ -168,6 +167,7 @@
   </script>
 </body>
 </html>
+
 
 
 <!-- ===== Exam Bank (shuffled + timer + saved scores) ===== -->
