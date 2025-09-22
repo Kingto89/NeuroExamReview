@@ -14,7 +14,7 @@
   - Path: internal capsule → pyramids (medulla)  
   - 🔴 Decussates: pyramidal decussation (medulla)  
   - 🔵 Synapse: anterior horn LMN → skeletal muscle  
-  - Function: fine limb movement, fractionation  
+  - Function: fine limb movement, fractionation, voluntary movement  
 
 - **Anterior corticospinal**  
   - Origin: cortex  
