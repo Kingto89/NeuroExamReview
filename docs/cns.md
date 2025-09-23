@@ -164,6 +164,63 @@
 
 ---
 
+<details open>
+<summary><b>🧠 Must-Know Cortical Sites</b></summary>
+
+- **Primary Motor Cortex (M1, Brodmann 4)**
+  - Precentral gyrus  
+  - Function: voluntary movement execution  
+  - Lesion → contralateral weakness, loss of fractionated movement  
+
+- **Premotor Cortex (Brodmann 6)**
+  - Anterior to precentral gyrus  
+  - Function: motor planning, posture adjustments  
+
+- **Supplementary Motor Area (SMA, Brodmann 6 medial)**
+  - Function: bimanual coordination, sequencing  
+
+- **Primary Somatosensory Cortex (S1, Brodmann 3,1,2)**
+  - Postcentral gyrus  
+  - Function: discriminative touch, proprioception  
+  - Lesion → contralateral sensory loss  
+
+- **Primary Visual Cortex (Brodmann 17)**
+  - Occipital lobe, calcarine sulcus  
+  - Function: visual perception  
+  - Lesion → contralateral homonymous hemianopia  
+
+- **Primary Auditory Cortex (Brodmann 41, 42)**
+  - Transverse temporal gyri (Heschl)  
+  - Function: sound perception  
+  - Lesion → difficulty localizing sounds (bilateral input)  
+
+- **Broca’s Area (Brodmann 44, 45)**
+  - Inferior frontal gyrus, dominant hemisphere (usually left)  
+  - Function: **expressive language**  
+  - Lesion → nonfluent (expressive) aphasia, comprehension preserved  
+
+- **Wernicke’s Area (Brodmann 22)**
+  - Superior temporal gyrus, dominant hemisphere  
+  - Function: **language comprehension**  
+  - Lesion → fluent aphasia, impaired comprehension  
+
+- **Prefrontal Cortex**
+  - Dorsolateral: executive functions, working memory  
+  - Orbitofrontal: emotional regulation, reward  
+  - Lesion → poor judgment, impulsivity, disinhibition  
+
+- **Parietal Association Cortex**
+  - Dominant hemisphere: praxis (planning skilled movement)  
+  - Nondominant: spatial awareness, attention  
+  - Lesion nondominant → contralateral neglect  
+
+- **Limbic Structures**
+  - Cingulate gyrus, hippocampus, amygdala  
+  - Emotion, memory, motivation  
+
+</details>
+---
+
 <details>
 <summary><b>🩺 Clinical Correlates</b></summary>
 
