@@ -60,25 +60,25 @@
 <details open>
 <summary><b>🔽 Fiber Types & Sensory Receptors</b></summary>
 
-  - **A-alph a— Aα(I)**
-  13–20 μm • **myelinated**  
+**A-alph a— Aα(I**)
+  13–20 μm • myelinated  
   Receptors: muscle spindle (Ia), Golgi tendon organ (Ib)  
-  Modality: **proprioception**
+  Modality: proprioception
 
-  - **A-beta — Aβ (II)**  
-  6–12 μm • **myelinated**  
+**A-beta — Aβ (II)  **
+  6–12 μm • myelinated  
   Receptors: Meissner, Merkel, Pacinian, Ruffini, hair follicle  
-  Modality: **light touch**, vibration, pressure
+  Modality: light touch, vibration, pressure
 
-  - **A-delta — Aδ (III)**  
-  1–5 μm • **myelinated**  
+**A-delta — Aδ (III) ** 
+  1–5 μm • myelinated 
   Receptors: free (bare) nerve endings  
-  Modality: **fast pain**, cool temperature
+  Modality: fast pain, cool temperature
 
-  - **C fibers — C (IV)**  
-  0.2–1.5 μm • **unmyelinated**  
+**C fibers — C (IV)**
+  0.2–1.5 μm • unmyelinated  
   Receptors: free (bare) nerve endings  
-  Modality: **slow pain**, warm temperature, itch
+  Modality: slow pain, warm temperature, itch
 
 
 **Cutaneous Receptors**
