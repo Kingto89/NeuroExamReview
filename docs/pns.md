@@ -39,10 +39,10 @@
   3. Repolarization: K⁺ efflux  
 
   **Resting potential**:
-  70 mV (maintained by Na⁺/K⁺ ATPase → 3 Na⁺ out, 2 K⁺ in)  
+  -70 mV (maintained by Na⁺/K⁺ ATPase → 3 Na⁺ out, 2 K⁺ in)  
 
   **Threshold**:
-  55 mV → Na⁺ channels open  
+  -55 mV → Na⁺ channels open  
 
 - **Refractory Periods**  
   - Absolute → no AP possible (Na+ channels inactivated)  
@@ -63,24 +63,24 @@
 <summary><b>🔽 Fiber Types & Sensory Receptors</b></summary>
 
 - **A-alpha — Aα (I)**
-  13–20 μm • myelinated  
-  Receptors: muscle spindle (Ia), Golgi tendon organ (Ib)  
-  Modality: proprioception  
+  -13–20 μm • myelinated  
+  -Receptors: muscle spindle (Ia), Golgi tendon organ (Ib)  
+  -Modality: proprioception  
 
 - **A-beta — Aβ (II)**
-  6–12 μm • myelinated  
-  Receptors: Meissner, Merkel, Pacinian, Ruffini, hair follicle  
-  Modality: light touch, vibration, pressure  
+  -6–12 μm • myelinated  
+  -Receptors: Meissner, Merkel, Pacinian, Ruffini, hair follicle  
+  -Modality: light touch, vibration, pressure  
 
 - **A-delta — Aδ (III)**
-  1–5 μm • myelinated  
-  Receptors: free (bare) nerve endings  
-  Modality: fast pain, cool temperature  
+  -1–5 μm • myelinated  
+  -Receptors: free (bare) nerve endings  
+  -Modality: fast pain, cool temperature  
 
 - **C fibers — C (IV)**
-  0.2–1.5 μm • unmyelinated  
-  Receptors: free (bare) nerve endings  
-  Modality: slow pain, warm temperature, itch  
+  -0.2–1.5 μm • unmyelinated  
+  -Receptors: free (bare) nerve endings  
+  -Modality: slow pain, warm temperature, itch  
 
 
 **Cutaneous Receptors**
@@ -103,8 +103,8 @@
   - **Musculoskeletal** → proprioception, nociception, temperature  
 
 - Touch pathways  
-**Light/discriminative touch** → A-beta fibers, precise localization  
-**Crude touch** → A-delta & C fibers, poorly localized  
+-**Light/discriminative touch** → A-beta fibers, precise localization  
+-**Crude touch** → A-delta & C fibers, poorly localized  
 
 </details>
 
@@ -121,7 +121,8 @@
   - Gamma dynamic → velocity sensitivity (nuclear bag)  
   - Gamma static → static length sensitivity (nuclear chain + some bag)  
 
-- **Golgi Tendon Organ (GTO)** → Ib afferents, tension in tendon  
+- **Golgi Tendon Organ (GTO)**
+- → Ib afferents, tension in tendon  
 - **Joint Receptors**  
   - Ruffini & paciniform endings → II afferents  
   - Free nerve endings → III & IV afferents  
