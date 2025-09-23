@@ -19,7 +19,27 @@
   - Retrograde (terminal → soma) → dynein, ATP  
 
 </details>
+---
 
+<details>
+<summary><b>🧩 Neuron Types</b></summary>
+
+- **Unipolar**  
+  - Single process; most sensory neurons (touch, pain).  
+
+- **Bipolar**  
+  - One dendrite + one axon; retina, olfactory epithelium, inner ear.  
+
+- **Multipolar**  
+  - Many dendrites + one axon; most common (motor neurons, interneurons).  
+
+- **Pseudounipolar**  
+  - Single process splits into two branches; DRG sensory neurons.  
+
+- **Interneurons**  
+  - Short local connections within CNS; integration and reflex arcs.  
+
+</details>
 ---
 
 <details open>
