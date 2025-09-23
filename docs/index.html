@@ -24,19 +24,37 @@
     button{padding:6px 10px; border:1px solid #d1d5db; border-radius:8px; background:#fff; cursor:pointer}
     button:hover{background:#f3f4f6}
 
+    /* Mobile-friendly iframes */
     .skf-frame-wrap{
-      width:100%; height:420px; border-radius:10px; overflow:hidden; background:#000;
+      width:100%; height:520px; border-radius:10px; overflow:hidden; background:#000;
       isolation:isolate;
     }
     .skf-frame-wrap iframe{
       width:100%; height:100%; border:0;
-      pointer-events:auto;
-      touch-action:manipulation;
+      pointer-events:auto; touch-action:manipulation;
     }
     details[open] > summary { position:relative; z-index:1; }
     * { -webkit-tap-highlight-color: transparent; }
     body { overscroll-behavior-y: contain; }
+
+    /* === Auto-collapsible styling (H2/H3/H4) === */
+    .subtree details {
+      margin:10px 0; padding:0; border-radius:12px; overflow:hidden;
+      border:1px solid #e5e7eb; background:#fff;
+    }
+    .subtree summary {
+      padding:10px 12px; background:#f9fafb; list-style:none; outline:none;
+    }
+    .subtree summary::-webkit-details-marker { display:none; }
+    .subtree .block { padding:12px; background:#fff; }
+    /* indent nested levels slightly for visual hierarchy */
+    .subtree details details { margin-left:10px; }
+    .subtree details details details { margin-left:20px; }
+
+    .tinybar { display:flex; gap:8px; align-items:center; margin:6px 0 10px; flex-wrap:wrap; }
+    .tinybar button { padding:4px 8px; font-size:.9rem; }
   </style>
+
   <!-- Markdown renderer -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
@@ -44,24 +62,23 @@
   <h1>NeuroExamReview</h1>
   <p class="muted">Interactive brain model + collapsible CNS/PNS study maps</p>
 
-  <!-- 3D brain at the top (BioDigital Healthline embed) -->
+  <!-- Top 3D model (BioDigital you chose) -->
   <h2>Brain 3D (interactive model)</h2>
-  <div class="embed skf-frame-wrap" style="height:520px">
+  <div class="embed skf-frame-wrap">
     <iframe
       title="BioDigital Human Viewer"
       src="https://human.biodigital.com/widgets/healthline/?be=3KnN&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=false&ui-label-list=true&ui-anatomy-descriptions=false&disable-scroll=false&uaid=51km3"
       allow="fullscreen; xr-spatial-tracking"
       allowfullscreen
       loading="eager"
-      referrerpolicy="strict-origin-when-cross-origin"
-      tabindex="0"></iframe>
+      referrerpolicy="strict-origin-when-cross-origin"></iframe>
   </div>
 
   <!-- Controls -->
   <div class="bar">
     <button onclick="toggleAll(true)">Expand all</button>
     <button onclick="toggleAll(false)">Collapse all</button>
-    <span class="muted">CNS and PNS content loads from <code>/docs/cns.md</code> and <code>/docs/pns.md</code>.</span>
+    <span class="muted">CNS and PNS content loads from <code>/cns.md</code> and <code>/pns.md</code>.</span>
   </div>
 
   <!-- Two collapsibles side-by-side on large screens -->
@@ -69,85 +86,139 @@
     <div class="col">
       <details open id="d-cns">
         <summary>Central Nervous System (CNS) — concept map & notes</summary>
-        <div id="cns" class="md"><p class="muted">Loading cns.md…</p></div>
+
+        <!-- per-panel controls -->
+        <div class="tinybar">
+          <button type="button" onclick="toggleSubs('cns', true)">Expand all sections</button>
+          <button type="button" onclick="toggleSubs('cns', false)">Collapse all sections</button>
+          <button type="button" onclick="openToDepth('cns', 2)">Expand to H2</button>
+          <button type="button" onclick="openToDepth('cns', 3)">Expand to H3</button>
+          <button type="button" onclick="openToDepth('cns', 4)">Expand to H4</button>
+        </div>
+
+        <div id="cns" class="md subtree"><p class="muted">Loading cns.md…</p></div>
         <p class="muted">Open as its own page: <a href="cns.md">cns.md</a></p>
       </details>
     </div>
+
     <div class="col">
       <details open id="d-pns">
         <summary>Peripheral Nervous System (PNS) — concept map & notes</summary>
-        <div id="pns" class="md"><p class="muted">Loading pns.md…</p></div>
+
+        <!-- per-panel controls -->
+        <div class="tinybar">
+          <button type="button" onclick="toggleSubs('pns', true)">Expand all sections</button>
+          <button type="button" onclick="toggleSubs('pns', false)">Collapse all sections</button>
+          <button type="button" onclick="openToDepth('pns', 2)">Expand to H2</button>
+          <button type="button" onclick="openToDepth('pns', 3)">Expand to H3</button>
+          <button type="button" onclick="openToDepth('pns', 4)">Expand to H4</button>
+        </div>
+
+        <div id="pns" class="md subtree"><p class="muted">Loading pns.md…</p></div>
         <p class="muted">Open as its own page: <a href="pns.md">pns.md</a></p>
       </details>
     </div>
   </div>
 
+  <!-- ===== Flashcards (options) BEFORE Extra 3D models ===== -->
+  <details open>
+    <summary>Flashcards (options)</summary>
+    <div class="md">
+      <p>Prefer a self-test view? Open the flashcards (click-to-reveal) you liked:</p>
+      <p><a href="cns-pns-flashcards-click-reveal.html" target="_blank" rel="noopener">Open Flashcards (Click-to-Reveal)</a></p>
+      <p class="muted">Later, we can auto-generate cards from your CNS/PNS markdown.</p>
+    </div>
+  </details>
+
   <!-- ===== Extra 3D models (unchanged Sketchfab iframes) ===== -->
   <details>
     <summary>Extra 3D models (click to expand)</summary>
 
-    <div class="embed skf-frame-wrap">
-      <iframe
-        title="Detailed Labeled Surface Structures"
-        src="https://sketchfab.com/models/d91080b5af91497b822728c08804f33c/embed?autostart=1&ui_infos=0&ui_watermark=0"
-        allow="autoplay; fullscreen; xr-spatial-tracking"
-        allowfullscreen playsinline loading="lazy" tabindex="0"></iframe>
-    </div>
-
-    <div class="embed skf-frame-wrap">
-      <iframe
-        title="Spinal cord lesions &amp; clinical signs &amp; symptoms"
-        src="https://sketchfab.com/models/bf086ab152a94273837b12a1702cf644/embed?autostart=1&ui_infos=0&ui_watermark=0"
-        allow="autoplay; fullscreen; xr-spatial-tracking"
-        allowfullscreen playsinline loading="lazy" tabindex="0"></iframe>
-    </div>
-
-    <div class="embed skf-frame-wrap">
-      <iframe
-        title="Cerebral sulci and gyri"
-        src="https://sketchfab.com/models/afe2aed1d91b4b52be3c842a63aa69b1/embed?autostart=1&ui_infos=0&ui_watermark=0"
-        allow="autoplay; fullscreen; xr-spatial-tracking"
-        allowfullscreen playsinline loading="lazy" tabindex="0"></iframe>
-    </div>
-
-    <div class="embed skf-frame-wrap">
-      <iframe
-        title="Spinothalamic Tract 10/13/21"
-        src="https://sketchfab.com/models/9754d81f54df426aafa25b3799b5ce65/embed?autostart=1&ui_infos=0&ui_watermark=0"
-        allow="autoplay; fullscreen; xr-spatial-tracking"
-        allowfullscreen playsinline loading="lazy" tabindex="0"></iframe>
-    </div>
-
-    <div class="embed skf-frame-wrap">
-      <iframe
-        title="Corticospinal Tract"
-        src="https://sketchfab.com/models/51d7d61024bf4ecb88f85a35f0041960/embed?autostart=1&ui_infos=0&ui_watermark=0"
-        allow="autoplay; fullscreen; xr-spatial-tracking"
-        allowfullscreen playsinline loading="lazy" tabindex="0"></iframe>
-    </div>
-
-    <div class="embed skf-frame-wrap">
-      <iframe
-        title="Ascending tracts"
-        src="https://sketchfab.com/models/3d7e233edbb94cd8b9e1b4047bead951/embed?autostart=1&ui_infos=0&ui_watermark=0"
-        allow="autoplay; fullscreen; xr-spatial-tracking"
-        allowfullscreen playsinline loading="lazy" tabindex="0"></iframe>
-    </div>
-
-    <div class="embed skf-frame-wrap">
-      <iframe
-        title="Sagittal head section"
-        src="https://sketchfab.com/models/19378ae104f74bb186c3cb9bd90e16f0/embed?autostart=1&ui_infos=0&ui_watermark=0"
-        allow="autoplay; fullscreen; xr-spatial-tracking"
-        allowfullscreen playsinline loading="lazy" tabindex="0"></iframe>
-    </div>
+    <div class="embed" style="border-radius:10px; overflow:hidden; background:#000"><iframe title="Detailed Labeled Surface Structures" src="https://sketchfab.com/models/d91080b5af91497b822728c08804f33c/embed?autostart=1&ui_infos=0&ui_watermark=0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe></div>
+    <div class="embed" style="border-radius:10px; overflow:hidden; background:#000"><iframe title="Spinal cord lesions &amp; clinical signs &amp; symptoms" src="https://sketchfab.com/models/bf086ab152a94273837b12a1702cf644/embed?autostart=1&ui_infos=0&ui_watermark=0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe></div>
+    <div class="embed" style="border-radius:10px; overflow:hidden; background:#000"><iframe title="Cerebral sulci and gyri" src="https://sketchfab.com/models/afe2aed1d91b4b52be3c842a63aa69b1/embed?autostart=1&ui_infos=0&ui_watermark=0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe></div>
+    <div class="embed" style="border-radius:10px; overflow:hidden; background:#000"><iframe title="Spinothalamic Tract 10/13/21" src="https://sketchfab.com/models/9754d81f54df426aafa25b3799b5ce65/embed?autostart=1&ui_infos=0&ui_watermark=0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe></div>
+    <div class="embed" style="border-radius:10px; overflow:hidden; background:#000"><iframe title="Corticospinal Tract" src="https://sketchfab.com/models/51d7d61024bf4ecb88f85a35f0041960/embed?autostart=1&ui_infos=0&ui_watermark=0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe></div>
+    <div class="embed" style="border-radius:10px; overflow:hidden; background:#000"><iframe title="Ascending tracts" src="https://sketchfab.com/models/3d7e233edbb94cd8b9e1b4047bead951/embed?autostart=1&ui_infos=0&ui_watermark=0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe></div>
+    <div class="embed" style="border-radius:10px; overflow:hidden; background:#000"><iframe title="Sagittal head section" src="https://sketchfab.com/models/19378ae104f74bb186c3cb9bd90e16f0/embed?autostart=1&ui_infos=0&ui_watermark=0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe></div>
   </details>
 
   <script>
+    // Expand/collapse helper (top-level panels)
     function toggleAll(open){
       document.querySelectorAll('details').forEach(d => d.open = open);
     }
+    // Expand/collapse all nested blocks in one column
+    function toggleSubs(containerId, open){
+      const host = document.getElementById(containerId);
+      if(!host) return;
+      host.querySelectorAll('.subtree details').forEach(d => d.open = open);
+    }
+    // Expand to a specific heading depth (2=H2 only, 3=H2+H3, 4=H2+H3+H4)
+    function openToDepth(containerId, depth){
+      const host = document.getElementById(containerId);
+      if(!host) return;
+      host.querySelectorAll('.subtree details').forEach(d => {
+        const lvl = parseInt(d.dataset.level || '999', 10);
+        d.open = (lvl && lvl <= depth);
+      });
+    }
 
+    // Convert Markdown-generated HTML into nested <details> trees (H2..H4)
+    function buildNestedDetails(container, minLevel=2, maxLevel=4){
+      const kids = Array.from(container.childNodes);
+      const isHeading = n => n.nodeType === 1 && /^H[1-6]$/.test(n.tagName);
+      const levelOf   = n => parseInt(n.tagName.slice(1), 10);
+
+      // New root that will hold rebuilt structure
+      const root = document.createElement('div');
+      root.className = 'subtree';
+
+      // Stack tracks current open blocks by level
+      const stack = [{ level: minLevel-1, el: root, content: root }];
+
+      let i = 0;
+      while (i < kids.length){
+        const node = kids[i];
+
+        if (isHeading(node)){
+          const lvl = levelOf(node);
+          if (lvl >= minLevel && lvl <= maxLevel){
+            // Create a <details> block with <summary> from this heading
+            const det = document.createElement('details');
+            det.open = false;                    // collapsed by default
+            det.dataset.level = String(lvl);
+            const sum = document.createElement('summary');
+            sum.textContent = node.textContent || 'Section';
+            const box = document.createElement('div');
+            box.className = 'block';
+
+            det.appendChild(sum);
+            det.appendChild(box);
+
+            // Pop back until parent is the nearest ancestor with lower level
+            while (stack.length && stack[stack.length-1].level >= lvl) stack.pop();
+            const parent = stack[stack.length-1];
+            parent.content.appendChild(det);
+            stack.push({ level: lvl, el: det, content: box });
+
+            // Drop the heading node (we consumed it)
+            i++;
+            continue;
+          }
+        }
+
+        // If it's not a handled heading, append to CURRENT content box
+        stack[stack.length-1].content.appendChild(node);
+        i++;
+      }
+
+      // Replace container contents
+      container.innerHTML = '';
+      Array.from(root.childNodes).forEach(n => container.appendChild(n));
+    }
+
+    // Load a markdown file and auto-wrap H2..H4 into nested collapsibles
     async function loadMD(file, target){
       const el = document.getElementById(target);
       try {
@@ -155,6 +226,10 @@
         if(!res.ok) throw new Error(res.status + " " + res.statusText);
         const md = await res.text();
         el.innerHTML = marked.parse(md);
+
+        // Build nested details for H2/H3/H4
+        buildNestedDetails(el, 2, 4);
+
       } catch (err) {
         el.innerHTML = `<p class="error">Failed to load ${file}: ${err.message}</p>`;
       }
