@@ -205,11 +205,57 @@
 <summary><b>🔽 Synaptic Neurochemistry</b></summary>
 
 - **Neurotransmitters**  
-  - Cholinergic → acetylcholine (ACh)  
-  - Amino acids → glutamate (excitatory), GABA & glycine (inhibitory)  
-  - Amines → dopamine, norepinephrine, serotonin, histamine  
-  - Peptides → substance P, endorphins, enkephalins  
-  - Other → nitric oxide  
+- **Acetylcholine (ACh)**
+  - Neuromuscular junction; autonomic ganglia; parasympathetic effector
+  - Receptors: nicotinic (ionotropic), muscarinic (metabotropic)
+  - ↑AChE inhibitors (donepezil, neostigmine) → ↑ACh
+  - Blocked by botulinum (↓release), curare (Nm antagonist)
+
+- **Glutamate**
+  - Major CNS **excitatory** transmitter
+  - Receptors: NMDA, AMPA, kainate (ionotropic), mGluR (metabotropic)
+  - NMDA overactivation → excitotoxicity (stroke, trauma)
+
+- **GABA**
+  - Major CNS **inhibitory** transmitter
+  - Receptors: GABA_A (Cl⁻ channel), GABA_B (Gi)
+  - ↑GABA effect: benzodiazepines, barbiturates, propofol
+
+- **Glycine**
+  - Inhibitory in spinal cord/brainstem (Cl⁻ influx)
+  - Blocked by strychnine → severe muscle spasms
+
+- **Dopamine**
+  - Motor control, reward, motivation
+  - Pathways: nigrostriatal, mesolimbic, mesocortical, tuberoinfundibular
+  - ↓Dopamine → Parkinsonism; ↑Dopamine → psychosis
+  - D2 antagonists = antipsychotics; L-DOPA/agonists = Parkinson’s
+
+- **Norepinephrine (NE)**
+  - Arousal, attention, stress response (locus coeruleus)
+  - Sympathetic postganglionic transmitter
+  - α/β receptors; ↑NE with SNRIs, TCAs; ↓NE in depression
+
+- **Serotonin (5-HT)**
+  - Mood, anxiety, sleep, pain modulation (raphe nuclei)
+  - Receptors: 5-HT₁–₇; SSRIs/SNRIs ↑5-HT
+  - Triptans = 5-HT₁B/1D agonists for migraine
+
+- **Histamine**
+  - Wakefulness, appetite (tuberomammillary nucleus)
+  - H₁ blockers (1st gen) → sedation
+
+- **Substance P**
+  - **Pain transmission** (nociceptive C fibers) to dorsal horn
+  - Elevated in inflammation; blocked indirectly by descending inhibition
+
+- **Endorphins & Enkephalins (Opioid peptides)**
+  - Descending **antinociception** (PAG → raphe → dorsal horn)
+  - μ/δ/κ receptors; mimicked by opioids (morphine, fentanyl)
+
+- **Nitric Oxide (NO)**
+  - Diffusible gas; retrograde modulator; ↑cGMP
+  - Vasodilation; involved in long-term potentiation (memory)
 
 - Disorders of synaptic function → botulism, myasthenia gravis, Lambert-Eaton  
 
