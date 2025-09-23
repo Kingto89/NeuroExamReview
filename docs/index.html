@@ -9,11 +9,12 @@
     body{
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       max-width: var(--maxw); margin: 24px auto; padding: 0 16px; line-height: 1.55;
+      color:#111827;
     }
     h1{margin: 0 0 8px}
     h2{margin: 18px 0 8px}
     .embed{margin:16px 0}
-    details{margin:18px 0; border:1px solid #e5e7eb; border-radius:10px; padding:10px 12px;}
+    details{margin:18px 0; border:1px solid #e5e7eb; border-radius:10px; padding:10px 12px; background:#fff}
     summary{cursor:pointer; font-weight:700}
     .md{padding:10px 0}
     .muted{color:#6b7280; font-size:.92rem}
@@ -24,7 +25,7 @@
     button{padding:6px 10px; border:1px solid #d1d5db; border-radius:8px; background:#fff; cursor:pointer}
     button:hover{background:#f3f4f6}
 
-    /* Mobile-friendly iframes */
+    /* Mobile-friendly for top model iframe */
     .skf-frame-wrap{
       width:100%; height:520px; border-radius:10px; overflow:hidden; background:#000;
       isolation:isolate;
@@ -37,22 +38,23 @@
     * { -webkit-tap-highlight-color: transparent; }
     body { overscroll-behavior-y: contain; }
 
-    /* === Auto-collapsible styling for H2/H3/H4 === */
-    .subtree details {
-      margin:10px 0; padding:0; border-radius:12px; overflow:hidden;
-      border:1px solid #e5e7eb; background:#fff;
+    /* === Collapsible list items built from bolded subheadings (no MD edits required) === */
+    .card-li{
+      border:1px solid #e5e7eb; border-radius:10px; background:#f9fafb;
+      margin:10px 0; padding:0; overflow:hidden;
     }
-    .subtree summary {
-      padding:10px 12px; background:#f9fafb; list-style:none; outline:none;
+    .card-li .li-head{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:10px; padding:10px 12px; cursor:pointer; user-select:none;
+      background:#f3f4f6; font-weight:700;
     }
-    .subtree summary::-webkit-details-marker { display:none; }
-    .subtree .block { padding:12px; background:#fff; }
-    /* visual indent for nested levels */
-    .subtree details details { margin-left:10px; }
-    .subtree details details details { margin-left:20px; }
+    .card-li .li-head .title{flex:1 1 auto;}
+    .card-li .li-body{ padding:10px 12px; display:none; background:#fff }
+    .card-li.open .li-body{ display:block; }
+    .chev{ font-size:12px; color:#6b7280 }
 
-    .tinybar { display:flex; gap:8px; align-items:center; margin:6px 0 10px; flex-wrap:wrap; }
-    .tinybar button { padding:4px 8px; font-size:.9rem; }
+    /* Keep nested bullets tidy inside cards */
+    .card-li ul{ margin:6px 0 6px 18px }
   </style>
 
   <!-- Markdown renderer -->
@@ -62,7 +64,7 @@
   <h1>NeuroExamReview</h1>
   <p class="muted">Interactive brain model + collapsible CNS/PNS study maps</p>
 
-  <!-- Top 3D model (BioDigital you chose) -->
+  <!-- Top 3D model (BioDigital you selected) -->
   <h2>Brain 3D (interactive model)</h2>
   <div class="embed skf-frame-wrap">
     <iframe
@@ -86,35 +88,20 @@
     <div class="col">
       <details open id="d-cns">
         <summary>Central Nervous System (CNS) — concept map & notes</summary>
-
-        <!-- per-panel controls -->
-        <div class="tinybar">
-          <button type="button" onclick="toggleSubs('cns', true)">Expand all subsections</button>
-          <button type="button" onclick="toggleSubs('cns', false)">Collapse all subsections</button>
-        </div>
-
-        <div id="cns" class="md subtree"><p class="muted">Loading cns.md…</p></div>
+        <div id="cns" class="md"><p class="muted">Loading cns.md…</p></div>
         <p class="muted">Open as its own page: <a href="cns.md">cns.md</a></p>
       </details>
     </div>
-
     <div class="col">
       <details open id="d-pns">
         <summary>Peripheral Nervous System (PNS) — concept map & notes</summary>
-
-        <!-- per-panel controls -->
-        <div class="tinybar">
-          <button type="button" onclick="toggleSubs('pns', true)">Expand all subsections</button>
-          <button type="button" onclick="toggleSubs('pns', false)">Collapse all subsections</button>
-        </div>
-
-        <div id="pns" class="md subtree"><p class="muted">Loading pns.md…</p></div>
+        <div id="pns" class="md"><p class="muted">Loading pns.md…</p></div>
         <p class="muted">Open as its own page: <a href="pns.md">pns.md</a></p>
       </details>
     </div>
   </div>
 
-  <!-- ===== Extra 3D models (unchanged Sketchfab iframes) ===== -->
+  <!-- ===== (Optional) Extra 3D models — unchanged iframes ===== -->
   <details>
     <summary>Extra 3D models (click to expand)</summary>
 
@@ -128,83 +115,93 @@
   </details>
 
   <script>
-    // Expand/collapse helper (top-level and per-column)
+    // Top-level expand/collapse helper
     function toggleAll(open){
       document.querySelectorAll('details').forEach(d => d.open = open);
     }
-    function toggleSubs(containerId, open){
-      const host = document.getElementById(containerId);
-      if(!host) return;
-      host.querySelectorAll('.subtree details').forEach(d => d.open = open);
+
+    // ---- Enhancer: turn bolded bullet subheadings into collapsible items ----
+    function enhanceBulletedCollapsibles(root){
+      // For each UL>LI where the first child is <strong> and there is more content,
+      // wrap that LI into a collapsible "card".
+      const lis = root.querySelectorAll('ul > li');
+      lis.forEach(li => {
+        // only consider the immediate <strong> inside the LI (not nested)
+        const strong = li.querySelector(':scope > strong');
+        if (!strong) return;
+
+        // Does this LI have more than just the <strong> title?
+        const hasMore = Array.from(li.childNodes).some(n=>{
+          if (n.nodeType===1 && n.tagName==='STRONG') return false;
+          if (n.nodeType===3 && n.textContent.trim()==='') return false;
+          return true; // text, nested UL/OL, etc.
+        });
+        if (!hasMore) return;
+
+        // Build a collapsible card
+        const card = document.createElement('div');
+        card.className = 'card-li';
+
+        const head = document.createElement('div');
+        head.className = 'li-head';
+
+        const title = document.createElement('div');
+        title.className = 'title';
+        title.textContent = strong.textContent.trim();
+
+        const chev = document.createElement('span');
+        chev.className = 'chev';
+        chev.textContent = '▼';
+
+        head.appendChild(title);
+        head.appendChild(chev);
+
+        const body = document.createElement('div');
+        body.className = 'li-body';
+
+        // Move everything EXCEPT the first <strong> into the body
+        const toMove = [];
+        Array.from(li.childNodes).forEach(n => { if (n !== strong) toMove.push(n); });
+        toMove.forEach(n => body.appendChild(n));
+
+        // Replace original LI contents with the card
+        li.innerHTML = '';
+        li.appendChild(card);
+        card.appendChild(head);
+        card.appendChild(body);
+
+        // Toggle open/close on click
+        head.addEventListener('click', () => {
+          const open = !card.classList.contains('open');
+          card.classList.toggle('open', open);
+          chev.textContent = open ? '▲' : '▼';
+        });
+      });
     }
 
-    // Turn Markdown headings (H2..H4) into nested <details> with their content
-    function buildNestedDetails(container, minLevel=2, maxLevel=4){
-      const nodes = Array.from(container.childNodes); // snapshot before we mutate
-      const root = document.createElement('div');
-      root.className = 'subtree';
-
-      const isHeading = el => el && el.nodeType === 1 && /^H[1-6]$/.test(el.tagName);
-      const levelOf   = el => parseInt(el.tagName.slice(1), 10);
-
-      // Stack of { level, contentEl } where contentEl is where children append
-      const stack = [{ level: minLevel - 1, contentEl: root }];
-
-      for (let n of nodes){
-        if (isHeading(n)){
-          const lvl = levelOf(n);
-          if (lvl >= minLevel && lvl <= maxLevel){
-            // Create a collapsible block for this heading
-            const det = document.createElement('details');
-            det.open = false;
-            const sum = document.createElement('summary');
-            sum.textContent = n.textContent || 'Section';
-            const box = document.createElement('div');
-            box.className = 'block';
-            det.appendChild(sum);
-            det.appendChild(box);
-
-            // Find correct parent (nearest lower level)
-            while (stack.length && stack[stack.length-1].level >= lvl) stack.pop();
-            stack[stack.length-1].contentEl.appendChild(det);
-            stack.push({ level: lvl, contentEl: box });
-
-            // consume heading (don’t re-append it)
-            continue;
-          }
-        }
-        // Not a handled heading → append to current box
-        stack[stack.length-1].contentEl.appendChild(n);
-      }
-
-      // Replace original with rebuilt tree
-      container.innerHTML = '';
-      while (root.firstChild) container.appendChild(root.firstChild);
-    }
-
-    // Load a markdown file, render it, then auto-wrap headings (H2…H4)
-    async function loadMD(file, target){
-      const el = document.getElementById(target);
+    // Load a markdown file, render with marked, then enhance bullets
+    async function loadMD(file, targetId){
+      const el = document.getElementById(targetId);
       try {
         const res = await fetch(file, {cache: "no-store"});
         if(!res.ok) throw new Error(res.status + " " + res.statusText);
         const md = await res.text();
+
+        // Render markdown. (Raw HTML in your md, like <details>, is preserved by marked.)
         el.innerHTML = marked.parse(md);
 
-        // Build nested collapsibles:
-        // H2 (e.g., Motor pathways, Brainstem, Sensory…)
-        // H3 (e.g., Corticospinal system/pyramidal, Corticobulbar…)
-        // H4 (e.g., Lateral/Anterior/Medial corticospinal, specific tracts, sub-definitions)
-        buildNestedDetails(el, 2, 4);
+        // After render, convert bolded bullets to collapsibles
+        enhanceBulletedCollapsibles(el);
 
       } catch (err) {
         el.innerHTML = `<p class="error">Failed to load ${file}: ${err.message}</p>`;
       }
     }
 
+    // Kick off markdown loads
     document.addEventListener('DOMContentLoaded', () => {
-      loadMD("cns.md", "cns");
-      loadMD("pns.md", "pns");
+      loadMD('cns.md', 'cns');
+      loadMD('pns.md', 'pns');
     });
   </script>
 </body>
