@@ -55,6 +55,21 @@
 
     /* Keep nested bullets tidy inside cards */
     .card-li ul{ margin:6px 0 6px 18px }
+
+    /* === FIX: Auto-scale Sketchfab iframes to remove black gaps === */
+    .skf-embed{
+      width:100%;
+      aspect-ratio:16/9;
+      background:#000;
+      border-radius:10px;
+      overflow:hidden;
+    }
+    .skf-embed iframe{
+      width:100%;
+      height:100%;
+      border:0;
+      display:block;
+    }
   </style>
 
   <!-- Markdown renderer -->
@@ -101,17 +116,31 @@
     </div>
   </div>
 
-  <!-- ===== Extra 3D models (unchanged Sketchfab iframes) ===== -->
+  <!-- ===== Extra 3D models (fixed wrappers) ===== -->
   <details>
     <summary>Extra 3D models (click to expand)</summary>
 
-    <div class="embed" style="border-radius:10px; overflow:hidden; background:#000"><iframe title="Detailed Labeled Surface Structures" src="https://sketchfab.com/models/d91080b5af91497b822728c08804f33c/embed?autostart=1&ui_infos=0&ui_watermark=0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe></div>
-    <div class="embed" style="border-radius:10px; overflow:hidden; background:#000"><iframe title="Spinal cord lesions &amp; clinical signs &amp; symptoms" src="https://sketchfab.com/models/bf086ab152a94273837b12a1702cf644/embed?autostart=1&ui_infos=0&ui_watermark=0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe></div>
-    <div class="embed" style="border-radius:10px; overflow:hidden; background:#000"><iframe title="Cerebral sulci and gyri" src="https://sketchfab.com/models/afe2aed1d91b4b52be3c842a63aa69b1/embed?autostart=1&ui_infos=0&ui_watermark=0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe></div>
-    <div class="embed" style="border-radius:10px; overflow:hidden; background:#000"><iframe title="Spinothalamic Tract 10/13/21" src="https://sketchfab.com/models/9754d81f54df426aafa25b3799b5ce65/embed?autostart=1&ui_infos=0&ui_watermark=0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe></div>
-    <div class="embed" style="border-radius:10px; overflow:hidden; background:#000"><iframe title="Corticospinal Tract" src="https://sketchfab.com/models/51d7d61024bf4ecb88f85a35f0041960/embed?autostart=1&ui_infos=0&ui_watermark=0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe></div>
-    <div class="embed" style="border-radius:10px; overflow:hidden; background:#000"><iframe title="Ascending tracts" src="https://sketchfab.com/models/3d7e233edbb94cd8b9e1b4047bead951/embed?autostart=1&ui_infos=0&ui_watermark=0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe></div>
-    <div class="embed" style="border-radius:10px; overflow:hidden; background:#000"><iframe title="Sagittal head section" src="https://sketchfab.com/models/19378ae104f74bb186c3cb9bd90e16f0/embed?autostart=1&ui_infos=0&ui_watermark=0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe></div>
+    <div class="embed skf-embed">
+      <iframe title="Detailed Labeled Surface Structures" src="https://sketchfab.com/models/d91080b5af91497b822728c08804f33c/embed?autostart=1&ui_infos=0&ui_watermark=0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="embed skf-embed">
+      <iframe title="Spinal cord lesions &amp; clinical signs &amp; symptoms" src="https://sketchfab.com/models/bf086ab152a94273837b12a1702cf644/embed?autostart=1&ui_infos=0&ui_watermark=0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="embed skf-embed">
+      <iframe title="Cerebral sulci and gyri" src="https://sketchfab.com/models/afe2aed1d91b4b52be3c842a63aa69b1/embed?autostart=1&ui_infos=0&ui_watermark=0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="embed skf-embed">
+      <iframe title="Spinothalamic Tract 10/13/21" src="https://sketchfab.com/models/9754d81f54df426aafa25b3799b5ce65/embed?autostart=1&ui_infos=0&ui_watermark=0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="embed skf-embed">
+      <iframe title="Corticospinal Tract" src="https://sketchfab.com/models/51d7d61024bf4ecb88f85a35f0041960/embed?autostart=1&ui_infos=0&ui_watermark=0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="embed skf-embed">
+      <iframe title="Ascending tracts" src="https://sketchfab.com/models/3d7e233edbb94cd8b9e1b4047bead951/embed?autostart=1&ui_infos=0&ui_watermark=0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="embed skf-embed">
+      <iframe title="Sagittal head section" src="https://sketchfab.com/models/19378ae104f74bb186c3cb9bd90e16f0/embed?autostart=1&ui_infos=0&ui_watermark=0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+    </div>
   </details>
 
   <script>
@@ -131,7 +160,6 @@
     //  A) bullets like: <li><strong>Title</strong> ...more...</li>
     //  B) paragraph-only headings: <p><strong>Title</strong></p> followed by content until a boundary
     function makeCardFromPair(titleNode, nodesToWrap){
-      // Build a card element placed where the first content node currently sits.
       const card = document.createElement('div');
       card.className = 'card-li';
 
@@ -152,16 +180,13 @@
       const body = document.createElement('div');
       body.className = 'li-body';
 
-      // Insert card before the first node to wrap
       const insertBefore = nodesToWrap[0];
       insertBefore.parentNode.insertBefore(card, insertBefore);
       card.appendChild(head);
       card.appendChild(body);
 
-      // Move all content nodes into body
       nodesToWrap.forEach(n => body.appendChild(n));
 
-      // Click toggle
       head.addEventListener('click', () => {
         const open = !card.classList.contains('open');
         card.classList.toggle('open', open);
@@ -175,7 +200,6 @@
         const strong = li.querySelector(':scope > strong');
         if (!strong) return;
 
-        // Determine if there is content beyond the title
         const more = Array.from(li.childNodes).filter(n => {
           if (n === strong) return false;
           if (n.nodeType === 3 && n.textContent.trim() === '') return false;
@@ -183,7 +207,6 @@
         });
         if (more.length === 0) return;
 
-        // Build card inside the LI
         const card = document.createElement('div');
         card.className = 'card-li';
 
@@ -201,10 +224,8 @@
         const body = document.createElement('div');
         body.className = 'li-body';
 
-        // Move all except the strong into body
         more.forEach(n => body.appendChild(n));
 
-        // Replace LI content with our card
         li.innerHTML = '';
         li.appendChild(card);
         card.appendChild(head);
@@ -219,46 +240,33 @@
     }
 
     function enhanceParagraphHeadingGroups(container){
-      // Find paragraphs that are ONLY a <strong>Title</strong>
       const paras = container.querySelectorAll('p > strong:only-child');
       paras.forEach(str => {
         const p = str.parentElement;
-        // Must ensure this paragraph is not already inside a card header
         if (p.closest('.card-li')) return;
 
-        // Determine the run of siblings that belong to this heading, until a boundary:
-        // - next <p><strong>...</strong></p>
-        // - <hr>
-        // - new top-level <details> (rare inside the same panel)
-        // - or end of container
         const run = [];
         let n = p.nextSibling;
         while (n) {
           if (n.nodeType === 1) {
-            // element node
             if (n.matches('p > strong:only-child, hr, details')) break;
             if (n.matches('p')) {
               const onlyStrong = n.querySelector(':scope > strong:only-child');
               if (onlyStrong) break;
             }
           }
-          // collect and advance
           const next = n.nextSibling;
           run.push(n);
           n = next;
         }
 
-        if (run.length === 0) return; // nothing to collapse; leave as-is
+        if (run.length === 0) return;
 
-        // Create a card before the first run node. The visible title is from <strong>.
         makeCardFromPair(str, run);
-
-        // Remove the original title paragraph (we used its text as the header)
         p.remove();
       });
     }
 
-    // Load a markdown file, render with marked, then enhance bullets + paragraph headings
     async function loadMD(file, targetId){
       const el = document.getElementById(targetId);
       try {
@@ -266,12 +274,9 @@
         if(!res.ok) throw new Error(res.status + " " + res.statusText);
         const md = await res.text();
 
-        // Render markdown. (Raw HTML in MD is preserved.)
         el.innerHTML = marked.parse(md);
 
-        // 1) Bulleted strong items -> cards
         enhanceBulletedCards(el);
-        // 2) Paragraph-only strong headings -> cards wrapping following content
         enhanceParagraphHeadingGroups(el);
 
       } catch (err) {
@@ -279,7 +284,6 @@
       }
     }
 
-    // Kick off markdown loads
     document.addEventListener('DOMContentLoaded', () => {
       loadMD('cns.md', 'cns');
       loadMD('pns.md', 'pns');
