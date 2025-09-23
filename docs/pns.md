@@ -38,11 +38,11 @@
   2. Na⁺ inactivation  
   3. Repolarization: K⁺ efflux  
 
-  **Resting potential**:
-  -70 mV (maintained by Na⁺/K⁺ ATPase → 3 Na⁺ out, 2 K⁺ in)  
+- **Resting potential**
+  - ~ –70 mV (maintained by Na⁺/K⁺ ATPase → 3 Na⁺ out, 2 K⁺ in)  
 
-  **Threshold**:
-  -55 mV → Na⁺ channels open  
+- **Threshold**
+  - ~ –55 mV → Na⁺ channels open  
 
 - **Refractory Periods**  
   - Absolute → no AP possible (Na+ channels inactivated)  
@@ -102,9 +102,10 @@
   - **Skin** → touch, nociception, temperature  
   - **Musculoskeletal** → proprioception, nociception, temperature  
 
-- Touch pathways  
--**Light/discriminative touch** → A-beta fibers, precise localization  
--**Crude touch** → A-delta & C fibers, poorly localized  
+- **Touch pathways**
+  - Light/discriminative touch → A-beta fibers, precise localization
+  - Crude touch → A-delta & C fibers, poorly localized
+
 
 </details>
 
@@ -121,10 +122,28 @@
   - Gamma dynamic → velocity sensitivity (nuclear bag)  
   - Gamma static → static length sensitivity (nuclear chain + some bag)  
 
-- **Golgi Tendon Organ (GTO)** → Ib afferents, tension in tendon  
-- **Joint Receptors**  
-  - Ruffini & paciniform endings → II afferents  
-  - Free nerve endings → III & IV afferents  
+- **Golgi Tendon Organ (GTO)**
+  - Ib afferents
+  - Senses tension in tendon
+
+- **Joint Receptors**
+  - **Ruffini endings (Type I)**
+    - Afferents: Group II
+    - Slowly adapting, low threshold
+    - Signal joint position, static tension, direction of movement  
+  - **Paciniform (Pacinian) corpuscles (Type II)**
+    - Afferents: Group II
+    - Rapidly adapting
+    - Detect acceleration / deceleration of movement  
+  - **Golgi-like ligament endings (Type III)**
+    - Afferents: Group Ib
+    - High threshold, slowly adapting
+    - Active at extreme joint ranges, protective role  
+  - **Free nerve endings (Type IV)**
+    - Afferents: Group III & IV (A-delta and C fibers)
+    - High threshold, nociceptive
+    - Signal pain, inflammation  
+ 
 
 </details>
 
