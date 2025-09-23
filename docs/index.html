@@ -38,7 +38,7 @@
     * { -webkit-tap-highlight-color: transparent; }
     body { overscroll-behavior-y: contain; }
 
-    /* === Collapsible list items built from bolded subheadings (no MD edits required) === */
+    /* Collapsible cards built from bolded subheadings (no MD edits required) */
     .card-li{
       border:1px solid #e5e7eb; border-radius:10px; background:#f9fafb;
       margin:10px 0; padding:0; overflow:hidden;
@@ -101,7 +101,7 @@
     </div>
   </div>
 
-  <!-- ===== (Optional) Extra 3D models — unchanged iframes ===== -->
+  <!-- ===== Extra 3D models (unchanged Sketchfab iframes) ===== -->
   <details>
     <summary>Extra 3D models (click to expand)</summary>
 
@@ -115,62 +115,101 @@
   </details>
 
   <script>
-    // Top-level expand/collapse helper
+    // Top-level expand/collapse helper (Option 6: also toggles cards)
     function toggleAll(open){
+      // Open/close all <details>
       document.querySelectorAll('details').forEach(d => d.open = open);
+      // Open/close all card bodies
+      document.querySelectorAll('.card-li').forEach(card => {
+        card.classList.toggle('open', open);
+        const chev = card.querySelector('.chev');
+        if (chev) chev.textContent = open ? '▲' : '▼';
+      });
     }
 
-    // ---- Enhancer: turn bolded bullet subheadings into collapsible items ----
-    function enhanceBulletedCollapsibles(root){
-      // For each UL>LI where the first child is <strong> and there is more content,
-      // wrap that LI into a collapsible "card".
-      const lis = root.querySelectorAll('ul > li');
+    // ---- Enhancer: turn bolded subheadings into collapsible cards ----
+    //  A) bullets like: <li><strong>Title</strong> ...more...</li>
+    //  B) paragraph-only headings: <p><strong>Title</strong></p> followed by content until a boundary
+    function makeCardFromPair(titleNode, nodesToWrap){
+      // Build a card element placed where the first content node currently sits.
+      const card = document.createElement('div');
+      card.className = 'card-li';
+
+      const head = document.createElement('div');
+      head.className = 'li-head';
+
+      const title = document.createElement('div');
+      title.className = 'title';
+      title.textContent = titleNode.textContent.trim();
+
+      const chev = document.createElement('span');
+      chev.className = 'chev';
+      chev.textContent = '▼';
+
+      head.appendChild(title);
+      head.appendChild(chev);
+
+      const body = document.createElement('div');
+      body.className = 'li-body';
+
+      // Insert card before the first node to wrap
+      const insertBefore = nodesToWrap[0];
+      insertBefore.parentNode.insertBefore(card, insertBefore);
+      card.appendChild(head);
+      card.appendChild(body);
+
+      // Move all content nodes into body
+      nodesToWrap.forEach(n => body.appendChild(n));
+
+      // Click toggle
+      head.addEventListener('click', () => {
+        const open = !card.classList.contains('open');
+        card.classList.toggle('open', open);
+        chev.textContent = open ? '▲' : '▼';
+      });
+    }
+
+    function enhanceBulletedCards(container){
+      const lis = container.querySelectorAll('ul > li');
       lis.forEach(li => {
-        // only consider the immediate <strong> inside the LI (not nested)
         const strong = li.querySelector(':scope > strong');
         if (!strong) return;
 
-        // Does this LI have more than just the <strong> title?
-        const hasMore = Array.from(li.childNodes).some(n=>{
-          if (n.nodeType===1 && n.tagName==='STRONG') return false;
-          if (n.nodeType===3 && n.textContent.trim()==='') return false;
-          return true; // text, nested UL/OL, etc.
+        // Determine if there is content beyond the title
+        const more = Array.from(li.childNodes).filter(n => {
+          if (n === strong) return false;
+          if (n.nodeType === 3 && n.textContent.trim() === '') return false;
+          return true;
         });
-        if (!hasMore) return;
+        if (more.length === 0) return;
 
-        // Build a collapsible card
+        // Build card inside the LI
         const card = document.createElement('div');
         card.className = 'card-li';
 
         const head = document.createElement('div');
         head.className = 'li-head';
-
         const title = document.createElement('div');
         title.className = 'title';
         title.textContent = strong.textContent.trim();
-
         const chev = document.createElement('span');
         chev.className = 'chev';
         chev.textContent = '▼';
-
         head.appendChild(title);
         head.appendChild(chev);
 
         const body = document.createElement('div');
         body.className = 'li-body';
 
-        // Move everything EXCEPT the first <strong> into the body
-        const toMove = [];
-        Array.from(li.childNodes).forEach(n => { if (n !== strong) toMove.push(n); });
-        toMove.forEach(n => body.appendChild(n));
+        // Move all except the strong into body
+        more.forEach(n => body.appendChild(n));
 
-        // Replace original LI contents with the card
+        // Replace LI content with our card
         li.innerHTML = '';
         li.appendChild(card);
         card.appendChild(head);
         card.appendChild(body);
 
-        // Toggle open/close on click
         head.addEventListener('click', () => {
           const open = !card.classList.contains('open');
           card.classList.toggle('open', open);
@@ -179,7 +218,47 @@
       });
     }
 
-    // Load a markdown file, render with marked, then enhance bullets
+    function enhanceParagraphHeadingGroups(container){
+      // Find paragraphs that are ONLY a <strong>Title</strong>
+      const paras = container.querySelectorAll('p > strong:only-child');
+      paras.forEach(str => {
+        const p = str.parentElement;
+        // Must ensure this paragraph is not already inside a card header
+        if (p.closest('.card-li')) return;
+
+        // Determine the run of siblings that belong to this heading, until a boundary:
+        // - next <p><strong>...</strong></p>
+        // - <hr>
+        // - new top-level <details> (rare inside the same panel)
+        // - or end of container
+        const run = [];
+        let n = p.nextSibling;
+        while (n) {
+          if (n.nodeType === 1) {
+            // element node
+            if (n.matches('p > strong:only-child, hr, details')) break;
+            if (n.matches('p')) {
+              const onlyStrong = n.querySelector(':scope > strong:only-child');
+              if (onlyStrong) break;
+            }
+          }
+          // collect and advance
+          const next = n.nextSibling;
+          run.push(n);
+          n = next;
+        }
+
+        if (run.length === 0) return; // nothing to collapse; leave as-is
+
+        // Create a card before the first run node. The visible title is from <strong>.
+        makeCardFromPair(str, run);
+
+        // Remove the original title paragraph (we used its text as the header)
+        p.remove();
+      });
+    }
+
+    // Load a markdown file, render with marked, then enhance bullets + paragraph headings
     async function loadMD(file, targetId){
       const el = document.getElementById(targetId);
       try {
@@ -187,11 +266,13 @@
         if(!res.ok) throw new Error(res.status + " " + res.statusText);
         const md = await res.text();
 
-        // Render markdown. (Raw HTML in your md, like <details>, is preserved by marked.)
+        // Render markdown. (Raw HTML in MD is preserved.)
         el.innerHTML = marked.parse(md);
 
-        // After render, convert bolded bullets to collapsibles
-        enhanceBulletedCollapsibles(el);
+        // 1) Bulleted strong items -> cards
+        enhanceBulletedCards(el);
+        // 2) Paragraph-only strong headings -> cards wrapping following content
+        enhanceParagraphHeadingGroups(el);
 
       } catch (err) {
         el.innerHTML = `<p class="error">Failed to load ${file}: ${err.message}</p>`;
@@ -206,8 +287,6 @@
   </script>
 </body>
 </html>
-
-
 
 
 <!-- ===== Exam Bank (shuffled + timer + saved scores) ===== -->
