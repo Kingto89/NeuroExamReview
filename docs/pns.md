@@ -60,7 +60,7 @@
 <details open>
 <summary><b>🔽 Fiber Types & Sensory Receptors</b></summary>
 
-**A-alph a— Aα(I)**
+- **A-alph a— Aα(I)**
   13–20 μm • **myelinated**  
   Receptors: muscle spindle (Ia), Golgi tendon organ (Ib)  
   Modality: **proprioception**
