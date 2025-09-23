@@ -8,7 +8,7 @@
 <details open>
 <summary><b>🔽 Neuron Basics & Structure</b></summary>
 
-- Neuron = functional unit of nervous system  
+- **Neuron** = functional unit of nervous system  
   - Soma (cell body) → protein synthesis, nucleus, organelles  
   - Dendrites → main input branches, receive graded potentials  
   - Axon → output, arises at axon hillock (trigger zone)  
@@ -81,7 +81,7 @@
   Modality: **slow pain**, warm temperature, itch
 
 
-**Cutaneous Receptors **  
+**Cutaneous Receptors**
 - Hair follicle endings - minor hair movements perceived as touch  
 - Meissner’s corpuscle - low-frequency vibration 
 - Merkel cell - sensitive to sustained light touch, pressure, and shape.   
@@ -101,8 +101,8 @@
   - **Musculoskeletal** → proprioception, nociception, temperature  
 
 - Touch pathways  
-  - Light/discriminative touch → A-beta fibers, precise localization  
-  - Crude touch → A-delta & C fibers, poorly localized  
+  **- Light/discriminative touch** → A-beta fibers, precise localization  
+ ** - Crude touch** → A-delta & C fibers, poorly localized  
 
 </details>
 
