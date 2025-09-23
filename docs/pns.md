@@ -25,8 +25,14 @@
 <details open>
 <summary><b>🔽 Synapses & Potentials</b></summary>
 
-- **Electrical synapses** → direct ionic spread via gap junctions; fast, synchronous (brainstem respiratory nuclei).  
-- **Chemical synapses** → majority; neurotransmitters cross cleft. Target of most drugs/toxins/diseases.  
+- **Electrical synapses**
+  - Direct ionic spread via gap junctions  
+  - Very fast, synchronous (e.g., brainstem respiratory nuclei)  
+
+- **Chemical synapses**
+  - Majority of synapses in the nervous system  
+  - Neurotransmitters cross the synaptic cleft  
+  - Target of most drugs, toxins, and diseases  
 
 - **Postsynaptic Potentials**  
   - Excitatory (EPSP): Na+ / Ca2+ influx → depolarization  
