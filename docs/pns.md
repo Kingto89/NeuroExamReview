@@ -204,7 +204,7 @@
 <details open>
 <summary><b>🔽 Synaptic Neurochemistry</b></summary>
 
-- **Neurotransmitters**  
+Neurotransmitters 
 - **Acetylcholine (ACh)**
   - Neuromuscular junction; autonomic ganglia; parasympathetic effector
   - Receptors: nicotinic (ionotropic), muscarinic (metabotropic)
