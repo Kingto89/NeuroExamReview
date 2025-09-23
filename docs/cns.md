@@ -94,7 +94,7 @@
 
 ---
 
-**Rigidity Types**  
+**Hypertonic States**  
 - Spasticity = velocity-dependent hypertonia  
 - Rigidity = not velocity-dependent  
   - Decerebrate = upper extremity extended, lower extremity extended  
