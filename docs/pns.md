@@ -101,8 +101,8 @@
   - **Musculoskeletal** → proprioception, nociception, temperature  
 
 - Touch pathways  
-  **- Light/discriminative touch** → A-beta fibers, precise localization  
- ** - Crude touch** → A-delta & C fibers, poorly localized  
+**Light/discriminative touch** → A-beta fibers, precise localization  
+**Crude touch** → A-delta & C fibers, poorly localized  
 
 </details>
 
