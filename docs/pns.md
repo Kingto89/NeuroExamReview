@@ -38,9 +38,11 @@
   2. Na⁺ inactivation  
   3. Repolarization: K⁺ efflux  
 
-  **Resting potential**: –70 mV (maintained by Na⁺/K⁺ ATPase → 3 Na⁺ out, 2 K⁺ in)  
+  **Resting potential**:
+  70 mV (maintained by Na⁺/K⁺ ATPase → 3 Na⁺ out, 2 K⁺ in)  
 
-  **Threshold**: –55 mV → Na⁺ channels open  
+  **Threshold**:
+  55 mV → Na⁺ channels open  
 
 - **Refractory Periods**  
   - Absolute → no AP possible (Na+ channels inactivated)  
