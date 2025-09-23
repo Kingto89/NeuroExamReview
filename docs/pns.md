@@ -19,7 +19,6 @@
   - Retrograde (terminal → soma) → dynein, ATP  
 
 </details>
----
 
 <details>
 <summary><b>🧩 Neuron Types</b></summary>
@@ -40,7 +39,6 @@
   - Short local connections within CNS; integration and reflex arcs.  
 
 </details>
----
 
 <details open>
 <summary><b>🔽 Synapses & Potentials</b></summary>
