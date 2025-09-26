@@ -130,7 +130,7 @@
     - First order: DRG → dorsal horn  
     - 🔴 Decussates: anterior white commissure  
     - Divergent ascent to thalamus and limbic system  
-  - Carries: pain, temperature, crude touch  
+  - Carries: pain, temperature (lateral tract), crude touch (anterior tract) 
 
 - **Face sensation**  
   - Discriminative touch: trigeminal → main sensory nucleus → 🔴 decussates pons → VPM → cortex  
@@ -140,17 +140,17 @@
 ---
 
 **Divergent Pathways**  
-- Spinomesencephalic → periaqueductal gray (antinociception)  
-- Spinoreticular → arousal  
-- Spino-emotional → limbic emotional response  
+- Spinomesencephalic → periaqueductal gray, turn eyes/head towards input (antinociception)  
+- Spinoreticular → arousal and attention, sleep/wake cycle synapse recticular formation  
+- Spino-emotional → limbic emotional response, affective responses to pain
 
 ---
 
 **Nonconscious Relay Pathways (to Cerebellum)**  
-- Posterior spinocerebellar → proprioception lower extremity (ipsilateral)  
-- Cuneocerebellar → proprioception upper extremity  
-- Anterior spinocerebellar → double 🔴 decussation → functionally ipsilateral  
-- Rostrospinocerebellar → coordination upper extremity   
+- Posterior spinocerebellar (High Fidelity) → proprioception lower extremity, 1st order nucl. dorsalis (2nd order ipsilateral)  
+- Cuneocerebellar (HF) → proprioception upper extremity -- 1st order to medulla, 2nd ipsilateral
+- Anterior spinocerebellar (Internal) → double 🔴 decussation → functionally ipsilateral  
+- Rostrospinocerebellar (Internal) → coordination upper extremity   
 
 ---
 
