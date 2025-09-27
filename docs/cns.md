@@ -131,7 +131,7 @@
 - **Face** → VPM nucleus of thalamus  
 - Both converge at the somatosensory cortex.
 
-- **Anterolateral / Spinothalamic**
+   **Anterolateral / Spinothalamic**
   - Fast pain (A-delta fibers, glutamate)  
     - First order: DRG → lamina I, II, V dorsal horn  
     - 🔴 Decussates: anterior white commissure (cord)  
