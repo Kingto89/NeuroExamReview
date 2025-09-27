@@ -187,7 +187,7 @@ discriminative touch, vibration, proprioception
 <details>
 <summary><b>Nonconscious Relay Pathways (Cerebellum)</b></summary>
 
-- **Posterior spinocerebellar (HF)** → proprioception, lower extremity (1st order → nucleus dorsalis, 2nd order ipsilateral)  
+- **Posterior spinocerebellar (High fidelity)** → proprioception, lower extremity (1st order → nucleus dorsalis, 2nd order ipsilateral)  
 - **Cuneocerebellar (HF)** → proprioception, upper extremity (1st order → medulla, 2nd order ipsilateral)  
 - **Anterior spinocerebellar (Internal)** → double 🔴 decussation → functionally ipsilateral  
 - **Rostrospinocerebellar (Internal)** → coordination, upper extremity  
@@ -196,7 +196,7 @@ discriminative touch, vibration, proprioception
 
 
 <details>
-<summary><b> Antinociception Sites</b></summary>
+<summary><b> Antinociception Sites/Level</b></summary>
 
 1. **Periphery** → NSAIDs ↓ prostaglandins (block nociceptor sensitization)  
 2. **Dorsal horn** → local inhibitory interneurons (enkephalin, endorphin)  
