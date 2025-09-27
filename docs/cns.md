@@ -133,7 +133,7 @@
 
 --- 
 
-#### DCML – Face (Discriminative Touch, Trigeminal System)
+ **DCML – Face (Discriminative Touch, Trigeminal System)**
 
 - **1st order**: trigeminal nerve (CN V) → synapse in main sensory nucleus (pons)  
 - **2nd order**: 🔴 decussates in pons → ascends in trigeminal lemniscus → synapse in VPM thalamus  
