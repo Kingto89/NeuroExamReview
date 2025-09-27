@@ -112,6 +112,7 @@
   - Lead pipe = uniform rigidity (neuroleptic malignant syndrome, stiff-man syndrome)  
 
 </details>   <!-- Motor closes here -
+
 ---
 
 <details open>
