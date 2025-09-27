@@ -131,23 +131,39 @@
 - **Face** → VPM nucleus of thalamus  
 - Both converge at the somatosensory cortex.
 
-   **Anterolateral / Spinothalamic**
-  - Fast pain (A-delta fibers, glutamate)  
-    - First order: DRG → lamina I, II, V dorsal horn  
-    - 🔴 Decussates: anterior white commissure (cord)  
-    - Second order → VPL thalamus  
-    - Third order → sensory cortex  
-  - Slow pain (C fibers, Substance P)  
-    - First order: DRG → dorsal horn  
-    - 🔴 Decussates: anterior white commissure  
-    - Divergent ascent to thalamus and limbic system  
-  - Carries: pain, temperature (lateral tract), crude touch (anterior tract) 
+  ## Dorsal Column–Medial Lemniscus (DCML)
 
-- **Face sensation**  
-  - Discriminative touch: trigeminal → main sensory nucleus → 🔴 decussates pons → VPM → cortex  
-  - Fast pain: trigeminal nerve → spinal trigeminal nucleus → 🔴 decussates anterior white matter → VPM → cortex  
-  - Slow pain: trigeminal → reticular formation → intralaminar thalamic nuclei → widespread cortex  
+### Fasciculus Gracilis (Lower Body, T7 & Below)
+- 1st order: DRG → ascend ipsilaterally in fasciculus gracilis → synapse in nucleus gracilis (medulla)  
+- 2nd order: decussate as internal arcuate fibers → ascend as medial lemniscus → VPL thalamus  
+- 3rd order: VPL thalamus → postcentral gyrus  
 
+### Fasciculus Cuneatus (Upper Body, T6 & Above)
+- 1st order: DRG → ascend ipsilaterally in fasciculus cuneatus → synapse in nucleus cuneatus (medulla)  
+- 2nd order: decussate in medulla → ascend as medial lemniscus → VPL thalamus  
+- 3rd order: VPL thalamus → postcentral gyrus  
+
+### Trigeminal Pathway (Face)
+- 1st order: CN V → main sensory nucleus (pons)  
+- 2nd order: decussate in pons → ascend to VPM thalamus  
+- 3rd order: VPM thalamus → postcentral gyrus  
+
+## Anterolateral System (Spinothalamic)
+
+### Lateral Spinothalamic Tract (Pain & Temperature)
+- 1st order: DRG → dorsal horn (lamina I, II, V)  
+- 2nd order: decussates in anterior white commissure → ascend contralaterally to VPL thalamus  
+- 3rd order: VPL thalamus → somatosensory cortex  
+
+### Anterior Spinothalamic Tract (Crude Touch & Pressure)
+- 1st order: DRG → dorsal horn  
+- 2nd order: decussates in anterior white commissure → ascend contralaterally to VPL thalamus  
+- 3rd order: VPL thalamus → somatosensory cortex
+
+**Face sensation**  
+- Discriminative touch (DCML): trigeminal → main sensory nucleus → 🔴 decussates pons → VPM → cortex  
+- Fast pain (Spinothalamic): trigeminal → spinal trigeminal nucleus → 🔴 decussates brainstem (anterior white commissure) → VPM → cortex  
+- Slow pain (Spinolimbic): trigeminal → spinal trigeminal nucleus → reticular formation → intralaminar thalamic nuclei → widespread cortex
 ---
 
 **Divergent Pathways**  
