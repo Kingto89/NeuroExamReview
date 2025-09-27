@@ -184,12 +184,16 @@
   - strocytes → support neurons, form blood-brain barrier, ion buffering, nutritive role.
   - Microglia → immune defense, phagocytosis, activated in disease/injury.
 
-- **Embryology**  
-  - Blastocyst → inner cell mass (embryo), outer cell mass (placenta)  
+- **Embryology**
+  - Stages in utero:
+  - Pre-embryonic (conception–day 14) → blastocyst forms 
+  - Blastocyst → inner cell mass (embryo), outer cell mass (placenta)
+  - Embryonic (day 15–week 8) → three germ layers form  
   - Germ layers  
     - Ectoderm → sensory organs, skin, nervous system  
     - Mesoderm → muscle, bone, dermis, circulation  
-    - Endoderm → gut, liver, pancreas, lungs  
+    - Endoderm → gut, liver, pancreas, lungs
+  - Fetal (week 8–birth) → growth, myelination, gyrification
   - Somites  
     - Sclerotome → vertebrae/skull  
     - Myotome → skeletal muscle  
@@ -296,10 +300,10 @@ Neurotransmitters
 - Divergence → one axon branches to many targets  
 - Convergence → multiple inputs onto one target neuron
 - Summation (integration of local potentials):
-  Spatial summation → multiple inputs from different presynaptic neurons arrive at different places simultaneously and combine at the axon hillock.
-  Temporal summation → one presynaptic neuron fires multiple times in rapid succession, overlapping to add together.
+- Spatial summation → multiple inputs from different presynaptic neurons arrive at different places simultaneously and combine at the axon hillock.
+- Temporal summation → one presynaptic neuron fires multiple times in rapid succession, overlapping to add together.
   Together they determine if threshold is reached and AP occurs.
--Propagation of action potentials:
+-  Propagation of action potentials:
   Faster with larger axon diameter and myelination.
 
 </details>
