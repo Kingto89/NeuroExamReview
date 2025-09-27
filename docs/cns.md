@@ -128,13 +128,13 @@
   - Upper body (T6 and above) → fasciculus cuneatus → synapse in nucleus cuneatus (medulla)  
 - 2nd order neuron: gracilis/cuneatus → 🔴 decussate as internal arcuate fibers → ascend in medial lemniscus [= tract formed by these crossed axons, acts like a highway] → synapse in VPL thalamus
 - 3rd order neuron: VPL cell bodies → ascends through internal capsule → postcentral gyrus (somatosensory cortex)
-- Carries: fine touch, vibration, proprioception  
+- Carries: fine touch, vibration, proprioception
 
-**From the Face (Trigeminal Equivalent)**  
-- 1st order neuron: Trigeminal ganglion → main sensory nucleus (pons)  
-- 2nd order neuron: 🔴 decussates in pons → ascend in trigeminal lemniscus → VPM thalamus  
-- 3rd order neuron: VPM thalamus → postcentral gyrus  
-- Carries: fine touch, vibration, proprioception from face  
+**Face Equivalent (Trigeminal – Discriminative Touch)**
+- 1st order: trigeminal ganglion → main sensory trigeminal nucleus (pons)
+- 2nd order: 🔴 decussates in pons → ascends in trigeminal lemniscus → VPM thalamus
+- 3rd order: VPM thalamus → internal capsule → postcentral gyrus
+- Carries: fine touch, vibration, proprioception from face
 
 [📌 VPL = body | VPM = face]
 
