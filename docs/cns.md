@@ -176,10 +176,6 @@ discriminative touch, vibration, proprioception
 - 3rd order: VPM thalamus → somatosensory cortex
 - Carries: pain, temperature, crude touch from face
 
-</details>
-
---- 
-
 **Divergent Pathways (ALS subset, not conscious)**  
 - Spinomesencephalic → periaqueductal gray, turn eyes/head towards input   
 - Spinoreticular → arousal and attention, sleep/wake cycle synapse recticular formation  
