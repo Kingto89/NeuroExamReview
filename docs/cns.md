@@ -111,7 +111,7 @@
   - Cogwheel = tremor plus rigidity (Parkinson’s)  
   - Lead pipe = uniform rigidity (neuroleptic malignant syndrome, stiff-man syndrome)  
 
-</details>   <!-- Motor closes here -
+</details>   <!-- Motor closes here -->
 
 ---
 
@@ -182,7 +182,7 @@
 3. Descending brainstem (periaqueductal gray, raphe nuclei)  
 4. Hormonal (endorphins, enkephalins)  
 
-</details>   <!-- Motor closes here -
+</details>   <!-- sensory closes here -->
 
 ---
 
