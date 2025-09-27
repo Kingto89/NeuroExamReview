@@ -107,64 +107,52 @@
 
 ---
 
-<details open>
+<details close>
 <summary><b>🔼 Sensory Pathways (Ascending)</b></summary>
 
-**Conscious Relay Pathways**  
+### Conscious Relay Pathways
 
-**From the Body (DCML)**
-- 1st order neuron: Dorsal root ganglion → ascends ipsilaterally in dorsal column  
+#### Dorsal Column–Medial Lemniscus (DCML)
+
+**From the Body**
+- 1st order neuron: DRG → ascends ipsilaterally in dorsal column  
   - Lower body (T7 and below) → fasciculus gracilis → synapse in nucleus gracilis (medulla)  
   - Upper body (T6 and above) → fasciculus cuneatus → synapse in nucleus cuneatus (medulla)  
-- 2nd order neuron: nucleus gracilis/cuneatus → decussate as internal arcuate fibers → ascend in medial lemniscus → VPL thalamus  
+- 2nd order neuron: gracilis/cuneatus → 🔴 decussate as internal arcuate fibers → ascend in medial lemniscus → VPL thalamus  
 - 3rd order neuron: VPL thalamus → postcentral gyrus (somatosensory cortex)  
 - Carries: fine touch, vibration, proprioception  
 
-**From the Face (DCML Equivalent via Trigeminal System)**  
-- 1st order neuron: Trigeminal ganglion → main sensory nucleus of trigeminal nerve (pons)  
-- 2nd order neuron: cross midline in pons → ascend in trigeminal lemniscus → VPM thalamus  
-- 3rd order neuron: VPM thalamus → postcentral gyrus (face area, lateral)  
+**From the Face (Trigeminal Equivalent)**  
+- 1st order neuron: Trigeminal ganglion → main sensory nucleus (pons)  
+- 2nd order neuron: 🔴 decussates in pons → ascend in trigeminal lemniscus → VPM thalamus  
+- 3rd order neuron: VPM thalamus → postcentral gyrus  
 - Carries: fine touch, vibration, proprioception from face  
 
-📌 **Key distinction:**  
-- **Body** → VPL nucleus of thalamus  
-- **Face** → VPM nucleus of thalamus  
-- Both converge at the somatosensory cortex.
+[📌 VPL = body | VPM = face]
 
-  ## Dorsal Column–Medial Lemniscus (DCML)
+---
 
-### Fasciculus Gracilis (Lower Body, T7 & Below)
-- 1st order: DRG → ascend ipsilaterally in fasciculus gracilis → synapse in nucleus gracilis (medulla)  
-- 2nd order: decussate as internal arcuate fibers → ascend as medial lemniscus → VPL thalamus  
-- 3rd order: VPL thalamus → postcentral gyrus  
+#### Anterolateral System (Spinothalamic)
 
-### Fasciculus Cuneatus (Upper Body, T6 & Above)
-- 1st order: DRG → ascend ipsilaterally in fasciculus cuneatus → synapse in nucleus cuneatus (medulla)  
-- 2nd order: decussate in medulla → ascend as medial lemniscus → VPL thalamus  
-- 3rd order: VPL thalamus → postcentral gyrus  
-
-### Trigeminal Pathway (Face)
-- 1st order: CN V → main sensory nucleus (pons)  
-- 2nd order: decussate in pons → ascend to VPM thalamus  
-- 3rd order: VPM thalamus → postcentral gyrus  
-
-## Anterolateral System (Spinothalamic)
-
-### Lateral Spinothalamic Tract (Pain & Temperature)
+**Lateral Spinothalamic Tract (Pain & Temperature)**  
 - 1st order: DRG → dorsal horn (lamina I, II, V)  
-- 2nd order: decussates in anterior white commissure → ascend contralaterally to VPL thalamus  
+- 2nd order: 🔴 decussates in anterior white commissure → ascend contralaterally → VPL thalamus  
 - 3rd order: VPL thalamus → somatosensory cortex  
 
-### Anterior Spinothalamic Tract (Crude Touch & Pressure)
+**Anterior Spinothalamic Tract (Crude Touch & Pressure)**  
 - 1st order: DRG → dorsal horn  
-- 2nd order: decussates in anterior white commissure → ascend contralaterally to VPL thalamus  
-- 3rd order: VPL thalamus → somatosensory cortex
+- 2nd order: 🔴 decussates in anterior white commissure → ascend contralaterally → VPL thalamus  
+- 3rd order: VPL thalamus → somatosensory cortex  
 
-**Face sensation**  
+---
+
+#### Face Sensation (Trigeminal System)
+
 - Discriminative touch (DCML): trigeminal → main sensory nucleus → 🔴 decussates pons → VPM → cortex  
 - Fast pain (Spinothalamic): trigeminal → spinal trigeminal nucleus → 🔴 decussates brainstem (anterior white commissure) → VPM → cortex  
-- Slow pain (Spinolimbic): trigeminal → spinal trigeminal nucleus → reticular formation → intralaminar thalamic nuclei → widespread cortex
----
+- Slow pain (Spinolimbic): trigeminal → spinal trigeminal nucleus → reticular formation → intralaminar thalamic nuclei → widespread cortex  
+
+</details>
 
 **Divergent Pathways**  
 - Spinomesencephalic → periaqueductal gray, turn eyes/head towards input (antinociception)  
