@@ -237,7 +237,8 @@ Neurotransmitters
   - Blocked by botulinum (↓release), curare (Nm antagonist)
 
 - **Glutamate**
-  - Major CNS **excitatory** transmitter
+  - Major CNS excitatory transmitter
+  - Pain: acts a NT for primary neuron
   - Receptors: NMDA, AMPA, kainate (ionotropic), mGluR (metabotropic)
   - NMDA overactivation → excitotoxicity (stroke, trauma)
 
