@@ -121,6 +121,7 @@
 ### Conscious Relay Pathways
 
 #### Dorsal Column–Medial Lemniscus (DCML)
+[📌 VPL = body | VPM = face]
 
 **From the Body**
 - 1st order neuron: DRG → ascends ipsilaterally in dorsal column  
@@ -130,14 +131,12 @@
 - 3rd order neuron: VPL cell bodies → ascends through internal capsule → postcentral gyrus (somatosensory cortex)
 - Carries: fine touch, vibration, proprioception
 
-**Face Equivalent (Trigeminal – Discriminative Touch)**
-- 1st order: trigeminal ganglion → main sensory trigeminal nucleus (pons)
-- 2nd order: 🔴 decussates in pons → ascends in trigeminal lemniscus → VPM thalamus
-- 3rd order: VPM thalamus → internal capsule → postcentral gyrus
-- Carries: fine touch, vibration, proprioception from face
+#### DCML – Face (Discriminative Touch, Trigeminal System)
 
-[📌 VPL = body | VPM = face]
-
+- **1st order**: trigeminal nerve (CN V) → synapse in main sensory nucleus (pons)  
+- **2nd order**: 🔴 decussates in pons → ascends in trigeminal lemniscus → synapse in VPM thalamus  
+- **3rd order**: VPM thalamus → internal capsule → postcentral gyrus  
+- **Carries**: discriminative touch, vibration, proprioception
 ---
 
 #### Anterolateral System (Spinothalamic)
