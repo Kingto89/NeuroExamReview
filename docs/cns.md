@@ -111,15 +111,25 @@
 <summary><b>🔼 Sensory Pathways (Ascending)</b></summary>
 
 **Conscious Relay Pathways**  
-- **Dorsal Column–Medial Lemniscus (DCML)**  
-  - Lower body (T7 and below) → fasciculus gracilis  
-  - Upper body (T6 and above) → fasciculus cuneatus  
-  - First order: DRG → dorsal column  
-  - 🔵 Synapse: (T7 & below) nucleus gracilis or (T6 & above) cuneatus (medulla)  
-  - 🔴 Decussates: internal arcuate fibers → medial lemniscus  
-  - Second order → VPL thalamus  
-  - Third order → somatosensory cortex  
-  - Carries: fine touch, vibration, proprioception, stereognosis  
+## Dorsal Column–Medial Lemniscus (DCML)
+**From the Body**
+- 1st order neuron: Dorsal root ganglion → ascends ipsilaterally in dorsal column  
+  - Lower body (T7 and below) → fasciculus gracilis → synapse in nucleus gracilis (medulla)  
+  - Upper body (T6 and above) → fasciculus cuneatus → synapse in nucleus cuneatus (medulla)  
+- 2nd order neuron: nucleus gracilis/cuneatus → decussate as internal arcuate fibers → ascend in medial lemniscus → VPL thalamus  
+- 3rd order neuron: VPL thalamus → postcentral gyrus (somatosensory cortex)  
+- Carries: fine touch, vibration, proprioception  
+
+**From the Face (DCML Equivalent via Trigeminal System)**  
+- 1st order neuron: Trigeminal ganglion → main sensory nucleus of trigeminal nerve (pons)  
+- 2nd order neuron: cross midline in pons → ascend in trigeminal lemniscus → VPM thalamus  
+- 3rd order neuron: VPM thalamus → postcentral gyrus (face area, lateral)  
+- Carries: fine touch, vibration, proprioception from face  
+
+📌 **Key distinction:**  
+- **Body** → VPL nucleus of thalamus  
+- **Face** → VPM nucleus of thalamus  
+- Both converge at the somatosensory cortex.
 
 - **Anterolateral / Spinothalamic**  
   - Fast pain (A-delta fibers, glutamate)  
