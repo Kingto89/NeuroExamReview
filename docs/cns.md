@@ -126,7 +126,7 @@
 - 1st order neuron: DRG → ascends ipsilaterally in dorsal column  
   - Lower body (T7 and below) → fasciculus gracilis → synapse in nucleus gracilis (medulla)  
   - Upper body (T6 and above) → fasciculus cuneatus → synapse in nucleus cuneatus (medulla)  
-- 2nd order neuron: gracilis/cuneatus → 🔴 decussate as internal arcuate fibers → ascend in medial lemniscus → VPL thalamus  
+- 2nd order neuron: gracilis/cuneatus → 🔴 decussate as internal arcuate fibers → ascend and synapses at VPL thalamus as medial lemniscus.
 - 3rd order neuron: VPL thalamus → postcentral gyrus (somatosensory cortex)  
 - Carries: fine touch, vibration, proprioception  
 
