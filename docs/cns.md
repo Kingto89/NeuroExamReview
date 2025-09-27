@@ -131,7 +131,7 @@
 - 3rd order neuron: VPL cell bodies → ascends through internal capsule → postcentral gyrus (somatosensory cortex)
 - Carries: fine touch, vibration, proprioception
 
-</details>
+--- 
 
 #### DCML – Face (Discriminative Touch, Trigeminal System)
 
@@ -153,9 +153,6 @@
 - 2nd order: 🔴 decussates in anterior white commissure → ascend contralaterally → VPL thalamus  
 - 3rd order: VPL thalamus → somatosensory cortex  
 
-<details>
-<summary><b>Face Sensation (Trigeminal System)</b></summary>
-
 **Face Equivalent (Trigeminal – Fast Pain & Temperature)**
 - 1st order: trigeminal ganglion → spinal trigeminal nucleus
 - 2nd order: 🔴 decussates in brainstem (anterior white commissure) → ascends in trigeminal lemniscus → VPM thalamus
@@ -163,6 +160,8 @@
 - Carries: pain, temperature, crude touch from face
 
 </details>
+
+--- 
 
 **Divergent Pathways**  
 - Spinomesencephalic → periaqueductal gray, turn eyes/head towards input (antinociception)  
