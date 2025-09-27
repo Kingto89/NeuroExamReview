@@ -115,7 +115,7 @@
   - Lower body (T7 and below) → fasciculus gracilis  
   - Upper body (T6 and above) → fasciculus cuneatus  
   - First order: DRG → dorsal column  
-  - 🔵 Synapse: nucleus gracilis or cuneatus (medulla)  
+  - 🔵 Synapse: (T7 & below) nucleus gracilis or (T6 & above) cuneatus (medulla)  
   - 🔴 Decussates: internal arcuate fibers → medial lemniscus  
   - Second order → VPL thalamus  
   - Third order → somatosensory cortex  
