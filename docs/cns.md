@@ -186,18 +186,26 @@ discriminative touch, vibration, proprioception
 
 <details>
 <summary><b>Nonconscious Relay Pathways (Cerebellum)</b></summary>
-- **Posterior spinocerebellar (HF)** → proprioception lower extremity  
-- **Cuneocerebellar (HF)** → proprioception upper extremity  
+
+- **Posterior spinocerebellar (HF)** → proprioception, lower extremity (1st order → nucleus dorsalis, 2nd order ipsilateral)  
+- **Cuneocerebellar (HF)** → proprioception, upper extremity (1st order → medulla, 2nd order ipsilateral)  
 - **Anterior spinocerebellar (Internal)** → double 🔴 decussation → functionally ipsilateral  
-- **Rostrospinocerebellar (Internal)** → coordination upper extremity  
+- **Rostrospinocerebellar (Internal)** → coordination, upper extremity  
+
+</details>
+
 
 <details>
-<summary><b>Antinociception Sites</b></summary> 
-1. Periphery (NSAIDs, decreased prostaglandins)  
-2. Dorsal horn (local inhibitory interneurons, enkephalin)  
-3. Descending brainstem/fast acting (periaqueductal gray, raphe nuclei -- serotonin, norepinephrine ))  
-4. Hormonal (endorphins, enkephalins / slower, longer)
-5. Amygdala & Cortical  
+<summary><b> Antinociception Sites</b></summary>
+
+1. **Periphery** → NSAIDs ↓ prostaglandins (block nociceptor sensitization)  
+2. **Dorsal horn** → local inhibitory interneurons (enkephalin, endorphin)  
+3. **Descending brainstem (fast-acting)** → periaqueductal gray (PAG), raphe nuclei, locus coeruleus (serotonin, norepinephrine)  
+4. **Hormonal (slower, longer)** → pituitary/adrenal release of endorphins, enkephalins  
+5. **Amygdala & Cortical** → higher emotional/cognitive modulation of pain perception  
+
+</details>
+
 
 </details>   <!-- sensory closes here -->
 
