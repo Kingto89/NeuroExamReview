@@ -157,7 +157,8 @@ discriminative touch, vibration, proprioception
 
 </details> <!-- DCML closes here ✅ -->
 
-#### Anterolateral System (Spinothalamic)
+<details>
+<summary><b>Anterolateral System (Spinothalamic)</b></summary>
 
 **Lateral Spinothalamic Tract (Pain & Temperature)**  
 - 1st order: DRG → dorsal horn (lamina I, II, V)  
@@ -179,14 +180,16 @@ discriminative touch, vibration, proprioception
 
 --- 
 
-**Divergent Pathways**  
-- Spinomesencephalic → periaqueductal gray, turn eyes/head towards input (antinociception)  
+**Divergent Pathways (ALS subset, not conscious)**  
+- Spinomesencephalic → periaqueductal gray, turn eyes/head towards input   
 - Spinoreticular → arousal and attention, sleep/wake cycle synapse recticular formation  
 - Spino-emotional → limbic emotional response, affective responses to pain
 
+</details> <!-- ALS closes -->
 ---
 
-**Nonconscious Relay Pathways (to Cerebellum)**  
+<details>
+<summary><b>Nonconscious Relay Pathways (Cerebellum)</b></summary>
 - Posterior spinocerebellar (High Fidelity) → proprioception lower extremity, 1st order nucl. dorsalis (2nd order ipsilateral)  
 - Cuneocerebellar (HF) → proprioception upper extremity -- 1st order to medulla, 2nd ipsilateral
 - Anterior spinocerebellar (Internal) → double 🔴 decussation → functionally ipsilateral  
@@ -194,11 +197,13 @@ discriminative touch, vibration, proprioception
 
 ---
 
-**Antinociception Sites**  
+<details>
+<summary><b>Antinociception Sites</b></summary> 
 1. Periphery (NSAIDs, decreased prostaglandins)  
-2. Dorsal horn (local interneurons, enkephalin)  
-3. Descending brainstem (periaqueductal gray, raphe nuclei)  
-4. Hormonal (endorphins, enkephalins)  
+2. Dorsal horn (local inhibitory interneurons, enkephalin)  
+3. Descending brainstem/fast acting (periaqueductal gray, raphe nuclei -- serotonin, norepinephrine ))  
+4. Hormonal (endorphins, enkephalins / slower, longer)
+5. Amygdala & Cortical  
 
 </details>   <!-- sensory closes here -->
 
