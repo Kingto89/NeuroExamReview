@@ -127,7 +127,7 @@
   - Lower body (T7 and below) → fasciculus gracilis → synapse in nucleus gracilis (medulla)  
   - Upper body (T6 and above) → fasciculus cuneatus → synapse in nucleus cuneatus (medulla)  
 - 2nd order neuron: gracilis/cuneatus → 🔴 decussate as internal arcuate fibers → ascend and synapses at VPL thalamus as medial lemniscus.
-- 3rd order neuron: VPL thalamus → postcentral gyrus (somatosensory cortex)  
+- 3rd order neuron: VPL cell bodies → ascends through internal capsule → postcentral gyrus (somatosensory cortex)
 - Carries: fine touch, vibration, proprioception  
 
 **From the Face (Trigeminal Equivalent)**  
