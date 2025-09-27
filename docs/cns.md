@@ -111,8 +111,8 @@
 <summary><b>🔼 Sensory Pathways (Ascending)</b></summary>
 
 **Conscious Relay Pathways**  
-## Dorsal Column–Medial Lemniscus (DCML)
-**From the Body**
+
+**From the Body (DCML)**
 - 1st order neuron: Dorsal root ganglion → ascends ipsilaterally in dorsal column  
   - Lower body (T7 and below) → fasciculus gracilis → synapse in nucleus gracilis (medulla)  
   - Upper body (T6 and above) → fasciculus cuneatus → synapse in nucleus cuneatus (medulla)  
@@ -131,7 +131,7 @@
 - **Face** → VPM nucleus of thalamus  
 - Both converge at the somatosensory cortex.
 
-- ##Anterolateral / Spinothalamic
+- **Anterolateral / Spinothalamic**
   - Fast pain (A-delta fibers, glutamate)  
     - First order: DRG → lamina I, II, V dorsal horn  
     - 🔴 Decussates: anterior white commissure (cord)  
