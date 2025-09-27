@@ -133,12 +133,27 @@
 
 --- 
 
- **DCML – Face (Discriminative Touch, Trigeminal System)**
+**DCML – Face (Discriminative Touch, Trigeminal System)**
 
-- **1st order**: trigeminal nerve (CN V) → synapse in main sensory nucleus (pons)  
-- **2nd order**: 🔴 decussates in pons → ascends in trigeminal lemniscus → synapse in VPM thalamus  
-- **3rd order**: VPM thalamus → internal capsule → postcentral gyrus  
-- **Carries**: discriminative touch, vibration, proprioception
+<details>
+<summary><b>1st order</b></summary>
+trigeminal nerve (CN V) → synapse in main sensory nucleus (pons)
+</details>
+
+<details>
+<summary><b>2nd order</b></summary>
+🔴 decussates in pons → ascends in trigeminal lemniscus → synapse in VPM thalamus
+</details>
+
+<details>
+<summary><b>3rd order</b></summary>
+VPM thalamus → internal capsule → postcentral gyrus
+</details>
+
+<details>
+<summary><b>Carries</b></summary>
+discriminative touch, vibration, proprioception
+</details>
 ---
 
 #### Anterolateral System (Spinothalamic)
