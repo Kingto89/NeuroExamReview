@@ -132,8 +132,8 @@
 - Carries: fine touch, vibration, proprioception
 
 --- 
-
-**DCML – Face (Discriminative Touch, Trigeminal System)**
+<details>
+<summary><b>DCML – Face (Discriminative Touch, Trigeminal System)</b></summary>
 
 <details>
 <summary><b>1st order</b></summary>
@@ -154,7 +154,6 @@ VPM thalamus → internal capsule → postcentral gyrus
 <summary><b>Carries</b></summary>
 discriminative touch, vibration, proprioception
 </details>
----
 
 #### Anterolateral System (Spinothalamic)
 
