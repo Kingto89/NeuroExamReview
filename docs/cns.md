@@ -142,7 +142,7 @@
 - 2nd order: 🔴 decussates in anterior white commissure → ascend contralaterally → VPL thalamus  
 - 3rd order: VPL thalamus → somatosensory cortex  
 
----
+</details>
 
 #### Face Sensation (Trigeminal System)
 
