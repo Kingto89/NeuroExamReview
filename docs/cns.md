@@ -26,14 +26,15 @@
   - 🔵 Synapse: cranial nerve motor nuclei in brainstem  
   - Function: muscles of head and face (bilateral except lower face), superficial neck muscles
 
-  - <details>
-<summary><b>📊 Corticospinal Quick Reference Table</b></summary>
+<details>
+<summary><b>📊 Key Differences: Pyramidal vs Extrapyramidal Motor Systems</b></summary>
 
-| Tract                | Other Name(s)          | Decussation                | Projection / Target              | Function                               |
-|-----------------------|------------------------|-----------------------------|----------------------------------|----------------------------------------|
-| Lateral corticospinal | —                      | Pyramidal decussation (medulla) | Contralateral spinal cord LMNs   | Fine, fractionated voluntary limb movement |
-| Medial corticospinal  | Sometimes “anterior corticospinal” | Spinal cord level (bilateral influence) | Trunk, neck, shoulders           | Posture & gross movement                |
-| Corticobrainstem      | Corticobulbar          | Most fibers bilateral (except lower face) | Cranial nerve motor nuclei       | Voluntary control of face, jaw, tongue, pharynx, larynx, SCM, trapezius |
+| Feature   | Pyramidal Motor System | Extrapyramidal Motor System |
+|-----------|-------------------------|-----------------------------|
+| **Function** | Voluntary movements | Involuntary movements, posture, muscle tone |
+| **Origin**   | Primary motor cortex | Basal ganglia, cerebellum, brainstem |
+| **Pathway**  | Direct (corticospinal and corticobulbar tracts) | Indirect (multiple structures) |
+| **Damage**   | Weakness, spasticity, hyperreflexia | Tremors, rigidity, akinesia, dyskinesia |
 
 </details>
 
