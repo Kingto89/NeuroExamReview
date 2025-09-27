@@ -131,6 +131,8 @@
 - 3rd order neuron: VPL cell bodies → ascends through internal capsule → postcentral gyrus (somatosensory cortex)
 - Carries: fine touch, vibration, proprioception
 
+</details>
+
 #### DCML – Face (Discriminative Touch, Trigeminal System)
 
 - **1st order**: trigeminal nerve (CN V) → synapse in main sensory nucleus (pons)  
