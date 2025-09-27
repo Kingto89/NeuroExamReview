@@ -194,7 +194,7 @@
   - Function: sound perception  
   - Lesion → difficulty localizing sounds (bilateral input)  
 
-- **Broca’s Area (Brodmann 44, 45)**
+- **Broca’s Area (Brodmann 44)/lateral premotor**
   - Inferior frontal gyrus, dominant hemisphere (usually left)  
   - Function: **expressive language**  
   - Lesion → nonfluent (expressive) aphasia, comprehension preserved  
@@ -204,19 +204,9 @@
   - Function: **language comprehension**  
   - Lesion → fluent aphasia, impaired comprehension  
 
-- **Prefrontal Cortex**
-  - Dorsolateral: executive functions, working memory  
-  - Orbitofrontal: emotional regulation, reward  
-  - Lesion → poor judgment, impulsivity, disinhibition  
-
-- **Parietal Association Cortex**
-  - Dominant hemisphere: praxis (planning skilled movement)  
-  - Nondominant: spatial awareness, attention  
-  - Lesion nondominant → contralateral neglect  
-
-- **Limbic Structures**
-  - Cingulate gyrus, hippocampus, amygdala  
-  - Emotion, memory, motivation  
+- **Primary Olfactory / Limbic Association Cortex (Brodmann 28, 34, 35, 36)**  
+Function: smell, emotion  
+Lesion → deficits in smell + emotion integration  
 
 </details>
 ---
