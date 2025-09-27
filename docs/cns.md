@@ -36,7 +36,7 @@
 - **Rubrospinal**  
   - Origin: red nucleus (midbrain)  
   - 🔴 Decussates: midbrain
-  - Descends then synapsed on contralateral MNs
+  - Descends then synapsed on contralateral MNs (wrist/finger extensors)
   - Function: facilitates upper extremity flexors  
 
 - **Reticulospinal**  
