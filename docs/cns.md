@@ -155,6 +155,8 @@ VPM thalamus → internal capsule → postcentral gyrus
 discriminative touch, vibration, proprioception
 </details>
 
+</details> <!-- DCML closes here ✅ -->
+
 #### Anterolateral System (Spinothalamic)
 
 **Lateral Spinothalamic Tract (Pain & Temperature)**  
