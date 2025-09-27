@@ -103,11 +103,9 @@
   - Cogwheel = tremor plus rigidity (Parkinson’s)  
   - Lead pipe = uniform rigidity (neuroleptic malignant syndrome, stiff-man syndrome)  
 
-</details>
-
 ---
 
-<details close>
+<details open>
 <summary><b>🔼 Sensory Pathways (Ascending)</b></summary>
 
 ### Conscious Relay Pathways
