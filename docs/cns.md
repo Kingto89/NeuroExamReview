@@ -144,6 +144,8 @@
 
 </details>
 
+---
+
 #### Face Sensation (Trigeminal System)
 
 - Discriminative touch (DCML): trigeminal → main sensory nucleus → 🔴 decussates pons → VPM → cortex  
