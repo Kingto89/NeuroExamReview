@@ -16,19 +16,15 @@
   - 🔵 Synapse: anterior horn LMN → skeletal muscle  
   - Function: fine limb movement, fractionation, voluntary movement  
 
-- **Anterior corticospinal**  
-  - Origin: cortex  
-  - Descends ipsilateral → 🔴 decussates at spinal cord level  
-  - Function: axial and postural muscles  
-
-- **Medial corticospinal**  
+- **Medial corticospinal**
+  - posture and gross movement
   - Bilateral projection to trunk, neck, shoulders  
   - Direct connection cortex → cord  
 
-- **Corticobulbar**  
+- **Corticobulbar/Corticobrainstem**  
   - Origin: cortex  
   - 🔵 Synapse: cranial nerve motor nuclei in brainstem  
-  - Function: muscles of head and face (bilateral except lower face)  
+  - Function: muscles of head and face (bilateral except lower face), superficial neck muscles
 
 ---
 
