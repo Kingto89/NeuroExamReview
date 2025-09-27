@@ -182,16 +182,14 @@ discriminative touch, vibration, proprioception
 - Spino-emotional → limbic emotional response, affective responses to pain
 
 </details> <!-- ALS closes -->
----
+
 
 <details>
 <summary><b>Nonconscious Relay Pathways (Cerebellum)</b></summary>
-- Posterior spinocerebellar (High Fidelity) → proprioception lower extremity, 1st order nucl. dorsalis (2nd order ipsilateral)  
-- Cuneocerebellar (HF) → proprioception upper extremity -- 1st order to medulla, 2nd ipsilateral
-- Anterior spinocerebellar (Internal) → double 🔴 decussation → functionally ipsilateral  
-- Rostrospinocerebellar (Internal) → coordination upper extremity   
-
----
+- **Posterior spinocerebellar (HF)** → proprioception lower extremity  
+- **Cuneocerebellar (HF)** → proprioception upper extremity  
+- **Anterior spinocerebellar (Internal)** → double 🔴 decussation → functionally ipsilateral  
+- **Rostrospinocerebellar (Internal)** → coordination upper extremity  
 
 <details>
 <summary><b>Antinociception Sites</b></summary> 
