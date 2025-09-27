@@ -35,7 +35,8 @@
 **Brainstem (Extrapyramidal) Pathways**  
 - **Rubrospinal**  
   - Origin: red nucleus (midbrain)  
-  - 🔴 Decussates: midbrain  
+  - 🔴 Decussates: midbrain
+  - Descends then synapsed on contralateral MNs
   - Function: facilitates upper extremity flexors  
 
 - **Reticulospinal**  
