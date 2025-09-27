@@ -142,11 +142,8 @@
 - 2nd order: 🔴 decussates in anterior white commissure → ascend contralaterally → VPL thalamus  
 - 3rd order: VPL thalamus → somatosensory cortex  
 
-</details>
-
----
-
-#### Face Sensation (Trigeminal System)
+<details>
+<summary><b>Face Sensation (Trigeminal System)</b></summary>
 
 - Discriminative touch (DCML): trigeminal → main sensory nucleus → 🔴 decussates pons → VPM → cortex  
 - Fast pain (Spinothalamic): trigeminal → spinal trigeminal nucleus → 🔴 decussates brainstem (anterior white commissure) → VPM → cortex  
