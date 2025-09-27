@@ -179,7 +179,10 @@
 - **Neuroglia**  
   - Schwann cells (PNS) → myelinate one axon; also phagocytes  
   - Satellite cells (PNS) → cover soma in DRG & autonomic ganglia  
-  - Oligodendrocytes (CNS) → myelinate multiple axons  
+  - Oligodendrocytes (CNS) → myelinate multiple axons
+  - Ependymal cells → line ventricles/central canal, regulate CSF.
+  - strocytes → support neurons, form blood-brain barrier, ion buffering, nutritive role.
+  - Microglia → immune defense, phagocytosis, activated in disease/injury.
 
 - **Embryology**  
   - Blastocyst → inner cell mass (embryo), outer cell mass (placenta)  
@@ -285,10 +288,19 @@ Neurotransmitters
 <summary><b>🔽 Information Flow</b></summary>
 
 - Afferent neurons → carry sensory info to CNS  
-- Efferent neurons → carry motor commands from CNS  
+- Efferent neurons → carry motor commands from CNS
+- SAME / DAVE:
+- Sensory = Afferent, Motor = Efferent.
+- Dorsal = Afferent, Ventral = Efferent. 
 - Interneurons → local connectors for integration  
 - Divergence → one axon branches to many targets  
-- Convergence → multiple inputs onto one target neuron  
+- Convergence → multiple inputs onto one target neuron
+- Summation (integration of local potentials):
+  Spatial summation → multiple inputs from different presynaptic neurons arrive at different places simultaneously and combine at the axon hillock.
+  Temporal summation → one presynaptic neuron fires multiple times in rapid succession, overlapping to add together.
+  Together they determine if threshold is reached and AP occurs.
+-Propagation of action potentials:
+  Faster with larger axon diameter and myelination.
 
 </details>
 
