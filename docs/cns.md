@@ -33,21 +33,21 @@
 ---
 
 **Brainstem (Extrapyramidal) Pathways**  
-- **Rubrospinal**  
+- **Rubrospinal - Lateral tract**  
   - Origin: red nucleus (midbrain)  
   - 🔴 Decussates: midbrain
   - Descends then synapsed on contralateral MNs (wrist/finger extensors)
   - Function: facilitates upper extremity flexors  
 
-- **Reticulospinal**  
+- **Reticulospinal - medial tract**  
   - Origin: reticular formation  
   - Function: bilateral posture, locomotion, reflex modulation  
 
-- **Vestibulospinal**  
+- **Vestibulospinal (2:medial and lateral tracts)**  
   - Origin: vestibular nuclei  
   - Function: balance, head position, activates extensors  
 
-- **Tectospinal**  
+- **Tectospinal - medial**  
   - Origin: superior colliculus  
   - 🔴 Decussates: midbrain  
   - Function: reflexive head and eye orientation  
