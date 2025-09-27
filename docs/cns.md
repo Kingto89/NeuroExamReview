@@ -205,8 +205,8 @@
   - Lesion → fluent aphasia, impaired comprehension  
 
 - **Primary Olfactory / Limbic Association Cortex (Brodmann 28, 34, 35, 36)**  
-Function: smell, emotion  
-Lesion → deficits in smell + emotion integration  
+  - Function: smell, emotion  
+  - Lesion → deficits in smell + emotion integration  
 
 </details>
 ---
