@@ -155,9 +155,11 @@
 <details>
 <summary><b>Face Sensation (Trigeminal System)</b></summary>
 
-- Discriminative touch (DCML): trigeminal → main sensory nucleus → 🔴 decussates pons → VPM → cortex  
-- Fast pain (Spinothalamic): trigeminal → spinal trigeminal nucleus → 🔴 decussates brainstem (anterior white commissure) → VPM → cortex  
-- Slow pain (Spinolimbic): trigeminal → spinal trigeminal nucleus → reticular formation → intralaminar thalamic nuclei → widespread cortex  
+**Face Equivalent (Trigeminal – Fast Pain & Temperature)**
+- 1st order: trigeminal ganglion → spinal trigeminal nucleus
+- 2nd order: 🔴 decussates in brainstem (anterior white commissure) → ascends in trigeminal lemniscus → VPM thalamus
+- 3rd order: VPM thalamus → somatosensory cortex
+- Carries: pain, temperature, crude touch from face
 
 </details>
 
