@@ -93,10 +93,14 @@ Refers to the organization of pools in the ventral horn of the spinal cord
 **Reflexes and Muscle Properties⭐️**  
 - Spinal reflexes can occur without brain input  
 - Phasic stretch reflex → monosynaptic, quick stretch
-  - Phasic receptors → adapt quickly, signal onset/offset (e.g., Pacinian, Meissner).
 - Tonic stretch reflex → polysynaptic, sustained stretch
-  - Tonic receptors → respond as long as stimulus maintained (e.g., Ruffini, Merkel).
- - Cutaneous reflexes → any reflex triggered by stimulation of the skin, includes withdrawal reflex, Babinski  
+- Cutaneous reflexes → any reflex triggered by stimulation of the skin, includes withdrawal reflex, Babinski  
+
+**Sensory Receptors (Adaptation Rate)**
+- **Phasic receptors** → adapt quickly, signal onset/offset  
+  - Examples: Pacinian corpuscles, Meissner corpuscles  
+- **Tonic receptors** → respond as long as stimulus maintained  
+  - Examples: Ruffini endings, Merkel discs
 
 - ⭐️Muscle tone and contraction  
   - Crossbridge: Ca++ binds troponin → conformational change   
