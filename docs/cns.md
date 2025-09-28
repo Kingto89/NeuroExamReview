@@ -184,27 +184,27 @@ discriminative touch, vibration, proprioception
 Slow pain= spinolimbic - Fast pain= Spinothalamic - discriminative= Fast
 
 **Two Tracts**
-- **Lateral Spinothalamic Tract** → nociception & temperature  
-- **Anterior Spinothalamic Tract** → crude touch & pressure  
+- Lateral Spinothalamic Tract → nociception & temperature  
+- Anterior Spinothalamic Tract → crude touch & pressure  
 
 ---
 
-**Fast Pain from Body (PDSLAVS)**  
-Peripheral axon → DRG → dorsal horn lamina I, II, V → decussate at anterior white commissure → ascend → VPL thalamus → somatosensory cortex  
+**Fast Pain from Body (PDSLAVS)** 
+- Peripheral axon → DRG → dorsal horn lamina I, II, V → decussate at anterior white commissure → ascend → VPL thalamus → somatosensory cortex  
 
 Better mnemonic: Paul Drove Slowly, Larry <span style="color:red">Ate</span> Very Spicy
 
 ---
 
-**Fast Pain from Face (TBUAVS)**  
-Trigeminal nerve → spinal trigeminal nucleus (brainstem/upper cervical) → decussate at anterior white commissure → ascend via trigeminal lemniscus → VPM thalamus → somatosensory cortex  
+**Fast Pain from Face (TBUAVS)** 
+- Trigeminal nerve → spinal trigeminal nucleus (brainstem/upper cervical) → decussate at anterior white commissure → ascend via trigeminal lemniscus → VPM thalamus → somatosensory cortex  
 
 Mnemonic: The Brainstem Uses <span style="color:red">Ascend</span> Via Somatosensory  
 
 ---
 
-**Slow Pain from Face (TRIM)**  
-Trigeminal → Reticular formation → Intralaminar nuclei → Many cortical areas  
+**Slow Pain from Face (TRIM)**   
+- Trigeminal → Reticular formation → Intralaminar nuclei → Many cortical areas  
 
 **Divergent Pathways (ALS subset-- slow pain, not conscious)** 
 Pathways reach the brainstem and brain structures
