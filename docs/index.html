@@ -19,32 +19,78 @@
     .md{padding:10px 0}
     .muted{color:#6b7280; font-size:.92rem}
     .error{color:#b00020}
+    #fillpic iframe {
+      width: 100%;
+      height: 100vh;
+      border: 2px solid #666;
+      border-radius: 8px;
+    }
     .row{display:flex; gap:16px; flex-wrap:wrap}
     .col{flex:1 1 460px}
     .bar{display:flex; gap:8px; align-items:center; margin:10px 0}
     button{padding:6px 10px; border:1px solid #d1d5db; border-radius:8px; background:#fff; cursor:pointer}
     button:hover{background:#f3f4f6}
 
-    .skf-frame-wrap{width:100%; height:520px; border-radius:10px; overflow:hidden; background:#000}
-    .skf-frame-wrap iframe{width:100%; height:100%; border:0}
+    .skf-frame-wrap{
+      width:100%; height:520px; border-radius:10px; overflow:hidden; background:#000;
+      isolation:isolate;
+    }
+    .skf-frame-wrap iframe{
+      width:100%; height:100%; border:0;
+      pointer-events:auto; touch-action:manipulation;
+    }
+    details[open] > summary { position:relative; z-index:1; }
+    * { -webkit-tap-highlight-color: transparent; }
+    body { overscroll-behavior-y: contain; }
 
-    .card-li{border:1px solid #e5e7eb; border-radius:10px; background:#f9fafb; margin:10px 0; padding:0; overflow:hidden}
-    .card-li .li-head{display:flex; align-items:center; justify-content:space-between;
-      gap:10px; padding:10px 12px; cursor:pointer; background:#f3f4f6; font-weight:700}
-    .card-li .li-body{padding:10px 12px; display:none; background:#fff}
-    .card-li.open .li-body{display:block}
-    .chev{font-size:12px; color:#6b7280}
-    .card-li ul{margin:6px 0 6px 18px}
+    .card-li{
+      border:1px solid #e5e7eb; border-radius:10px; background:#f9fafb;
+      margin:10px 0; padding:0; overflow:hidden;
+    }
+    .card-li .li-head{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:10px; padding:10px 12px; cursor:pointer; user-select:none;
+      background:#f3f4f6; font-weight:700;
+    }
+    .card-li .li-head .title{flex:1 1 auto;}
+    .card-li .li-body{ padding:10px 12px; display:none; background:#fff }
+    .card-li.open .li-body{ display:block; }
+    .chev{ font-size:12px; color:#6b7280 }
+    .card-li ul{ margin:6px 0 6px 18px }
 
-    .skf-embed{width:100%; aspect-ratio:16/9; background:#000; border-radius:10px; overflow:hidden}
-    .skf-embed iframe{width:100%; height:100%; border:0}
+    .skf-embed{
+      width:100%;
+      aspect-ratio:16/9;
+      background:#000;
+      border-radius:10px;
+      overflow:hidden;
+    }
+    .skf-embed iframe{
+      width:100%;
+      height:100%;
+      border:0;
+      display:block;
+    }
 
-    /* Fillable styles */
-    .fill-blank{display:inline-block; min-width:120px; border-bottom:1px solid #999; margin:0 4px}
-    .fill-blank input{border:none; border-bottom:1px solid #666; outline:none; font-size:1rem; padding:2px 4px; min-width:120px}
-    .fill-blank.correct input{background:#d1fae5}
-    .fill-blank.incorrect input{background:#fee2e2}
+    /* Fillable tract styles */
+    .fill-blank {
+      display:inline-block;
+      min-width:120px;
+      border-bottom:1px solid #999;
+      margin:0 4px;
+    }
+    .fill-blank input {
+      border:none;
+      border-bottom:1px solid #666;
+      outline:none;
+      font-size:1rem;
+      padding:2px 4px;
+      min-width:120px;
+    }
+    .fill-blank.correct input{ background:#d1fae5; }
+    .fill-blank.incorrect input{ background:#fee2e2; }
   </style>
+
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
@@ -53,13 +99,13 @@
 
   <h2>Brain 3D (interactive model)</h2>
   <div class="embed skf-frame-wrap">
-    <!-- ✅ Restored your original BioDigital embed -->
     <iframe
       title="BioDigital Human Viewer"
-      src="https://human.biodigital.com/viewer/?be=3KnN&ui-info=true&ui-nav=true&uaid=51km3"
+      src="https://human.biodigital.com/widgets/healthline/?be=3KnN&ui-info=true&ui-search=true&ui-reset=true&ui-fullscreen=true&ui-nav=true&ui-tools=true&ui-help=true&ui-chapter-list=false&ui-label-list=true&ui-anatomy-descriptions=false&disable-scroll=false&uaid=51km3"
       allow="fullscreen; xr-spatial-tracking"
       allowfullscreen
-      loading="eager"></iframe>
+      loading="eager"
+      referrerpolicy="strict-origin-when-cross-origin"></iframe>
   </div>
 
   <div class="bar">
@@ -96,9 +142,18 @@
   </div>
 
   <div id="fillpic" style="display:none; margin:16px 0; text-align:center">
-    <iframe id="fill-pdf"
-      src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://kingto89.github.io/NeuroExamReview/Fillable%20Pathway.pdf">
-    </iframe>
+    <div id="fill-wrap" style="display:flex; gap:16px; justify-content:center; align-items:flex-start">
+      <iframe id="fill-pdf"
+        src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://kingto89.github.io/NeuroExamReview/Fillable%20Pathway.pdf">
+      </iframe>
+      <img id="ref-img" src="Dorsal Column Pathway.jpg"
+        style="width:45%; height:600px; object-fit:contain; border:2px solid #666; border-radius:8px; display:none">
+    </div>
+    <div style="margin-top:12px">
+      <button onclick="lockFillPic()">Lock Answers</button>
+      <button onclick="resetFillPic()">Reset Fill</button>
+      <button id="refBtn" onclick="toggleReference()">Show Reference</button>
+    </div>
   </div>
 
   <div id="filltracts" style="display:none; margin:16px 0">
@@ -112,8 +167,12 @@
 
   <details>
     <summary>Extra 3D models (click to expand)</summary>
-    <div class="embed skf-embed"><iframe title="Spinal cord lesions" src="https://sketchfab.com/models/bf086ab152a94273837b12a1702cf644/embed"></iframe></div>
-    <div class="embed skf-embed"><iframe title="Corticospinal Tract" src="https://sketchfab.com/models/51d7d61024bf4ecb88f85a35f0041960/embed"></iframe></div>
+    <div class="embed skf-embed">
+      <iframe title="Detailed Labeled Surface Structures" src="https://sketchfab.com/models/d91080b5af91497b822728c08804f33c/embed?autostart=1&ui_infos=0&ui_watermark=0"></iframe>
+    </div>
+    <div class="embed skf-embed">
+      <iframe title="Spinal cord lesions" src="https://sketchfab.com/models/bf086ab152a94273837b12a1702cf644/embed?autostart=1&ui_infos=0&ui_watermark=0"></iframe>
+    </div>
   </details>
 
   <script>
@@ -125,11 +184,12 @@
         if(chev) chev.textContent=open?'▲':'▼';
       });
     }
-
     function makeCardFromPair(titleNode,nodesToWrap){
-      const card=document.createElement('div'); card.className='card-li';
+      const card=document.createElement('div');
+      card.className='card-li';
       const head=document.createElement('div'); head.className='li-head';
-      const title=document.createElement('div'); title.className='title'; title.textContent=titleNode.textContent.trim();
+      const title=document.createElement('div'); title.className='title';
+      title.textContent=titleNode.textContent.trim();
       const chev=document.createElement('span'); chev.className='chev'; chev.textContent='▼';
       head.appendChild(title); head.appendChild(chev);
       const body=document.createElement('div'); body.className='li-body';
@@ -142,7 +202,6 @@
         chev.textContent=open?'▲':'▼';
       });
     }
-
     function enhanceBulletedCards(container){
       const lis=container.querySelectorAll('ul > li');
       lis.forEach(li=>{
@@ -165,7 +224,6 @@
         });
       });
     }
-
     function enhanceParagraphHeadingGroups(container){
       const paras=container.querySelectorAll('p > strong:only-child');
       paras.forEach(str=>{
@@ -183,7 +241,6 @@
         makeCardFromPair(str,run); p.remove();
       });
     }
-
     async function loadMD(file,targetId){
       const el=document.getElementById(targetId);
       try{
@@ -192,35 +249,36 @@
         const md=await res.text();
         el.innerHTML=marked.parse(md);
         enhanceBulletedCards(el); enhanceParagraphHeadingGroups(el);
-        // Blanks: underline answers OR underscores
+        // make blanks fillable
         el.querySelectorAll('u').forEach(u=>{
           const answer=u.textContent.trim();
           const wrap=document.createElement('span'); wrap.className='fill-blank';
           const input=document.createElement('input'); input.type='text'; input.dataset.answer=answer;
           wrap.appendChild(input); u.replaceWith(wrap);
         });
-        el.innerHTML=el.innerHTML.replace(/_{3,}/g,'<span class="fill-blank"><input type="text"></span>');
       }catch(err){
         el.innerHTML=`<p class="error">Failed to load ${file}: ${err.message}</p>`;
       }
     }
-
     document.addEventListener('DOMContentLoaded',()=>{
       loadMD('cns.md','cns');
       loadMD('pns.md','pns');
       loadMD('fillable_tracts.md','tracts');
     });
 
-    function togglePics(){const pics=document.getElementById('pics'); pics.style.display=(pics.style.display==='none')?'block':'none';}
-    function toggleFillPic(){const fill=document.getElementById('fillpic'); fill.style.display=(fill.style.display==='none')?'block':'none';}
-    function toggleFillTracts(){const box=document.getElementById('filltracts'); box.style.display=(box.style.display==='none')?'block':'none';}
+    function togglePics(){const pics=document.getElementById('pics'); pics.style.display=(pics.style.display==='none')?'block':'none'; if(pics.style.display==='block'){document.getElementById('fillpic').style.display='none';document.getElementById('filltracts').style.display='none';}}
+    function toggleFillPic(){const fill=document.getElementById('fillpic');const isHidden=window.getComputedStyle(fill).display==='none';fill.style.display=isHidden?'block':'none';if(isHidden){document.getElementById('pics').style.display='none';document.getElementById('filltracts').style.display='none';fill.scrollIntoView({behavior:'smooth',block:'start'});}}
+    function lockFillPic(){alert("Answers locked. Use Reset to clear.");}
+    function resetFillPic(){const old=document.getElementById('fill-pdf'); if(old){const fresh=old.cloneNode(true); old.replaceWith(fresh);}}
+    function toggleReference(){const btn=document.getElementById('refBtn');const refImg=document.getElementById('ref-img');if(refImg.style.display==='none'){refImg.style.display='block';btn.textContent="Hide Reference";}else{refImg.style.display='none';btn.textContent="Show Reference";}}
+    function toggleFillTracts(){const box=document.getElementById('filltracts');box.style.display=(box.style.display==='none')?'block':'none';if(box.style.display==='block'){document.getElementById('pics').style.display='none';document.getElementById('fillpic').style.display='none';box.scrollIntoView({behavior:'smooth',block:'start'});}}
 
     function checkTracts(){
       document.querySelectorAll('#filltracts input').forEach(inp=>{
-        const ans=(inp.dataset.answer||'').trim().toLowerCase();
         const val=inp.value.trim().toLowerCase();
+        const ans=inp.dataset.answer.trim().toLowerCase();
         inp.parentElement.classList.remove('correct','incorrect');
-        if(ans){inp.parentElement.classList.add(val===ans?'correct':'incorrect');}
+        if(val){inp.parentElement.classList.add(val===ans?'correct':'incorrect');}
       });
     }
     function resetTracts(){
