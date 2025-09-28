@@ -163,8 +163,8 @@ discriminative touch, vibration, proprioception
 Slow pain= spinolimbic - Fast pain= Spinothalamic - discriminative= Fast
 
 **Two Tracts**
-- Lateral Spinothalamic Tract (nociception & Temperature)**  
-- Anterior Spinothalamic Tract (Crude Touch & Pressure)**  
+- Lateral Spinothalamic Tract (nociception & Temperature)  
+- Anterior Spinothalamic Tract (Crude Touch & Pressure)  
 
 **Fast Pain**
 - 1st order: peripheral axon to DRG → dorsal horn/SC (lamina I, II, V)  
@@ -182,7 +182,7 @@ Slow pain= spinolimbic - Fast pain= Spinothalamic - discriminative= Fast
 - Spinoreticular → arousal and attention, sleep/wake cycle synapse recticular formation  
 - Spino-emotional → limbic emotional response, affective responses to pain
 - Pathways have projection neurons with poor localization (can’t pinpoint exact spot of pain)
-- - First order neuron in pathway are small C Fibers
+- First order neuron in pathway are small C Fibers
 
 </details> <!-- ALS closes -->
 
