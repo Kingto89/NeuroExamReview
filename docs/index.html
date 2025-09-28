@@ -184,6 +184,7 @@
         if(chev) chev.textContent=open?'▲':'▼';
       });
     }
+
     function makeCardFromPair(titleNode,nodesToWrap){
       const card=document.createElement('div');
       card.className='card-li';
@@ -202,6 +203,7 @@
         chev.textContent=open?'▲':'▼';
       });
     }
+
     function enhanceBulletedCards(container){
       const lis=container.querySelectorAll('ul > li');
       lis.forEach(li=>{
@@ -224,6 +226,7 @@
         });
       });
     }
+
     function enhanceParagraphHeadingGroups(container){
       const paras=container.querySelectorAll('p > strong:only-child');
       paras.forEach(str=>{
@@ -242,7 +245,6 @@
       });
     }
 
-    // Unified loadMD with blanks → inputs
     async function loadMD(file,targetId){
       const el=document.getElementById(targetId);
       try{
@@ -250,16 +252,18 @@
         if(!res.ok) throw new Error(res.status+" "+res.statusText);
         const md=await res.text();
         el.innerHTML=marked.parse(md);
-        enhanceBulletedCards(el);
-        enhanceParagraphHeadingGroups(el);
-        // convert ___ into input fields
-        el.innerHTML = el.innerHTML.replace(/_{3,}/g, match => {
-          return `<span class="fill-blank"><input type="text" data-answer=""></span>`;
+        enhanceBulletedCards(el); enhanceParagraphHeadingGroups(el);
+        el.querySelectorAll('u').forEach(u=>{
+          const answer=u.textContent.trim();
+          const wrap=document.createElement('span'); wrap.className='fill-blank';
+          const input=document.createElement('input'); input.type='text'; input.dataset.answer=answer;
+          wrap.appendChild(input); u.replaceWith(wrap);
         });
       }catch(err){
         el.innerHTML=`<p class="error">Failed to load ${file}: ${err.message}</p>`;
       }
     }
+
     document.addEventListener('DOMContentLoaded',()=>{
       loadMD('cns.md','cns');
       loadMD('pns.md','pns');
@@ -275,16 +279,15 @@
 
     function checkTracts(){
       document.querySelectorAll('#filltracts input').forEach(inp=>{
-        const got=inp.value.trim().toLowerCase();
-        const want=inp.dataset.answer.trim().toLowerCase();
+        const val=inp.value.trim().toLowerCase();
+        const ans=inp.dataset.answer.trim().toLowerCase();
         inp.parentElement.classList.remove('correct','incorrect');
-        if(got){inp.parentElement.classList.add(got===want?'correct':'incorrect');}
+        if(val){inp.parentElement.classList.add(val===ans?'correct':'incorrect');}
       });
     }
     function resetTracts(){
       document.querySelectorAll('#filltracts input').forEach(inp=>{
-        inp.value='';
-        inp.parentElement.classList.remove('correct','incorrect');
+        inp.value=''; inp.parentElement.classList.remove('correct','incorrect');
       });
     }
   </script>
