@@ -14,7 +14,7 @@
   - Path: internal capsule → pyramids (medulla)  
   - 🔴 Decussates: pyramidal decussation (medulla)  
   - 🔵 Synapse: anterior horn LMN → skeletal muscle  
-  - Function: fine limb movement, fractionation, voluntary movement  
+  - Function: fine limb movement, fractionation/independent muscle activation, most important for voluntary movement  
 
 - **Medial corticospinal**
   - posture and gross movement
@@ -45,7 +45,7 @@
   - Origin: red nucleus (midbrain)  
   - 🔴 Decussates: midbrain
   - Descends then synapsed on contralateral MNs (wrist/finger extensors)
-  - Function: facilitates upper extremity flexors  
+  - Function: Helps control finger extension 
 
 - **Reticulospinal - medial tract**  
   - Origin: reticular formation  
@@ -63,6 +63,7 @@
 ---
 
 **Nonspecific Motor Tracts**  
+Poorer motor performance when emotions or anxiety is high
 - **Ceruleospinal** (norepinephrine) → increases interneuron and MN excitability  
 - **Raphespinal** (serotonin) → increases interneuron and MN excitability  
 
@@ -104,7 +105,8 @@
 ---
 
 **Hypertonic States**  
-- Spasticity = velocity-dependent hypertonia  
+- Spasticity = velocity-dependent hypertonia
+  - Clasp-knife [sudden give-way] → resistance initially, then sudden release with continued stretch 
 - Rigidity = not velocity-dependent  
   - Decerebrate = upper extremity extended, lower extremity extended  
   - Decorticate = upper extremity flexed, lower extremity extended  
@@ -177,8 +179,8 @@ Slow pain= spinolimbic - Fast pain= Spinothalamic - discriminative= Fast
 - 3rd order: VPM thalamus → somatosensory cortex
 - Carries: pain, temperature, crude touch from face
 
-**Divergent Pathways (ALS subset, not conscious)**  
-- Spinomesencephalic → periaqueductal gray, turn eyes/head towards input 0r injury   
+**Divergent Pathways (ALS subset-- slow pain, not conscious)**  
+- Spinomesencephalic → periaqueductal gray (antinociception), superior colliculus--turn eyes/head towards input or injury   
 - Spinoreticular → arousal and attention, sleep/wake cycle synapse recticular formation  
 - Spino-emotional → limbic emotional response, affective responses to pain
 - Pathways have projection neurons with poor localization (can’t pinpoint exact spot of pain)
