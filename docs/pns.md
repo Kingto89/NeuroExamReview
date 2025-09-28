@@ -8,7 +8,7 @@
 <details open>
 <summary><b>🔽 Neuron Basics & Structure</b></summary>
 
-- **Neuron** = functional unit of nervous system  
+- **Neuron⭐️** = functional unit of nervous system  
   - Soma (cell body) → protein synthesis, nucleus, organelles  
   - Dendrites → main input branches, receive graded potentials  
   - Axon → output, arises at axon hillock (trigger zone)  
@@ -53,23 +53,23 @@
   - Target of most drugs, toxins, and diseases  
 
 - **Postsynaptic Potentials**  
-  - Excitatory (EPSP): Na+ / Ca2+ influx → depolarization  
-  - Inhibitory (IPSP): Cl− influx or K+ efflux → hyperpolarization
+  - Excitatory (EPSP): Na+ / Ca2+ influx → depolarization (closer to fire) 
+  - Inhibitory (IPSP): Cl− influx or K+ efflux → hyperpolarization (harder to fire)
   - In hyperpolarization (potential dips below rest/becomes more negative  (eg. –80 mV) before returning to rest/less negative/-70mV) 
   - More Ca2+ = more NT release; less Ca2+ = less NT release  
 
-- **AP Phases**  
+- **AP Phases⭐️**  
   1. Depolarization (with signal): Na⁺ & Ca⁺ influx (+35 mV peak membrane potential)  
-  2. Na⁺ inactivation  
-  3. Repolarization: K⁺ efflux  
+    - Na⁺ inactivation  
+  2. Repolarization: K⁺ efflux or Cl− influx
 
 - **Resting potential**
-  - ~ –70 mV (maintained by Na⁺/K⁺ ATPase → 3 Na⁺ out, 2 K⁺ in)  
+  - ⭐️~ –70 mV (maintained by Na⁺/K⁺ ATPase → 3 Na⁺ out, 2 K⁺ in)  
 
 - **Threshold**
-  - ~ –55 mV → Na⁺ channels open  (no action potential if not met)
+  - ⭐️~ –55 mV → Na⁺ channels open  (no action potential if not met)
 
-- **Refractory Periods**  
+- **Refractory Periods⭐️**  
   - Absolute → no AP possible (Na+ channels inactivated)  
   - Relative → stronger stimulus needed  
   - Function: forward-only propagation  
@@ -85,7 +85,7 @@
 ---
 
 <details open>
-<summary><b>🔽 Fiber Types & Sensory Receptors</b></summary>
+<summary><b>🔽 Fiber Types & Sensory Receptors⭐️</b></summary>
   
 - **A-alpha — Aα (I)**
   - 13–20 μm • myelinated  
@@ -139,36 +139,36 @@
 <details open>
 <summary><b>🔽 Proprioceptors</b></summary>
 
-- **Muscle Spindle Afferents**  
+- **Muscle Spindle Afferents⭐️**  
   - Ia → phasic, max firing with quick stretch (nuclear bag fibers → velocity)  
   - II → tonic, proportional to static stretch (nuclear chain fibers → length)
 
-- **Efferents to Muscle Spindles**
+- **Efferents to Muscle Spindles⭐️**
 - Alpha-efferents → contract extrafusal fibers (main skeletal muscle) in response to change in length
 - Gamma-efferents → contract intrafusal fibers (inside spindle) to “reset” resting length
   - Gamma dynamic → velocity sensitivity (nuclear bag)  
   - Gamma static → static length sensitivity (nuclear chain + some bag)  
 
-- **Golgi Tendon Organ (GTO)**
+- **Golgi Tendon Organ (GTO)⭐️**
   - Ib afferents
   - Senses tension in tendon
   - relays tension to CNS
 
-- **Joint Receptors**
+- **Joint Receptors⭐️**
   - **Ruffini endings (Type I)**
-    - Afferents: Group II
+    - ⭐️Afferents: Group II
     - Slowly adapting, low threshold
     - Signal joint position, static tension, direction of movement  
   - **Paciniform (Pacinian) corpuscles (Type II)**
-    - Afferents: Group II
+    - ⭐️Afferents: Group II
     - Rapidly adapting
     - Detect acceleration / deceleration of movement  
   - **Golgi-like ligament endings (Type III)**
-    - Afferents: Group Ib
+    - ⭐️Afferents: Group Ib
     - High threshold, slowly adapting
     - Active at extreme joint ranges, protective role  
   - **Free nerve endings (Type IV)**
-    - Afferents: Group III & IV (A-delta and C fibers)
+    - ⭐️Afferents: Group III & IV (A-delta and C fibers)
     - High threshold, nociceptive
     - Signal pain, inflammation  
  
@@ -180,7 +180,7 @@
 <details open>
 <summary><b>🔽 Developmental Origins & Support Cells</b></summary>
 
-- **Neuroglia**  
+- **Neuroglia⭐️**  
   - Schwann cells (PNS) → myelinate one axon; also phagocytes  
   - Satellite cells (PNS) → cover soma in DRG & autonomic ganglia  
   - Oligodendrocytes (CNS) → myelinate multiple axons
@@ -213,7 +213,7 @@
   - Filum terminale = pia/dura extension anchor  
   - Cauda equina = lumbar/sacral roots descending  
 
-- **Primary Brain Vesicles**  
+- **Primary Brain Vesicles⭐️**  
 
   - **Forebrain (Prosencephalon):**  
     - Telencephalon → cerebrum (cerebral cortex, basal ganglia, hippocampus, amygdala, olfactory bulb, lateral ventricles)  
@@ -231,7 +231,7 @@
 ---
 
 <details open>
-<summary><b>🔽 Synaptic Neurochemistry</b></summary>
+<summary><b>🔽 Synaptic Neurochemistry⭐️</b></summary>
 
 Neurotransmitters 
 - **Acetylcholine (ACh)**
@@ -243,19 +243,19 @@ Neurotransmitters
 - **Glutamate**
   - Amino Acid
   - Major CNS excitatory transmitter
-  - Pain: acts a NT for primary neuron/ Fast Pain
+  - ⭐️Pain: acts a NT for primary neuron/ Fast Pain
   - Receptors: NMDA, AMPA, kainate (ionotropic), mGluR (metabotropic)
   - NMDA overactivation → excitotoxicity (stroke, trauma)
 
 - **GABA**
   - Amino Acid
-  - Major CNS inhibitory transmitter
+  - ⭐️Major CNS inhibitory transmitter
   - Receptors: GABA_A (Cl⁻ channel), GABA_B (Gi)
   - ↑GABA effect: benzodiazepines, barbiturates, propofol
 
 - **Glycine**
   - Amino Acid
-  - Inhibitory in spinal cord/brainstem (Cl⁻ influx)
+  - ⭐️Inhibitory in spinal cord/brainstem (Cl⁻ influx)
   - Blocked by strychnine → severe muscle spasms
 
 - **Dopamine**
@@ -278,10 +278,10 @@ Neurotransmitters
   - Wakefulness, appetite (tuberomammillary nucleus)
   - H₁ blockers (1st gen) → sedation
 
-- **Substance P**
+- **Substance P (Peptide)**
   - **Pain transmission** (nociceptive C fibers) to dorsal horn
   - Elevated in inflammation; blocked indirectly by descending inhibition
-  - Slow pain
+  - ⭐️Slow pain
 
 - **Endorphins & Enkephalins (Opioid peptides)**
   - Descending **antinociception** (PAG → raphe → dorsal horn)
@@ -298,13 +298,13 @@ Neurotransmitters
 ---
 
 <details open>
-<summary><b>🔽 Information Flow</b></summary>
+<summary><b>🔽 Information Flow⭐️</b></summary>
 
 - Afferent neurons → carry sensory info to CNS  
 - Efferent neurons → carry motor commands from CNS
-- SAME / DAVE:
-- Sensory = Afferent, Motor = Efferent.
-- Dorsal = Afferent, Ventral = Efferent. 
+- ⭐️SAME / DAVE:
+  - Sensory = Afferent, Motor = Efferent.
+  - Dorsal = Afferent, Ventral = Efferent. 
 - Interneurons → local connectors for integration  
 - Divergence → one axon branches to many targets  
 - Convergence → multiple inputs onto one target neuron
@@ -312,7 +312,7 @@ Neurotransmitters
 - Spatial summation → multiple inputs from different presynaptic neurons arrive at different places simultaneously and combine at the axon hillock.
 - Temporal summation → one presynaptic neuron fires multiple times in rapid succession, overlapping to add together.
   Together they determine if threshold is reached and AP occurs.
--  Propagation of action potentials:
+- ⭐️Propagation of action potentials:
   Faster with larger axon diameter and myelination.
 
 </details>
