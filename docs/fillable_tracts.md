@@ -1,3 +1,6 @@
+
+---
+
 # Fillable Tracts Practice
 
 Use this file to recall all major tracts. Click a section to expand, then try filling in the blanks.
@@ -10,9 +13,9 @@ Use this file to recall all major tracts. Click a section to expand, then try fi
 <details>
 <summary>Lateral Corticospinal Tract</summary>
 
-Origin: <u></u> (cortex)
-🔴 Decussates: <u></u> (medulla)
-Synapse: <u></u> horn LMN
+Origin: <u data-answer="primary motor cortex"></u> (cortex)
+🔴 Decussates: <u data-answer="pyramidal decussation"></u> (medulla)
+Synapse: <u data-answer="anterior"></u> horn LMN
 Function: Voluntary movement, fractionation
 
 </details>
@@ -20,18 +23,18 @@ Function: Voluntary movement, fractionation
 <details>
 <summary>Medial Corticospinal Tract</summary>
 
-Origin: <u></u> (cortex)
-Descends: <u></u> (ipsilateral)
-Function: <u></u> movements (neck, shoulder, trunk)
+Origin: <u data-answer="primary motor cortex"></u> (cortex)
+Descends: <u data-answer="ipsilateral"></u> (ipsilateral)
+Function: <u data-answer="axial and proximal"></u> movements (neck, shoulder, trunk)
 
 </details>
 
 <details>
 <summary>Corticobulbar (Corticobrainstem) Tract</summary>
 
-Origin: <u></u> (cortex)
-Synapse: <u></u> motor nuclei
-Innervation: Bilateral except <u></u> face
+Origin: <u data-answer="primary motor cortex"></u> (cortex)
+Synapse: <u data-answer="cranial nerve"></u> motor nuclei
+Innervation: Bilateral except <u data-answer="lower face (CN VII)"></u> face
 
 </details>
 
@@ -45,18 +48,18 @@ Innervation: Bilateral except <u></u> face
 <details>
 <summary>Rubrospinal – Lateral Tract</summary>
 
-Origin: <u></u> (midbrain)
-🔴 Decussates: <u></u>
-Descends then synapsed on <u></u> MNs (wrist/finger extensors)
-Function: Helps control finger <u></u>
+Origin: <u data-answer="red nucleus"></u> (midbrain)
+🔴 Decussates: <u data-answer="midbrain"></u>
+Descends then synapsed on <u data-answer="contralateral"></u> MNs (wrist/finger extensors)
+Function: Helps control finger <u data-answer="extension"></u>
 
 </details>
 
 <details>
 <summary>Vestibulospinal Tracts</summary>
 
-Medial tract → <u></u> head/neck position
-Lateral tract → activates <u></u> muscles for balance
+Medial tract → <u data-answer="stabilizes"></u> head/neck position
+Lateral tract → activates <u data-answer="extensor"></u> muscles for balance
 
 </details>
 
@@ -64,8 +67,8 @@ Lateral tract → activates <u></u> muscles for balance
 <summary>Reticulospinal – Medial</summary>
 
 Origin: Reticular formation
-Descends <u></u> (ipsilateral)
-Function: <u></u> posture/gross movement
+Descends <u data-answer="ipsilaterally"></u> (ipsilateral)
+Function: <u data-answer="posture and gross movement"></u> posture/gross movement
 
 </details>
 
@@ -79,18 +82,18 @@ Function: <u></u> posture/gross movement
 <details>
 <summary>Body (VPL)</summary>
 
-1st order: start in <u></u> → ascend in <u></u> → synapse at <u></u>
-2nd order: decussation at <u></u> → ascend medial lemniscus → synapse at <u></u>
-3rd order: ascend to internal capsule → termination in <u></u>
+1st order: start in <u data-answer="dorsal root ganglion"></u> → ascend in <u data-answer="gracile/cuneate fasciculi (dorsal columns)"></u> → synapse at <u data-answer="gracile and cuneate nuclei (medulla)"></u>
+2nd order: decussation at <u data-answer="internal arcuate fibers (medulla)"></u> → ascend medial lemniscus → synapse at <u data-answer="VPL of thalamus"></u>
+3rd order: ascend to internal capsule → termination in <u data-answer="primary somatosensory cortex (postcentral gyrus)"></u>
 
 </details>
 
 <details>
 <summary>Face (VPM)</summary>
 
-1st order: start in <u></u> → synapse at <u></u> (pons)
-2nd order: decussation at <u></u> → ascend in trigeminal lemniscus → synapse at <u></u>
-3rd order: ascend to internal capsule → termination in <u></u>
+1st order: start in <u data-answer="trigeminal (CN V) primary neurons"></u> → synapse at <u data-answer="principal (chief) sensory nucleus of V"></u> (pons)
+2nd order: decussation at <u data-answer="pons"></u> → ascend in trigeminal lemniscus → synapse at <u data-answer="VPM of thalamus"></u>
+3rd order: ascend to internal capsule → termination in <u data-answer="primary somatosensory cortex (face area)"></u>
 
 </details>
 
@@ -104,25 +107,25 @@ Function: <u></u> posture/gross movement
 <details>
 <summary>Fast Pain – Body</summary>
 
-1st order: start in <u></u> → synapse at <u></u> (lamina I, II, V)
-2nd order: decussation at <u></u> → ascend spinothalamic tract → synapse at <u></u>
-3rd order: ascend to internal capsule → termination in <u></u>
+1st order: start in <u data-answer="nociceptors/DRG"></u> → synapse at <u data-answer="dorsal horn (lamina I, II, V)"></u> (lamina I, II, V)
+2nd order: decussation at <u data-answer="anterior white commissure (spinal cord)"></u> → ascend spinothalamic tract → synapse at <u data-answer="VPL of thalamus"></u>
+3rd order: ascend to internal capsule → termination in <u data-answer="primary somatosensory cortex"></u>
 
 </details>
 
 <details>
 <summary>Fast Pain – Face</summary>
 
-1st order: start in <u></u> → synapse at <u></u> (brainstem/upper cervical)
-2nd order: decussation at <u></u> → ascend trigeminal lemniscus → synapse at <u></u>
-3rd order: ascend to internal capsule → termination in <u></u>
+1st order: start in <u data-answer="CN V (± VII, IX, X)"></u> → synapse at <u data-answer="spinal trigeminal nucleus"></u> (brainstem/upper cervical)
+2nd order: decussation at <u data-answer="medulla/pons"></u> → ascend trigeminal lemniscus → synapse at <u data-answer="VPM of thalamus"></u>
+3rd order: ascend to internal capsule → termination in <u data-answer="primary somatosensory cortex (face area)"></u>
 
 </details>
 
 <details>
 <summary>Slow Pain – Face (TRIM)</summary>
 
-Trigeminal → <u></u> formation → <u></u> nuclei → <u></u> cortical areas
+Trigeminal → <u data-answer="reticular"></u> formation → <u data-answer="intralaminar"></u> nuclei → <u data-answer="medial"></u> cortical areas
 
 </details>
 
@@ -136,36 +139,37 @@ Trigeminal → <u></u> formation → <u></u> nuclei → <u></u> cortical areas
 <details>
 <summary>Posterior Spinocerebellar</summary>
 
-Origin: 1st order synapse at <u></u> (T1–L2)
-Ascend <u></u> (ipsilateral) → enter via <u></u> cerebellar peduncle
+Origin: 1st order synapse at <u data-answer="nucleus dorsalis of Clarke (T1–L2)"></u> (T1–L2)
+Ascend <u data-answer="ipsilaterally"></u> (ipsilateral) → enter via <u data-answer="inferior"></u> cerebellar peduncle
 
 </details>
 
 <details>
 <summary>Cuneocerebellar</summary>
 
-Origin: 1st order synapse at <u></u> nucleus (medulla)
-Ascend <u></u> (ipsilateral) → enter via <u></u> cerebellar peduncle
+Origin: 1st order synapse at <u data-answer="accessory cuneate"></u> nucleus (medulla)
+Ascend <u data-answer="ipsilaterally"></u> (ipsilateral) → enter via <u data-answer="inferior"></u> cerebellar peduncle
 
 </details>
 
 <details>
 <summary>Anterior Spinocerebellar</summary>
 
-Origin: <u></u> interneurons (thoracolumbar)
-🔴 Double decussation: <u></u> and <u></u>
-Ascend → enter via <u></u> cerebellar peduncle
+Origin: <u data-answer="spinal border"></u> interneurons (thoracolumbar)
+🔴 Double decussation: <u data-answer="spinal cord"></u> and <u data-answer="pons"></u>
+Ascend → enter via <u data-answer="superior"></u> cerebellar peduncle
 
 </details>
 
 <details>
 <summary>Rostral Spinocerebellar</summary>
 
-Origin: <u></u> interneurons (cervical)
-Ascend → enter via <u></u> and <u></u> cerebellar peduncles
+Origin: <u data-answer="cervical"></u> interneurons (cervical)
+Ascend → enter via <u data-answer="inferior"></u> and <u data-answer="superior"></u> cerebellar peduncles
 
 </details>
 
 </details>
 
-<!-- :contentReference[oaicite:0]{index=0} -->
+---
+
