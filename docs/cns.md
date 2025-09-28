@@ -6,7 +6,7 @@
 ---
 
 <details open>
-<summary><b>🔽 Motor Pathways (Descending)</b></summary>
+<summary><b>🔽 Motor Pathways (Descending)⭐️</b></summary>
 
 **Corticospinal System (Pyramidal)**  
 - **Lateral corticospinal**  
@@ -40,7 +40,7 @@
 
 ---
 
-**Brainstem (Extrapyramidal) Pathways**  
+**Brainstem (Extrapyramidal) Pathways⭐️**  
 - **Rubrospinal - Lateral tract**  
   - Origin: red nucleus (midbrain)  
   - 🔴 Decussates: midbrain
@@ -62,8 +62,8 @@
 
 ---
 
-**Nonspecific Motor Tracts**  
-Poorer motor performance when emotions or anxiety is high
+**Nonspecific Motor Tracts⭐️**  
+⭐️Poorer motor performance when emotions or anxiety is high
 - **Ceruleospinal** (norepinephrine) → increases interneuron and MN excitability  
 - **Raphespinal** (serotonin) → increases interneuron and MN excitability  
 
@@ -81,15 +81,19 @@ Poorer motor performance when emotions or anxiety is high
 
 **Reflexes and Muscle Properties**  
 - Spinal reflexes can occur without brain input  
-  - Phasic stretch reflex → monosynaptic, quick stretch  
-  - Tonic stretch reflex → polysynaptic, sustained stretch  
-  - Cutaneous reflexes → withdrawal, Babinski  
+- Phasic stretch reflex → monosynaptic, quick stretch  
+- Tonic stretch reflex → polysynaptic, sustained stretch  
+ - Cutaneous reflexes → withdrawal, Babinski  
 
 - Muscle tone and contraction  
-  - Crossbridge cycling requires calcium  
+  - ⭐️Crossbridge: Ca++ binds troponin → conformational change   
   - Normal-length vs contracture (shortened sarcomeres)  
   - Feedforward = anticipatory postural adjustment  
-  - Feedback = sensory-driven correction  
+  - Feedback = sensory-driven correction
+ 
+- ⭐️Excitation–Contraction Coupling (Ca++)
+  - Acetylcholine at neuromuscular junction → binds receptors on sarcolemma → action potential travels along T-tubules  
+  - Calcium released from sarcoplasmic reticulum → binds troponin → contraction begins  
 
 ---
 
@@ -98,13 +102,13 @@ Poorer motor performance when emotions or anxiety is high
 - Paralysis = complete loss  
 - UMN signs = spasticity (velocity-dependent), hyperreflexia, Babinski positive  
 - LMN signs = flaccid paralysis, fasciculations, atrophy  
-- Myoplasticity = contracture, atrophy, weak actin-myosin binding  
+- ⭐️Myoplasticity = contracture, atrophy, weak actin-myosin binding (determine resistance/stretch) 
 - Abnormal cutaneous reflexes → Babinski, clonus  
 - Fractionation loss → impaired hand and finger fine movements  
 
 ---
 
-**Hypertonic States**  
+**Hypertonic States⭐️**  
 - Spasticity = velocity-dependent hypertonia
   - Clasp-knife [sudden give-way] → resistance initially, then sudden release with continued stretch 
 - Rigidity = not velocity-dependent  
@@ -122,7 +126,7 @@ Poorer motor performance when emotions or anxiety is high
 
 ### Conscious Relay Pathways
 
-#### Dorsal Column–Medial Lemniscus (DCML)
+#### Dorsal Column–Medial Lemniscus (DCML)⭐️
 [📌 VPL = body | VPM = face]
 
 **From the Body**
@@ -160,7 +164,7 @@ discriminative touch, vibration, proprioception
 </details> <!-- DCML closes here ✅ -->
 
 <details>
-<summary><b>Anterolateral System (Spinothalamic)</b></summary>
+<summary><b>Anterolateral System (Spinothalamic)⭐️</b></summary>
 
 Slow pain= spinolimbic - Fast pain= Spinothalamic - discriminative= Fast
 
@@ -190,7 +194,7 @@ Slow pain= spinolimbic - Fast pain= Spinothalamic - discriminative= Fast
 
 
 <details>
-<summary><b>Nonconscious Relay Pathways (Cerebellum)</b></summary>
+<summary><b>Nonconscious Relay Pathways⭐️ (Cerebellum)</b></summary>
 
 - **Posterior spinocerebellar (High Fidelity)**  
   → input: lower extremity  
@@ -233,7 +237,7 @@ Slow pain= spinolimbic - Fast pain= Spinothalamic - discriminative= Fast
 ---
 
 <details open>
-<summary><b>🧠 Must-Know Cortical Sites</b></summary>
+<summary><b>🧠 Must-Know Cortical Sites⭐️</b></summary>
 
 - **Primary Motor Cortex (M1, Brodmann 4)**
   - Precentral gyrus  
@@ -280,8 +284,9 @@ Slow pain= spinolimbic - Fast pain= Spinothalamic - discriminative= Fast
 ---
 
 <details>
-<summary><b>🩺 Clinical Correlates</b></summary>
+<summary><b>🩺 Clinical Correlates⭐️</b></summary>
 
+- ⭐️Upper motor neurons (UMN) → cortex cell bodies; axons to spinal cord; signal interneurons & LMNs  
 - Brown-Séquard syndrome → ipsilateral DCML and motor loss, contralateral pain and temperature loss  
 - Anterior cord syndrome → corticospinal and spinothalamic lost, DCML spared  
 - ALS → UMN and LMN degeneration, sensory spared  
@@ -290,7 +295,12 @@ Slow pain= spinolimbic - Fast pain= Spinothalamic - discriminative= Fast
 - Babinski → UMN sign  
 - Hemiplegia = weakness one side  
 - Paraplegia = weakness below arms  
-- Tetraplegia = weakness in all four limbs  
+- Tetraplegia = weakness in all four limbs
+- ⭐️Light touch → localization of touch & vibration; ability to distinguish two close points  
+- ⭐️Conscious proprioception** → awareness of movement and position of body parts  
+- ⭐️Stereognosis → identify objects by touch + proprioception (e.g., key in hand without vision)
+- ⭐️Muscle tone is the resistance to stretch in a resting muscle
+
 
 </details>
 
