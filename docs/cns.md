@@ -199,7 +199,7 @@ Slow pain= spinolimbic - Fast pain= Spinothalamic - discriminative= Fast
 - Carries: pain, temperature, crude touch from face
 
 **Slow Pain from Face (TRIM)**
-- TRIM = **Trigeminal → Reticular formation → Intralaminar nuclei → Many cortical areas**
+- TRIM = Trigeminal → Reticular formation → Intralaminar nuclei → Many cortical areas
 
 **Divergent Pathways (ALS subset-- slow pain, not conscious)** 
 Pathways reach the brainstem and brain structures
