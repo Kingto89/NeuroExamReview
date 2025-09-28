@@ -293,13 +293,15 @@
       }
     }
 
-    function toggleFillPic(){
-      const fill = document.getElementById('fillpic');
-      fill.style.display = (fill.style.display === 'none') ? 'block' : 'none';
-      if(fill.style.display === 'block'){
-        document.getElementById('pics').style.display = 'none';
-      }
-    }
+function toggleFillPic(){
+  const fill = document.getElementById('fillpic');
+  const isHidden = window.getComputedStyle(fill).display === 'none';
+  fill.style.display = isHidden ? 'block' : 'none';
+  if(isHidden){
+    document.getElementById('pics').style.display = 'none';
+    fill.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+}
 
     function lockFillPic(){
       alert("Answers locked. Use Reset to clear.");
