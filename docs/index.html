@@ -92,11 +92,21 @@
   </div>
 
   <!-- Controls -->
-  <div class="bar">
-    <button onclick="toggleAll(true)">Expand all</button>
-    <button onclick="toggleAll(false)">Collapse all</button>
-    <span class="muted">CNS and PNS content loads from <code>cns.md</code> and <code>pns.md</code>.</span>
+<div class="bar">
+  <button onclick="toggleAll(true)">Expand all</button>
+  <button onclick="toggleAll(false)">Collapse all</button>
+  <button onclick="togglePics()">Useful Pictures</button>
+  <button onclick="toggleFillPic()">Fill Picture</button>
+</div>
+
+<!-- Hidden picture section -->
+<div id="pics" style="display:none; margin:16px 0">
+  <div style="display:flex; flex-wrap:wrap; gap:16px; justify-content:center">
+    <img src="Dorsal Column Pathway.jpg" alt="Dorsal Column Pathway" style="max-width:30%; border:1px solid #ccc; border-radius:8px">
+    <img src="Pathway Comparison.jpg" alt="Pathway Comparison" style="max-width:30%; border:1px solid #ccc; border-radius:8px">
+    <img src="Ascending Pathway.png" alt="Ascending Pathway" style="max-width:30%; border:1px solid #ccc; border-radius:8px">
   </div>
+</div>
 
   <!-- Two collapsibles side-by-side on large screens -->
   <div class="row">
@@ -115,6 +125,11 @@
       </details>
     </div>
   </div>
+<!-- Fill-in recall picture -->
+<div id="fillpic" style="display:none; margin:16px 0; text-align:center">
+  <embed src="Fillable Pathway.pdf" type="application/pdf" 
+         style="width:80%; height:600px; border:2px dashed #666; border-radius:8px">
+</div>
 
   <!-- ===== Extra 3D models (fixed wrappers) ===== -->
   <details>
@@ -275,6 +290,15 @@
         const md = await res.text();
 
         el.innerHTML = marked.parse(md);
+function toggleFillPic(){
+  const fill = document.getElementById('fillpic');
+  fill.style.display = (fill.style.display === 'none') ? 'block' : 'none';
+
+  // Optional: auto-hide Useful Pictures when Fill Picture is open
+  if(fill.style.display === 'block'){
+    document.getElementById('pics').style.display = 'none';
+  }
+}
 
         enhanceBulletedCards(el);
         enhanceParagraphHeadingGroups(el);
