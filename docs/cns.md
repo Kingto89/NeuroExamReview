@@ -210,7 +210,7 @@ Mnemonic: The Brainstem Uses <span style="color:red">Ascend</span> Via Somatosen
 
 **Divergent Pathways (ALS subset-- slow pain, not conscious)** 
 Pathways reach the brainstem and brain structures
-- Spinomesencephalic → periaqueductal gray (antinociception), superior colliculus--turn eyes/head towards input or injury   
+- Spinomesencephalic → periaqueductal gray - PAG (antinociception), superior colliculus--turn eyes/head towards input or injury   
 - Spinoreticular → arousal and attention, sleep/wake cycle synapse recticular formation  
 - Spino-emotional → limbic emotional response, affective responses to pain
 - Pathways have projection neurons with poor localization (can’t pinpoint exact spot of pain)
