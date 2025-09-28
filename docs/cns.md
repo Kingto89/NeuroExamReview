@@ -96,12 +96,6 @@ Refers to the organization of pools in the ventral horn of the spinal cord
 - Tonic stretch reflex → polysynaptic, sustained stretch
 - Cutaneous reflexes → any reflex triggered by stimulation of the skin, includes withdrawal reflex, Babinski  
 
-**Sensory Receptors (Adaptation Rate)**
-- **Phasic receptors** → adapt quickly, signal onset/offset  
-  - Examples: Pacinian corpuscles, Meissner corpuscles  
-- **Tonic receptors** → respond as long as stimulus maintained  
-  - Examples: Ruffini endings, Merkel discs
-
 - ⭐️Muscle tone and contraction  
   - Crossbridge: Ca++ binds troponin → conformational change   
   - Normal-length vs contracture (shortened sarcomeres)  
