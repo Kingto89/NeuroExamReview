@@ -204,7 +204,9 @@ Mnemonic: The Brainstem Uses <span style="color:red">Ascend</span> Via Somatosen
 ---
 
 **Slow Pain from Face (TRIM)**   
-- Trigeminal → Reticular formation → Intralaminar nuclei → Many cortical areas  
+- Trigeminal → Reticular formation → Intralaminar nuclei → Many cortical areas
+
+--- 
 
 **Divergent Pathways (ALS subset-- slow pain, not conscious)** 
 Pathways reach the brainstem and brain structures
