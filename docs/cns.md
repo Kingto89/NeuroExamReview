@@ -69,9 +69,10 @@
 
 ---
 <details>
-<summary><b>Motor Neuron Pools⭐️</b></summary>
-   
-Located in Ventral horn
+  
+**Motor Neuron Pools⭐️**
+  Located in Ventral horn
+  
 - Medial = axial and proximal muscles  
 - Lateral = distal muscles  
 - Anterior = extensors  
