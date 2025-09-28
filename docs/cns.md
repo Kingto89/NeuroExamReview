@@ -78,8 +78,7 @@ Located in Ventral horn
 - Posterior = flexors  
 - Alpha motor neurons = extrafusal fibers (force)  
 - Gamma motor neurons = intrafusal fibers (spindle sensitivity)
-  
-<details>
+
 ---
 
 **Stepping Pattern Generators (SPGs)⭐️**
