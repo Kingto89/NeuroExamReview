@@ -20,11 +20,11 @@
     .muted{color:#6b7280; font-size:.92rem}
     .error{color:#b00020}
     #fillpic iframe {
-  width: 100%;
-  height: 100vh; /* full screen height */
-  border: 2px solid #666;
-  border-radius: 8px;
-}
+      width: 100%;
+      height: 100vh; /* full screen height */
+      border: 2px solid #666;
+      border-radius: 8px;
+    }
     .row{display:flex; gap:16px; flex-wrap:wrap}
     .col{flex:1 1 460px}
     .bar{display:flex; gap:8px; align-items:center; margin:10px 0}
@@ -103,7 +103,7 @@
     <button onclick="toggleAll(false)">Collapse all</button>
     <button onclick="togglePics()">Useful Pictures</button>
     <button onclick="toggleFillPic()">Fill Picture</button>
-     <button onclick="toggleFillTracts()">Fillable Tracts</button>
+    <button onclick="toggleFillTracts()">Fillable Tracts</button>
   </div>
 
   <!-- Hidden picture section -->
@@ -133,29 +133,29 @@
     </div>
   </div>
 
-<!-- Fill-in recall picture -->
-<div id="fillpic" style="display:none; margin:16px 0; text-align:center">
-  <div id="fill-wrap" style="display:flex; gap:16px; justify-content:center; align-items:flex-start">
-<iframe
-  id="fill-pdf"
-  src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://kingto89.github.io/NeuroExamReview/Fillable%20Pathway.pdf">
-</iframe>
-    <img id="ref-img" src="Dorsal Column Pathway.jpg" 
-         alt="Dorsal Column Pathway reference"
-         style="width:45%; height:600px; object-fit:contain; border:2px solid #666; border-radius:8px; display:none">
+  <!-- Fill-in recall picture -->
+  <div id="fillpic" style="display:none; margin:16px 0; text-align:center">
+    <div id="fill-wrap" style="display:flex; gap:16px; justify-content:center; align-items:flex-start">
+      <iframe
+        id="fill-pdf"
+        src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://kingto89.github.io/NeuroExamReview/Fillable%20Pathway.pdf">
+      </iframe>
+      <img id="ref-img" src="Dorsal Column Pathway.jpg" 
+          alt="Dorsal Column Pathway reference"
+          style="width:45%; height:600px; object-fit:contain; border:2px solid #666; border-radius:8px; display:none">
+    </div>
+    <div style="margin-top:12px">
+      <button onclick="lockFillPic()">Lock Answers</button>
+      <button onclick="resetFillPic()">Reset Fill</button>
+      <button id="refBtn" onclick="toggleReference()">Show Reference</button>
+    </div>
+  </div> <!-- closes fillpic -->
+
+  <!-- Fill-in recall tracts -->
+  <div id="filltracts" style="display:none; margin:16px 0">
+    <div id="tracts" class="md"><p class="muted">Loading fillable_tracts.md…</p></div>
+    <p class="muted">Open as its own page: <a href="fillable_tracts.md">fillable_tracts.md</a></p>
   </div>
-  <div style="margin-top:12px">
-    <button onclick="lockFillPic()">Lock Answers</button>
-    <button onclick="resetFillPic()">Reset Fill</button>
-    <button id="refBtn" onclick="toggleReference()">Show Reference</button>
-</div> <!-- closes fillpic -->
-
-<!-- Fill-in recall tracts -->
-<div id="filltracts" style="display:none; margin:16px 0">
-  <div id="tracts" class="md"><p class="muted">Loading fillable_tracts.md…</p></div>
-  <p class="muted">Open as its own page: <a href="fillable_tracts.md">fillable_tracts.md</a></p>
-</div>
-
 
   <!-- ===== Extra 3D models (fixed wrappers) ===== -->
   <details>
@@ -182,185 +182,6 @@
       <iframe title="Sagittal head section" src="https://sketchfab.com/models/19378ae104f74bb186c3cb9bd90e16f0/embed?autostart=1&ui_infos=0&ui_watermark=0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
     </div>
   </details>
-
-  <script>
-    // Top-level expand/collapse helper
-    function toggleAll(open){
-      document.querySelectorAll('details').forEach(d => d.open = open);
-      document.querySelectorAll('.card-li').forEach(card => {
-        card.classList.toggle('open', open);
-        const chev = card.querySelector('.chev');
-        if (chev) chev.textContent = open ? '▲' : '▼';
-      });
-    }
-
-    // ---- Enhancer functions (full from your original index) ----
-    function makeCardFromPair(titleNode, nodesToWrap){
-      const card = document.createElement('div');
-      card.className = 'card-li';
-      const head = document.createElement('div');
-      head.className = 'li-head';
-      const title = document.createElement('div');
-      title.className = 'title';
-      title.textContent = titleNode.textContent.trim();
-      const chev = document.createElement('span');
-      chev.className = 'chev';
-      chev.textContent = '▼';
-      head.appendChild(title);
-      head.appendChild(chev);
-      const body = document.createElement('div');
-      body.className = 'li-body';
-      const insertBefore = nodesToWrap[0];
-      insertBefore.parentNode.insertBefore(card, insertBefore);
-      card.appendChild(head);
-      card.appendChild(body);
-      nodesToWrap.forEach(n => body.appendChild(n));
-      head.addEventListener('click', () => {
-        const open = !card.classList.contains('open');
-        card.classList.toggle('open', open);
-        chev.textContent = open ? '▲' : '▼';
-      });
-    }
-
-    function enhanceBulletedCards(container){
-      const lis = container.querySelectorAll('ul > li');
-      lis.forEach(li => {
-        const strong = li.querySelector(':scope > strong');
-        if (!strong) return;
-        const more = Array.from(li.childNodes).filter(n => {
-          if (n === strong) return false;
-          if (n.nodeType === 3 && n.textContent.trim() === '') return false;
-          return true;
-        });
-        if (more.length === 0) return;
-        const card = document.createElement('div');
-        card.className = 'card-li';
-        const head = document.createElement('div');
-        head.className = 'li-head';
-        const title = document.createElement('div');
-        title.className = 'title';
-        title.textContent = strong.textContent.trim();
-        const chev = document.createElement('span');
-        chev.className = 'chev';
-        chev.textContent = '▼';
-        head.appendChild(title);
-        head.appendChild(chev);
-        const body = document.createElement('div');
-        body.className = 'li-body';
-        more.forEach(n => body.appendChild(n));
-        li.innerHTML = '';
-        li.appendChild(card);
-        card.appendChild(head);
-        card.appendChild(body);
-        head.addEventListener('click', () => {
-          const open = !card.classList.contains('open');
-          card.classList.toggle('open', open);
-          chev.textContent = open ? '▲' : '▼';
-        });
-      });
-    }
-
-    function enhanceParagraphHeadingGroups(container){
-      const paras = container.querySelectorAll('p > strong:only-child');
-      paras.forEach(str => {
-        const p = str.parentElement;
-        if (p.closest('.card-li')) return;
-        const run = [];
-        let n = p.nextSibling;
-        while (n) {
-          if (n.nodeType === 1) {
-            if (n.matches('p > strong:only-child, hr, details')) break;
-            if (n.matches('p')) {
-              const onlyStrong = n.querySelector(':scope > strong:only-child');
-              if (onlyStrong) break;
-            }
-          }
-          const next = n.nextSibling;
-          run.push(n);
-          n = next;
-        }
-        if (run.length === 0) return;
-        makeCardFromPair(str, run);
-        p.remove();
-      });
-    }
-
-    async function loadMD(file, targetId){
-      const el = document.getElementById(targetId);
-      try {
-        const res = await fetch(file, {cache: "no-store"});
-        if(!res.ok) throw new Error(res.status + " " + res.statusText);
-        const md = await res.text();
-        el.innerHTML = marked.parse(md);
-        enhanceBulletedCards(el);
-        enhanceParagraphHeadingGroups(el);
-      } catch (err) {
-        el.innerHTML = `<p class="error">Failed to load ${file}: ${err.message}</p>`;
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      loadMD('cns.md', 'cns');
-      loadMD('pns.md', 'pns');
-      loadMD('fillable_tracts.md', 'tracts');
-    });
-
-    // === NEW FUNCTIONS ADDED ===
-    function togglePics(){
-      const pics = document.getElementById('pics');
-      pics.style.display = (pics.style.display === 'none') ? 'block' : 'none';
-      if(pics.style.display === 'block'){
-        document.getElementById('fillpic').style.display = 'none';
-      }
-    }
-
-function toggleFillPic(){
-  const fill = document.getElementById('fillpic');
-  const isHidden = window.getComputedStyle(fill).display === 'none';
-  fill.style.display = isHidden ? 'block' : 'none';
-  if(isHidden){
-    document.getElementById('pics').style.display = 'none';
-    fill.scrollIntoView({behavior:'smooth', block:'start'});
-  }
-}
-
-    function lockFillPic(){
-      alert("Answers locked. Use Reset to clear.");
-    }
-
-function resetFillPic() {
-  const container = document.getElementById('fillpic');
-  const old = container.querySelector('iframe'); // now looks for iframe
-  if (old) {
-    const fresh = old.cloneNode(true);
-    old.replaceWith(fresh);
-  }
-}
-
-function toggleReference(){
-  const btn = document.getElementById('refBtn');
-  const refImg = document.getElementById('ref-img');
-
-  if(refImg.style.display === 'none'){
-    refImg.style.display = 'block';
-    btn.textContent = "Hide Reference";
-  } else {
-    refImg.style.display = 'none';
-    btn.textContent = "Show Reference";
-  }
-}
-    
-function toggleFillTracts(){
-  const box = document.getElementById('filltracts');
-  box.style.display = (box.style.display === 'none') ? 'block' : 'none';
-
-  // Optional: auto-hide other sections when tracts are open
-  if(box.style.display === 'block'){
-    document.getElementById('pics').style.display = 'none';
-    document.getElementById('fillpic').style.display = 'none';
-  }
-}
-  </script>
 
 <!-- ===== Exam Bank (shuffled + timer + saved scores) ===== -->
 <details open>
