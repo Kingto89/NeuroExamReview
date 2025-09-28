@@ -126,20 +126,25 @@
     </div>
   </div>
 
-  <!-- Fill-in recall picture -->
 <!-- Fill-in recall picture -->
 <div id="fillpic" style="display:none; margin:16px 0; text-align:center">
-  <iframe 
-    id="fill-pdf"
-    src="https://mozilla.github.io/pdf.js/web/viewer.html?file=Fillable%20Pathway.pdf" 
-    style="width:80%; height:600px; border:2px dashed #666; border-radius:8px">
-  </iframe>
+  <div id="fill-wrap" style="display:flex; gap:16px; justify-content:center; align-items:flex-start">
+    <iframe 
+      id="fill-pdf"
+      src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://kingto89.github.io/NeuroExamReview/Fillable%20Pathway.pdf" 
+      style="width:45%; height:600px; border:2px dashed #666; border-radius:8px">
+    </iframe>
+    <img id="ref-img" src="Dorsal Column Pathway.jpg" 
+         alt="Dorsal Column Pathway reference"
+         style="width:45%; height:600px; object-fit:contain; border:2px solid #666; border-radius:8px; display:none">
+  </div>
   <div style="margin-top:12px">
     <button onclick="lockFillPic()">Lock Answers</button>
     <button onclick="resetFillPic()">Reset Fill</button>
     <button id="refBtn" onclick="toggleReference()">Show Reference</button>
   </div>
 </div>
+
 
   <!-- ===== Extra 3D models (fixed wrappers) ===== -->
   <details>
@@ -322,40 +327,17 @@ function toggleFillPic(){
 
 function toggleReference(){
   const btn = document.getElementById('refBtn');
-  const container = document.getElementById('fillpic');
-  let wrap = document.getElementById('fill-wrap');
+  const refImg = document.getElementById('ref-img');
 
-  if(!wrap){
-    // Create side-by-side wrapper
-    wrap = document.createElement('div');
-    wrap.id = 'fill-wrap';
-    wrap.style.display = 'flex';
-    wrap.style.gap = '16px';
-    wrap.style.justifyContent = 'center';
-    wrap.style.marginTop = '16px';
-
-    const pdf = container.querySelector('embed');
-    if(pdf){ wrap.appendChild(pdf); }
-
-    const refImg = document.createElement('img');
-    refImg.id = 'ref-img';
-    refImg.src = "Dorsal Column Pathway.jpg";
-    refImg.alt = "Dorsal Column Pathway reference";
-    refImg.style = "max-width:45%; border:2px solid #666; border-radius:8px";
-
-    wrap.appendChild(refImg);
-    container.appendChild(wrap);
-
+  if(refImg.style.display === 'none'){
+    refImg.style.display = 'block';
     btn.textContent = "Hide Reference";
   } else {
-    // Remove wrapper, restore PDF
-    const pdf = wrap.querySelector('embed');
-    if(pdf){ container.insertBefore(pdf, wrap); }
-    wrap.remove();
+    refImg.style.display = 'none';
     btn.textContent = "Show Reference";
   }
 }
-    
+ 
   </script>
 </body>
 </html>
