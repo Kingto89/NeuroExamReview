@@ -6,13 +6,13 @@
 ---
 
 <details open>
-<summary><b>🔽 Neuron Basics & Structure</b></summary>
+<summary><b>🔽 Neuron Basics & Structure⭐️</b></summary>
 
-- **Neuron⭐️** = functional unit of nervous system  
-  - Soma (cell body) → protein synthesis, nucleus, organelles  
-  - Dendrites → main input branches, receive graded potentials  
-  - Axon → output, arises at axon hillock (trigger zone)  
-  - Presynaptic terminal → releases neurotransmitter into synaptic cleft/end of axon to target cell  
+- **Neuron** = functional unit of nervous system  
+  - ⭐️Soma (cell body) → protein synthesis, nucleus, organelles  
+  - ⭐️Dendrites → main input branches, receive graded potentials  
+  - ⭐️Axon → output, arises at axon hillock (trigger zone)  
+  - ⭐️Presynaptic terminal → releases neurotransmitter into synaptic cleft/end of axon to target cell  
 
 - **Cytoskeleton & Transport**  
   - Anterograde (soma → terminal) → kinesin, ATP  
@@ -74,7 +74,7 @@
   - Relative → stronger stimulus needed  
   - Function: forward-only propagation  
 
-- **Conduction**  
+- **Conduction⭐️**  
   - Unmyelinated → continuous regeneration  
   - Myelinated → saltatory (nodes of Ranvier) → faster, energy-efficient  
   - CNS demyelination = multiple sclerosis  
