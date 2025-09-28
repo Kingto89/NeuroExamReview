@@ -160,26 +160,29 @@ discriminative touch, vibration, proprioception
 <details>
 <summary><b>Anterolateral System (Spinothalamic)</b></summary>
 
-**Lateral Spinothalamic Tract (Pain & Temperature)**  
-- 1st order: DRG → dorsal horn (lamina I, II, V)  
-- 2nd order: 🔴 decussates in anterior white commissure → ascend contralaterally → VPL thalamus  
-- 3rd order: VPL thalamus → somatosensory cortex  
+Slow pain= spinolimbic - Fast pain= Spinothalamic - discriminative= Fast
 
-**Anterior Spinothalamic Tract (Crude Touch & Pressure)**  
-- 1st order: DRG → dorsal horn  
-- 2nd order: 🔴 decussates in anterior white commissure → ascend contralaterally → VPL thalamus  
-- 3rd order: VPL thalamus → somatosensory cortex  
+**Two Tracts**
+- Lateral Spinothalamic Tract (nociception & Temperature)**  
+- Anterior Spinothalamic Tract (Crude Touch & Pressure)**  
 
-**Face Equivalent (Trigeminal – Fast Pain & Temperature)**
-- 1st order: trigeminal ganglion → spinal trigeminal nucleus
+**Fast Pain**
+- 1st order: peripheral axon to DRG → dorsal horn/SC (lamina I, II, V)  
+- 2nd order: 🔴 decussates in anterior white commissure → ascend contralaterally → VPL thalamus  
+- 3rd order: VPL thalamus → somatosensory cortex (1 & 2) 
+
+**Fast Pain From Face**
+- 1st order: trigeminal Nerve → Brainstem → spinal trigeminal nucleus
 - 2nd order: 🔴 decussates in brainstem (anterior white commissure) → ascends in trigeminal lemniscus → VPM thalamus
 - 3rd order: VPM thalamus → somatosensory cortex
 - Carries: pain, temperature, crude touch from face
 
 **Divergent Pathways (ALS subset, not conscious)**  
-- Spinomesencephalic → periaqueductal gray, turn eyes/head towards input   
+- Spinomesencephalic → periaqueductal gray, turn eyes/head towards input 0r injury   
 - Spinoreticular → arousal and attention, sleep/wake cycle synapse recticular formation  
 - Spino-emotional → limbic emotional response, affective responses to pain
+- Pathways have projection neurons with poor localization (can’t pinpoint exact spot of pain)
+- - First order neuron in pathway are small C Fibers
 
 </details> <!-- ALS closes -->
 
@@ -187,10 +190,26 @@ discriminative touch, vibration, proprioception
 <details>
 <summary><b>Nonconscious Relay Pathways (Cerebellum)</b></summary>
 
-- **Posterior spinocerebellar (High fidelity)** → proprioception, lower extremity (1st order → nucleus dorsalis, 2nd order ipsilateral)  
-- **Cuneocerebellar (HF)** → proprioception, upper extremity (1st order → medulla, 2nd order ipsilateral)  
-- **Anterior spinocerebellar (Internal)** → double 🔴 decussation → functionally ipsilateral  
-- **Rostrospinocerebellar (Internal)** → coordination, upper extremity  
+- **Posterior spinocerebellar (High Fidelity)**  
+  → input: lower extremity  
+  → 1st order → nucleus dorsalis (T1–L2)  
+  → 2nd order ipsilateral via **inferior cerebellar peduncle**  
+
+- **Cuneocerebellar (High Fidelity)**  
+  → input: upper extremity  
+  → 1st order → lateral accessory nucleus (medulla)  
+  → 2nd order ipsilateral via **inferior cerebellar peduncle**
+   
+- **Anterior spinocerebellar (Internal)**  
+  → input: thoracolumbar SC  
+  → double 🔴 decussation (SC + cerebellum) → functionally ipsilateral  
+  → enters via **superior cerebellar peduncle**  
+
+- **Rostrospinocerebellar (Internal)**  
+  → input: cervical SC  
+  → ascends mostly ipsilateral  
+  → enters via **superior AND inferior cerebellar peduncles**  
+  → coordinates upper extremity  
 
 </details>
 
