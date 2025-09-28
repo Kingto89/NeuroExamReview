@@ -68,8 +68,9 @@
 - **Raphespinal** (serotonin) → increases interneuron and MN excitability  
 
 ---
-
-**Motor Neuron Pools⭐️**  
+<details>
+<summary><b>Motor Neuron Pools⭐️</b></summary>
+   
 Located in Ventral horn
 - Medial = axial and proximal muscles  
 - Lateral = distal muscles  
@@ -77,7 +78,8 @@ Located in Ventral horn
 - Posterior = flexors  
 - Alpha motor neurons = extrafusal fibers (force)  
 - Gamma motor neurons = intrafusal fibers (spindle sensitivity)
-
+  
+<details>
 ---
 
 **Stepping Pattern Generators (SPGs)⭐️**
