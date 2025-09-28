@@ -71,7 +71,8 @@
 ---
 
 **Motor Neuron Pools⭐️**
-  Located in Ventral horn
+  
+Refers to the organization of pools in the ventral horn of the spinal cord
   
 - Medial = axial and proximal muscles  
 - Lateral = distal muscles  
