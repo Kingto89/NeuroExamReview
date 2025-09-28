@@ -8,11 +8,11 @@
 <details open>
 <summary><b>🔽 Neuron Basics & Structure⭐️</b></summary>
 
-- **Neuron** = functional unit of nervous system  
-  - ⭐️Soma (cell body) → protein synthesis, nucleus, organelles  
-  - ⭐️Dendrites → main input branches, receive graded potentials  
-  - ⭐️Axon → output, arises at axon hillock (trigger zone)  
-  - ⭐️Presynaptic terminal → releases neurotransmitter into synaptic cleft/end of axon to target cell  
+  - Neuron = functional unit of nervous system/nerve cells  
+  - Soma (cell body) → protein synthesis, nucleus, organelles  
+  - Dendrites → main input branches, receive graded potentials, project from soma  
+  - Axon → output, arises at axon hillock (trigger zone)  
+  - Presynaptic terminal → releases neurotransmitter into synaptic cleft/end of axon to target cell  
 
 - **Cytoskeleton & Transport**  
   - Anterograde (soma → terminal) → kinesin, ATP  
@@ -41,7 +41,9 @@
 </details>
 
 <details open>
-<summary><b>🔽 Synapses & Potentials</b></summary>
+<summary><b>🔽 Synapses & Potentials⭐️</b></summary>
+  
+⭐️ Same chemical & electrical interaction
 
 - **Electrical synapses**
   - Direct ionic spread via gap junctions  
@@ -53,13 +55,13 @@
   - Target of most drugs, toxins, and diseases  
 
 - **Postsynaptic Potentials**  
-  - Excitatory (EPSP): Na+ / Ca2+ influx → depolarization (closer to fire) 
-  - Inhibitory (IPSP): Cl− influx or K+ efflux → hyperpolarization (harder to fire)
+  - ⭐️Excitatory (EPSP): Na+ / Ca2+ influx → depolarization (closer to fire) 
+  - ⭐️Inhibitory (IPSP): Cl− influx or K+ efflux → hyperpolarization (harder to fire)
   - In hyperpolarization (potential dips below rest/becomes more negative  (eg. –80 mV) before returning to rest/less negative/-70mV) 
-  - More Ca2+ = more NT release; less Ca2+ = less NT release  
+  - ⭐️More Ca2+ = more NT release; less Ca2+ = less NT release  
 
 - **AP Phases⭐️**  
-  1. Depolarization (with signal): Na⁺ & Ca⁺ influx (+35 mV peak membrane potential)  
+  1. Depolarization (with signal) less negative: Na⁺ & Ca⁺ influx (+35 mV peak membrane potential)  
     - Na⁺ inactivation  
   2. Repolarization: K⁺ efflux or Cl− influx
 
@@ -181,32 +183,48 @@
 <summary><b>🔽 Developmental Origins & Support Cells</b></summary>
 
 - **Neuroglia⭐️**  
-  - Schwann cells (PNS) → myelinate one axon; also phagocytes  
-  - Satellite cells (PNS) → cover soma in DRG & autonomic ganglia  
+  - Schwann cells (PNS) → myelinate one axon; also acts as phagocytes
+    - only supporting cells in PNS
+  - Satellite cells (PNS) → thin cells covering soma in DRG (PNS) & autonomic ganglia (Sympathetic and Parasympathetic)  
   - Oligodendrocytes (CNS) → myelinate multiple axons
   - Ependymal cells → line ventricles/central canal, regulate CSF.
   - Astrocytes → support neurons, form blood-brain barrier, ion buffering, nutritive role.
   - Microglia → immune defense, phagocytosis, activated in disease/injury.
 
-- **Embryology**
+- **Embryology⭐️**
   - Stages in utero:
   - Pre-embryonic (conception–day 14) → blastocyst forms 
-  - Blastocyst → inner cell mass (embryo), outer cell mass (placenta)
-  - Embryonic (day 15–week 8) → three germ layers form  
+  - ⭐️Blastocyst (2 layers) → inner cell mass (embryo), outer cell mass (placenta)
+  - ⭐️Embryonic (day 15–week 8) → three germ layers form  
   - Germ layers  
-    - Ectoderm → sensory organs, skin, nervous system  
+    - ⭐️Ectoderm → sensory organs, skin, nervous system  
     - Mesoderm → muscle, bone, dermis, circulation  
     - Endoderm → gut, liver, pancreas, lungs
-  - Fetal (week 8–birth) → growth, myelination, gyrification
-  - Somites  
-    - Sclerotome → vertebrae/skull  
-    - Myotome → skeletal muscle  
-    - Dermatome → dermis  
+  - ⭐️Fetal (week 8–birth) → growth, myelination, gyrification
+    -  myelination (starts 4th fetal month, ends 3rd year of life)
+    -  myelination: a sheath of proteins and fats surrounding an axon
 
-- **Neural Tube Regions**  
-  - Basal plate → motor (ventral horn)  
-  - Alar plate → sensory (dorsal horn)  
-  - Neural crest → PNS sensory neurons, Schwann, autonomic, endocrine  
+- **Neural Tube Formation (Day 18–26)**
+  - ⭐️Tube: closure begins in future cervical region → proceeds rostral & caudal
+  - ⭐️Groove: edges of neural plate fold upward
+  - ⭐️Plate: surface ectoderm thickening in contact with amniotic fluid
+  - Neuropores: rostral closes day 27, caudal closes day 30
+  - ⭐️Two concentric rings/layers by day 26:
+    - Mantle layer (inner) → gray matter (cell bodies, nuclei)
+    - Marginal layer (outer) → white matter (axons, glia)
+  - Regions include
+    - Basal plate → motor (ventral horn)
+    - Alar plate → sensory (dorsal horn)
+    - ⭐️Neural crest (from tube edges) → PNS sensory neurons
+      - 2 projections: SC & somite (dermis via mesoderm)
+
+- **Somite Development (Mesoderm, Day 20+)**
+  - ⭐️First appear in occipital region → added caudally
+  - Divide into sclerotome (vertebrae/skull), myotome (muscle), dermatome (dermis)
+  - Each somite differentiates into 3 regions:
+    - Sclerotome → vertebrae and ribs 
+    - Myotome → skeletal muscle 
+    - Dermatome → dermis of the skin 
 
 - **Spinal Cord Ends**  
   - Conus medullaris = end of cord  
@@ -239,11 +257,12 @@ Neurotransmitters
   - Receptors: nicotinic (ionotropic), muscarinic (metabotropic)
   - ↑AChE inhibitors (donepezil, neostigmine) → ↑ACh
   - Blocked by botulinum (↓release), curare (Nm antagonist)
+  - ⭐️Used by all neurons that synapse with muscle fibers: fast acting
 
 - **Glutamate**
   - Amino Acid
   - Major CNS excitatory transmitter
-  - ⭐️Pain: acts a NT for primary neuron/ Fast Pain
+  - ⭐️Pain: acts a NT for primary neuron/ Fast Pain in PNS
   - Receptors: NMDA, AMPA, kainate (ionotropic), mGluR (metabotropic)
   - NMDA overactivation → excitotoxicity (stroke, trauma)
 
@@ -290,6 +309,9 @@ Neurotransmitters
 - **Nitric Oxide (NO)**
   - Diffusible gas; retrograde modulator; ↑cGMP
   - Vasodilation; involved in long-term potentiation (memory)
+  - ⭐️Higher release at skin acupoints (enzymatic + bacterial generation)  
+  - ⭐️Norepinephrine is modulated by NO in sympathetic system  
+
 
 - Disorders of synaptic function → botulism, myasthenia gravis, Lambert-Eaton  
 
@@ -300,8 +322,8 @@ Neurotransmitters
 <details open>
 <summary><b>🔽 Information Flow⭐️</b></summary>
 
-- Afferent neurons → carry sensory info to CNS  
-- Efferent neurons → carry motor commands from CNS
+- ⭐️Afferent neurons → carry sensory info to CNS  
+- ⭐️Efferent neurons → carry motor commands from CNS
 - ⭐️SAME / DAVE:
   - Sensory = Afferent, Motor = Efferent.
   - Dorsal = Afferent, Ventral = Efferent. 
