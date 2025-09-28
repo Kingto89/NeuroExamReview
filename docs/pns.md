@@ -58,7 +58,7 @@
   - More Ca2+ = more NT release; less Ca2+ = less NT release  
 
 - **AP Phases**  
-  1. Rapid depolarization: Na⁺ influx (+30 mV peak membrane potential)  
+  1. Rapid depolarization: Na⁺ influx (+35 mV peak membrane potential)  
   2. Na⁺ inactivation  
   3. Repolarization: K⁺ efflux  
 
