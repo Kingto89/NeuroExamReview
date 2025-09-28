@@ -92,7 +92,7 @@
 - Spinal reflexes can occur without brain input  
 - Phasic stretch reflex → monosynaptic, quick stretch  
 - Tonic stretch reflex → polysynaptic, sustained stretch  
- - Cutaneous reflexes → withdrawal, Babinski  
+ - Cutaneous reflexes → any reflex triggered by stimulation of the skin, includes withdrawal reflex, Babinski  
 
 - ⭐️Muscle tone and contraction  
   - Crossbridge: Ca++ binds troponin → conformational change   
