@@ -19,6 +19,12 @@
     .md{padding:10px 0}
     .muted{color:#6b7280; font-size:.92rem}
     .error{color:#b00020}
+    #fillpic iframe {
+  width: 100%;
+  height: 100vh; /* full screen height */
+  border: 2px solid #666;
+  border-radius: 8px;
+}
     .row{display:flex; gap:16px; flex-wrap:wrap}
     .col{flex:1 1 460px}
     .bar{display:flex; gap:8px; align-items:center; margin:10px 0}
@@ -129,11 +135,10 @@
 <!-- Fill-in recall picture -->
 <div id="fillpic" style="display:none; margin:16px 0; text-align:center">
   <div id="fill-wrap" style="display:flex; gap:16px; justify-content:center; align-items:flex-start">
-    <iframe 
-      id="fill-pdf"
-      src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://kingto89.github.io/NeuroExamReview/Fillable%20Pathway.pdf" 
-      style="width:45%; height:600px; border:2px dashed #666; border-radius:8px">
-    </iframe>
+<iframe
+  id="fill-pdf"
+  src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://kingto89.github.io/NeuroExamReview/Fillable%20Pathway.pdf">
+</iframe>
     <img id="ref-img" src="Dorsal Column Pathway.jpg" 
          alt="Dorsal Column Pathway reference"
          style="width:45%; height:600px; object-fit:contain; border:2px solid #666; border-radius:8px; display:none">
