@@ -47,11 +47,12 @@
   - Descends then synapsed on contralateral MNs (wrist/finger extensors)
   - Function: Helps control finger extension 
 
-- **Reticulospinal - medial tract**  
+- **Reticulospinal - medial motor tract**  
   - Origin: reticular formation  
   - Function: bilateral posture, locomotion, reflex modulation  
 
-- **Vestibulospinal (2:medial and lateral tracts)**  
+- **Vestibulospinal = 2 tracts (medial + lateral)**
+  - both medial and lateral tracts are part of the medial motor system* 
   - Origin: vestibular nuclei  
   - Function: balance, head position, activates extensors  
 
