@@ -103,6 +103,7 @@
     <button onclick="toggleAll(false)">Collapse all</button>
     <button onclick="togglePics()">Useful Pictures</button>
     <button onclick="toggleFillPic()">Fill Picture</button>
+     <button onclick="toggleFillTracts()">Fillable Tracts</button>
   </div>
 
   <!-- Hidden picture section -->
@@ -147,7 +148,12 @@
     <button onclick="lockFillPic()">Lock Answers</button>
     <button onclick="resetFillPic()">Reset Fill</button>
     <button id="refBtn" onclick="toggleReference()">Show Reference</button>
-  </div>
+</div> <!-- closes fillpic -->
+
+<!-- Fill-in recall tracts -->
+<div id="filltracts" style="display:none; margin:16px 0">
+  <div id="tracts" class="md"><p class="muted">Loading fillable_tracts.md…</p></div>
+  <p class="muted">Open as its own page: <a href="fillable_tracts.md">fillable_tracts.md</a></p>
 </div>
 
 
@@ -296,6 +302,7 @@
     document.addEventListener('DOMContentLoaded', () => {
       loadMD('cns.md', 'cns');
       loadMD('pns.md', 'pns');
+      loadMD('fillable_tracts.md', 'tracts');
     });
 
     // === NEW FUNCTIONS ADDED ===
@@ -342,7 +349,17 @@ function toggleReference(){
     btn.textContent = "Show Reference";
   }
 }
- 
+    
+function toggleFillTracts(){
+  const box = document.getElementById('filltracts');
+  box.style.display = (box.style.display === 'none') ? 'block' : 'none';
+
+  // Optional: auto-hide other sections when tracts are open
+  if(box.style.display === 'block'){
+    document.getElementById('pics').style.display = 'none';
+    document.getElementById('fillpic').style.display = 'none';
+  }
+}
   </script>
 </body>
 </html>
