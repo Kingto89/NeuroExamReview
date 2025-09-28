@@ -5,7 +5,7 @@
 
 ---
 
-<details open>
+<details close>
 <summary><b>🔽 Neuron Basics & Structure⭐️</b></summary>
 
   - Neuron = functional unit of nervous system/nerve cells  
@@ -146,10 +146,10 @@
   - II → tonic, proportional to static stretch (nuclear chain fibers → length)
 
 - **Efferents to Muscle Spindles⭐️**
-- Alpha-efferents → contract extrafusal fibers (main skeletal muscle) in response to change in length
-- Gamma-efferents → contract intrafusal fibers (inside spindle) to “reset” resting length
-  - Gamma dynamic → velocity sensitivity (nuclear bag)  
-  - Gamma static → static length sensitivity (nuclear chain + some bag)  
+  - Alpha-efferents → contract extrafusal fibers (main skeletal muscle) in response to change in length
+  - Gamma-efferents → contract intrafusal fibers (inside spindle) to “reset” resting length
+    - Gamma dynamic → velocity sensitivity (nuclear bag)  
+    - Gamma static → static length sensitivity (nuclear chain + some bag)  
 
 - **Golgi Tendon Organ (GTO)⭐️**
   - Ib afferents
