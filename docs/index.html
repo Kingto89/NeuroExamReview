@@ -127,15 +127,19 @@
   </div>
 
   <!-- Fill-in recall picture -->
-  <div id="fillpic" style="display:none; margin:16px 0; text-align:center">
-    <embed src="Fillable Pathway.pdf" type="application/pdf" 
-           style="width:80%; height:600px; border:2px dashed #666; border-radius:8px">
-<div style="margin-top:12px">
-  <button onclick="lockFillPic()">Lock Answers</button>
-  <button onclick="resetFillPic()">Reset Fill</button>
- <button id="refBtn" onclick="toggleReference()">Show Reference</button>
-</div>
+<!-- Fill-in recall picture -->
+<div id="fillpic" style="display:none; margin:16px 0; text-align:center">
+  <iframe 
+    id="fill-pdf"
+    src="https://mozilla.github.io/pdf.js/web/viewer.html?file=Fillable%20Pathway.pdf" 
+    style="width:80%; height:600px; border:2px dashed #666; border-radius:8px">
+  </iframe>
+  <div style="margin-top:12px">
+    <button onclick="lockFillPic()">Lock Answers</button>
+    <button onclick="resetFillPic()">Reset Fill</button>
+    <button id="refBtn" onclick="toggleReference()">Show Reference</button>
   </div>
+</div>
 
   <!-- ===== Extra 3D models (fixed wrappers) ===== -->
   <details>
