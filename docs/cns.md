@@ -68,8 +68,7 @@
 - **Raphespinal** (serotonin) → increases interneuron and MN excitability  
 
 ---
-<details>
-  
+
 **Motor Neuron Pools⭐️**
   Located in Ventral horn
   
