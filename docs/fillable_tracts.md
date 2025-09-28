@@ -10,28 +10,28 @@ Use this file to recall all major tracts. Click a section to expand, then try fi
 <details>
 <summary>Lateral Corticospinal Tract</summary>
 
-Origin: _______ (cortex)  
-🔴 Decussates: _______ (medulla)  
-Synapse: _______ horn LMN  
-Function: Voluntary movement, fractionation  
+Origin: <u></u> (cortex)
+🔴 Decussates: <u></u> (medulla)
+Synapse: <u></u> horn LMN
+Function: Voluntary movement, fractionation
 
 </details>
 
 <details>
 <summary>Medial Corticospinal Tract</summary>
 
-Origin: _______ (cortex)  
-Descends: _______ (ipsilateral)  
-Function: _______ movements (neck, shoulder, trunk)  
+Origin: <u></u> (cortex)
+Descends: <u></u> (ipsilateral)
+Function: <u></u> movements (neck, shoulder, trunk)
 
 </details>
 
 <details>
 <summary>Corticobulbar (Corticobrainstem) Tract</summary>
 
-Origin: _______ (cortex)  
-Synapse: _______ motor nuclei  
-Innervation: Bilateral except _______ face  
+Origin: <u></u> (cortex)
+Synapse: <u></u> motor nuclei
+Innervation: Bilateral except <u></u> face
 
 </details>
 
@@ -45,27 +45,27 @@ Innervation: Bilateral except _______ face
 <details>
 <summary>Rubrospinal – Lateral Tract</summary>
 
-Origin: _______ (midbrain)  
-🔴 Decussates: _______  
-Descends then synapsed on _______ MNs (wrist/finger extensors)  
-Function: Helps control finger _______  
+Origin: <u></u> (midbrain)
+🔴 Decussates: <u></u>
+Descends then synapsed on <u></u> MNs (wrist/finger extensors)
+Function: Helps control finger <u></u>
 
 </details>
 
 <details>
 <summary>Vestibulospinal Tracts</summary>
 
-Medial tract → _______ head/neck position  
-Lateral tract → activates _______ muscles for balance  
+Medial tract → <u></u> head/neck position
+Lateral tract → activates <u></u> muscles for balance
 
 </details>
 
 <details>
 <summary>Reticulospinal – Medial</summary>
 
-Origin: Reticular formation  
-Descends _______ (ipsilateral)  
-Function: _______ posture/gross movement  
+Origin: Reticular formation
+Descends <u></u> (ipsilateral)
+Function: <u></u> posture/gross movement
 
 </details>
 
@@ -79,18 +79,18 @@ Function: _______ posture/gross movement
 <details>
 <summary>Body (VPL)</summary>
 
-1st order: start in _______ → ascend in _______ → synapse at _______  
-2nd order: decussation at _______ → ascend medial lemniscus → synapse at _______  
-3rd order: ascend to internal capsule → termination in _______  
+1st order: start in <u></u> → ascend in <u></u> → synapse at <u></u>
+2nd order: decussation at <u></u> → ascend medial lemniscus → synapse at <u></u>
+3rd order: ascend to internal capsule → termination in <u></u>
 
 </details>
 
 <details>
 <summary>Face (VPM)</summary>
 
-1st order: start in _______ → synapse at _______ (pons)  
-2nd order: decussation at _______ → ascend in trigeminal lemniscus → synapse at _______  
-3rd order: ascend to internal capsule → termination in _______  
+1st order: start in <u></u> → synapse at <u></u> (pons)
+2nd order: decussation at <u></u> → ascend in trigeminal lemniscus → synapse at <u></u>
+3rd order: ascend to internal capsule → termination in <u></u>
 
 </details>
 
@@ -104,25 +104,25 @@ Function: _______ posture/gross movement
 <details>
 <summary>Fast Pain – Body</summary>
 
-1st order: start in _______ → synapse at _______ (lamina I, II, V)  
-2nd order: decussation at _______ → ascend spinothalamic tract → synapse at _______  
-3rd order: ascend to internal capsule → termination in _______  
+1st order: start in <u></u> → synapse at <u></u> (lamina I, II, V)
+2nd order: decussation at <u></u> → ascend spinothalamic tract → synapse at <u></u>
+3rd order: ascend to internal capsule → termination in <u></u>
 
 </details>
 
 <details>
 <summary>Fast Pain – Face</summary>
 
-1st order: start in _______ → synapse at _______ (brainstem/upper cervical)  
-2nd order: decussation at _______ → ascend trigeminal lemniscus → synapse at _______  
-3rd order: ascend to internal capsule → termination in _______  
+1st order: start in <u></u> → synapse at <u></u> (brainstem/upper cervical)
+2nd order: decussation at <u></u> → ascend trigeminal lemniscus → synapse at <u></u>
+3rd order: ascend to internal capsule → termination in <u></u>
 
 </details>
 
 <details>
 <summary>Slow Pain – Face (TRIM)</summary>
 
-Trigeminal → _______ formation → _______ nuclei → _______ cortical areas  
+Trigeminal → <u></u> formation → <u></u> nuclei → <u></u> cortical areas
 
 </details>
 
@@ -136,34 +136,36 @@ Trigeminal → _______ formation → _______ nuclei → _______ cortical areas
 <details>
 <summary>Posterior Spinocerebellar</summary>
 
-Origin: 1st order synapse at _______ (T1–L2)  
-Ascend _______ (ipsilateral) → enter via _______ cerebellar peduncle  
+Origin: 1st order synapse at <u></u> (T1–L2)
+Ascend <u></u> (ipsilateral) → enter via <u></u> cerebellar peduncle
 
 </details>
 
 <details>
 <summary>Cuneocerebellar</summary>
 
-Origin: 1st order synapse at _______ nucleus (medulla)  
-Ascend _______ (ipsilateral) → enter via _______ cerebellar peduncle  
+Origin: 1st order synapse at <u></u> nucleus (medulla)
+Ascend <u></u> (ipsilateral) → enter via <u></u> cerebellar peduncle
 
 </details>
 
 <details>
 <summary>Anterior Spinocerebellar</summary>
 
-Origin: _______ interneurons (thoracolumbar)  
-🔴 Double decussation: _______ and _______  
-Ascend → enter via _______ cerebellar peduncle  
+Origin: <u></u> interneurons (thoracolumbar)
+🔴 Double decussation: <u></u> and <u></u>
+Ascend → enter via <u></u> cerebellar peduncle
 
 </details>
 
 <details>
 <summary>Rostral Spinocerebellar</summary>
 
-Origin: _______ interneurons (cervical)  
-Ascend → enter via _______ and _______ cerebellar peduncles  
+Origin: <u></u> interneurons (cervical)
+Ascend → enter via <u></u> and <u></u> cerebellar peduncles
 
 </details>
 
 </details>
+
+<!-- :contentReference[oaicite:0]{index=0} -->
