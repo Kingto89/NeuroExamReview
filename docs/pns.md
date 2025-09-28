@@ -139,7 +139,7 @@
 ---
 
 <details open>
-<summary><b>🔽 Proprioceptors</b></summary>
+<summary><b>🔽 Proprioceptors⭐️</b></summary>
 
 - **Muscle Spindle Afferents⭐️**  
   - Ia → phasic, max firing with quick stretch (nuclear bag fibers → velocity)  
