@@ -69,24 +69,32 @@
 
 ---
 
-**Motor Neuron Pools**  
+**Motor Neuron Pools⭐️**  
+Located in Ventral horn
 - Medial = axial and proximal muscles  
 - Lateral = distal muscles  
 - Anterior = extensors  
 - Posterior = flexors  
 - Alpha motor neurons = extrafusal fibers (force)  
-- Gamma motor neurons = intrafusal fibers (spindle sensitivity)  
+- Gamma motor neurons = intrafusal fibers (spindle sensitivity)
 
 ---
 
-**Reflexes and Muscle Properties**  
+**Stepping Pattern Generators (SPGs)⭐️**
+
+- Adaptable spinal interneurons → activate LMNs for alternating hip & knee flexion/extension  
+- Each lower limb has a dedicated SPG  
+
+---
+
+**Reflexes and Muscle Properties⭐️**  
 - Spinal reflexes can occur without brain input  
 - Phasic stretch reflex → monosynaptic, quick stretch  
 - Tonic stretch reflex → polysynaptic, sustained stretch  
  - Cutaneous reflexes → withdrawal, Babinski  
 
-- Muscle tone and contraction  
-  - ⭐️Crossbridge: Ca++ binds troponin → conformational change   
+- ⭐️Muscle tone and contraction  
+  - Crossbridge: Ca++ binds troponin → conformational change   
   - Normal-length vs contracture (shortened sarcomeres)  
   - Feedforward = anticipatory postural adjustment  
   - Feedback = sensory-driven correction
@@ -97,12 +105,15 @@
 
 ---
 
-**Signs of Motor Tract Lesions**  
-- Paresis = weakness (partial)  
-- Paralysis = complete loss  
+**Signs of Motor Tract Lesions⭐️**  
+- Paresis → partial loss; MT lesion → inadequate facilitation of motor neurons  
+- Paralysis → complete loss; muscles innervated below level of complete spinal cord lesion
+- Hemiplegia = weakness one side  
+- Paraplegia = weakness below arms  
+- Tetraplegia = weakness in all four limbs  
 - UMN signs = spasticity (velocity-dependent), hyperreflexia, Babinski positive  
 - LMN signs = flaccid paralysis, fasciculations, atrophy  
-- ⭐️Myoplasticity = contracture, atrophy, weak actin-myosin binding (determine resistance/stretch) 
+- Myoplasticity = contracture, atrophy, weak actin-myosin binding (determine resistance/stretch) 
 - Abnormal cutaneous reflexes → Babinski, clonus  
 - Fractionation loss → impaired hand and finger fine movements  
 
@@ -125,6 +136,7 @@
 <summary><b>🔼 Sensory Pathways (Ascending)</b></summary>
 
 ### Conscious Relay Pathways
+Pathways that reach the primary Somatosensory Cortes
 
 #### Dorsal Column–Medial Lemniscus (DCML)⭐️
 [📌 VPL = body | VPM = face]
@@ -183,7 +195,8 @@ Slow pain= spinolimbic - Fast pain= Spinothalamic - discriminative= Fast
 - 3rd order: VPM thalamus → somatosensory cortex
 - Carries: pain, temperature, crude touch from face
 
-**Divergent Pathways (ALS subset-- slow pain, not conscious)**  
+**Divergent Pathways (ALS subset-- slow pain, not conscious)** 
+Pathways reach the brainstem and brain structures
 - Spinomesencephalic → periaqueductal gray (antinociception), superior colliculus--turn eyes/head towards input or injury   
 - Spinoreticular → arousal and attention, sleep/wake cycle synapse recticular formation  
 - Spino-emotional → limbic emotional response, affective responses to pain
@@ -195,6 +208,7 @@ Slow pain= spinolimbic - Fast pain= Spinothalamic - discriminative= Fast
 
 <details>
 <summary><b>Nonconscious Relay Pathways⭐️ (Cerebellum)</b></summary>
+Pathways that project to the cerebellum
 
 - **Posterior spinocerebellar (High Fidelity)**  
   → input: lower extremity  
@@ -291,15 +305,17 @@ Slow pain= spinolimbic - Fast pain= Spinothalamic - discriminative= Fast
 - Anterior cord syndrome → corticospinal and spinothalamic lost, DCML spared  
 - ALS → UMN and LMN degeneration, sensory spared  
 - Tabes dorsalis → DCML demyelination → loss of proprioception and vibration  
-- Spinal shock → flaccidity, areflexia initially  
-- Babinski → UMN sign  
-- Hemiplegia = weakness one side  
-- Paraplegia = weakness below arms  
-- Tetraplegia = weakness in all four limbs
-- ⭐️Light touch → localization of touch & vibration; ability to distinguish two close points  
-- ⭐️Conscious proprioception** → awareness of movement and position of body parts  
-- ⭐️Stereognosis → identify objects by touch + proprioception (e.g., key in hand without vision)
-- ⭐️Muscle tone is the resistance to stretch in a resting muscle
+- ⭐️Spinal/cerebral shock → acute MT lesion; motor neurons temporarily inactive  
+- Babinski → UMN sign
+- ⭐️Light touch: localization of touch & vibration; ability to distinguish two close points  
+- ⭐️Conscious proprioception: awareness of movement and position of body parts  
+- ⭐️Stereognosis: identify objects by touch + proprioception (e.g., key in hand without vision)
+- ⭐️Muscle tone: the resistance to stretch in a resting muscle
+  - Flaccid: complete lack of resistance
+  - Hypotonia: abnormally low, to normal, to velocity dependent
+  - hypertonia: abnormally high resistance that increases with faster movement
+- ⭐️Fibrillation: random brief contraction of single muscle fibers, not visible on skin  
+
 
 
 </details>
