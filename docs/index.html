@@ -251,9 +251,11 @@
         enhanceBulletedCards(el); enhanceParagraphHeadingGroups(el);
         // make blanks fillable
         el.querySelectorAll('u').forEach(u=>{
-          const answer=u.textContent.trim();
+          const answer = (u.getAttribute('data-answer') || u.textContent).trim();
+          const accept = (u.getAttribute('data-accept') || '').trim();
           const wrap=document.createElement('span'); wrap.className='fill-blank';
           const input=document.createElement('input'); input.type='text'; input.dataset.answer=answer;
+          if (accept) input.dataset.accept = accept;
           wrap.appendChild(input); u.replaceWith(wrap);
         });
       }catch(err){
@@ -273,12 +275,37 @@
     function toggleReference(){const btn=document.getElementById('refBtn');const refImg=document.getElementById('ref-img');if(refImg.style.display==='none'){refImg.style.display='block';btn.textContent="Hide Reference";}else{refImg.style.display='none';btn.textContent="Show Reference";}}
     function toggleFillTracts(){const box=document.getElementById('filltracts');box.style.display=(box.style.display==='none')?'block':'none';if(box.style.display==='block'){document.getElementById('pics').style.display='none';document.getElementById('fillpic').style.display='none';box.scrollIntoView({behavior:'smooth',block:'start'});}}
 
+    function normalize(s){
+  return (s||"")
+    .toLowerCase()
+    .normalize("NFD").replace(/\p{Diacritic}/gu,"")
+    .replace(/[^a-z0-9\s]/g," ")
+    .replace(/\s+/g," ")
+    .trim();
+}
+
+function isCorrect(userValue, inputEl){
+  const gold = inputEl.dataset.answer || "";
+  const extras = (inputEl.dataset.accept || "")
+    .split(",").map(s=>s.trim()).filter(Boolean);
+
+  const u = normalize(userValue);
+  const candidates = [gold, ...extras].map(normalize).filter(Boolean);
+
+  // exact (normalized) or simple prefix “close enough”
+  return candidates.some(c =>
+    u === c ||
+    (c.length >= 5 && (c.startsWith(u) || u.startsWith(c)))
+  );
+}
     function checkTracts(){
-      document.querySelectorAll('#filltracts input').forEach(inp=>{
-        const val=inp.value.trim().toLowerCase();
-        const ans=inp.dataset.answer.trim().toLowerCase();
-        inp.parentElement.classList.remove('correct','incorrect');
-        if(val){inp.parentElement.classList.add(val===ans?'correct':'incorrect');}
+    document.querySelectorAll('#filltracts input').forEach(inp=>{
+    inp.parentElement.classList.remove('correct','incorrect');
+    const ok = isCorrect(inp.value, inp);
+    if (inp.value.trim()) {
+    inp.parentElement.classList.add(ok ? 'correct' : 'incorrect');
+}
+
       });
     }
     function resetTracts(){
