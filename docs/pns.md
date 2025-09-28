@@ -12,7 +12,7 @@
   - Soma (cell body) → protein synthesis, nucleus, organelles  
   - Dendrites → main input branches, receive graded potentials  
   - Axon → output, arises at axon hillock (trigger zone)  
-  - Presynaptic terminal → releases neurotransmitter into synaptic cleft  
+  - Presynaptic terminal → releases neurotransmitter into synaptic cleft/end of axon to target cell  
 
 - **Cytoskeleton & Transport**  
   - Anterograde (soma → terminal) → kinesin, ATP  
@@ -54,11 +54,12 @@
 
 - **Postsynaptic Potentials**  
   - Excitatory (EPSP): Na+ / Ca2+ influx → depolarization  
-  - Inhibitory (IPSP): Cl− influx or K+ efflux → hyperpolarization  
+  - Inhibitory (IPSP): Cl− influx or K+ efflux → hyperpolarization
+  - In hyperpolarization (potential dips below rest/becomes more negative  (eg. –80 mV) before returning to rest/less negative/-70mV) 
   - More Ca2+ = more NT release; less Ca2+ = less NT release  
 
 - **AP Phases**  
-  1. Rapid depolarization: Na⁺ influx (+35 mV peak membrane potential)  
+  1. Depolarization (with signal): Na⁺ & Ca⁺ influx (+35 mV peak membrane potential)  
   2. Na⁺ inactivation  
   3. Repolarization: K⁺ efflux  
 
@@ -66,7 +67,7 @@
   - ~ –70 mV (maintained by Na⁺/K⁺ ATPase → 3 Na⁺ out, 2 K⁺ in)  
 
 - **Threshold**
-  - ~ –55 mV → Na⁺ channels open  
+  - ~ –55 mV → Na⁺ channels open  (no action potential if not met)
 
 - **Refractory Periods**  
   - Absolute → no AP possible (Na+ channels inactivated)  
@@ -93,7 +94,7 @@
 
 - **A-beta — Aβ (II)**
   - 6–12 μm • myelinated  
-  - Receptors: Meissner, Merkel, Pacinian, Ruffini, hair follicle  
+  - Receptors: muscle spindle, Meissner, Merkel, Pacinian, Ruffini, hair follicle  
   - Modality: light touch, vibration, pressure  
 
 - **A-delta — Aδ (III)**
@@ -139,16 +140,19 @@
 <summary><b>🔽 Proprioceptors</b></summary>
 
 - **Muscle Spindle Afferents**  
-  - Ia → phasic, max firing with quick stretch  
-  - II → tonic, proportional to static stretch  
+  - Ia → phasic, max firing with quick stretch (nuclear bag fibers → velocity)  
+  - II → tonic, proportional to static stretch (nuclear chain fibers → length)
 
-- **Gamma Motor System (spindle efferents)**  
+- **Efferents to Muscle Spindles**
+- Alpha-efferents → contract extrafusal fibers (main skeletal muscle) in response to change in length
+- Gamma-efferents → contract intrafusal fibers (inside spindle) to “reset” resting length
   - Gamma dynamic → velocity sensitivity (nuclear bag)  
   - Gamma static → static length sensitivity (nuclear chain + some bag)  
 
 - **Golgi Tendon Organ (GTO)**
   - Ib afferents
   - Senses tension in tendon
+  - relays tension to CNS
 
 - **Joint Receptors**
   - **Ruffini endings (Type I)**
@@ -181,7 +185,7 @@
   - Satellite cells (PNS) → cover soma in DRG & autonomic ganglia  
   - Oligodendrocytes (CNS) → myelinate multiple axons
   - Ependymal cells → line ventricles/central canal, regulate CSF.
-  - strocytes → support neurons, form blood-brain barrier, ion buffering, nutritive role.
+  - Astrocytes → support neurons, form blood-brain barrier, ion buffering, nutritive role.
   - Microglia → immune defense, phagocytosis, activated in disease/injury.
 
 - **Embryology**
@@ -237,17 +241,20 @@ Neurotransmitters
   - Blocked by botulinum (↓release), curare (Nm antagonist)
 
 - **Glutamate**
+  - Amino Acid
   - Major CNS excitatory transmitter
-  - Pain: acts a NT for primary neuron
+  - Pain: acts a NT for primary neuron/ Fast Pain
   - Receptors: NMDA, AMPA, kainate (ionotropic), mGluR (metabotropic)
   - NMDA overactivation → excitotoxicity (stroke, trauma)
 
 - **GABA**
-  - Major CNS **inhibitory** transmitter
+  - Amino Acid
+  - Major CNS inhibitory transmitter
   - Receptors: GABA_A (Cl⁻ channel), GABA_B (Gi)
   - ↑GABA effect: benzodiazepines, barbiturates, propofol
 
 - **Glycine**
+  - Amino Acid
   - Inhibitory in spinal cord/brainstem (Cl⁻ influx)
   - Blocked by strychnine → severe muscle spasms
 
@@ -274,6 +281,7 @@ Neurotransmitters
 - **Substance P**
   - **Pain transmission** (nociceptive C fibers) to dorsal horn
   - Elevated in inflammation; blocked indirectly by descending inhibition
+  - Slow pain
 
 - **Endorphins & Enkephalins (Opioid peptides)**
   - Descending **antinociception** (PAG → raphe → dorsal horn)
