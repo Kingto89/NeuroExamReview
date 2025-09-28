@@ -139,7 +139,7 @@ Refers to the organization of pools in the ventral horn of the spinal cord
 <summary><b>🔼 Sensory Pathways (Ascending)</b></summary>
 
 ### Conscious Relay Pathways
-Pathways that reach the primary Somatosensory Cortes
+Pathways that reach the primary Somatosensory Cortex
 
 #### Dorsal Column–Medial Lemniscus (DCML)⭐️
 [📌 VPL = body | VPM = face]
