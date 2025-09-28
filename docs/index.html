@@ -92,21 +92,21 @@
   </div>
 
   <!-- Controls -->
-<div class="bar">
-  <button onclick="toggleAll(true)">Expand all</button>
-  <button onclick="toggleAll(false)">Collapse all</button>
-  <button onclick="togglePics()">Useful Pictures</button>
-  <button onclick="toggleFillPic()">Fill Picture</button>
-</div>
-
-<!-- Hidden picture section -->
-<div id="pics" style="display:none; margin:16px 0">
-  <div style="display:flex; flex-wrap:wrap; gap:16px; justify-content:center">
-    <img src="Dorsal Column Pathway.jpg" alt="Dorsal Column Pathway" style="max-width:30%; border:1px solid #ccc; border-radius:8px">
-    <img src="Pathway Comparison.jpg" alt="Pathway Comparison" style="max-width:30%; border:1px solid #ccc; border-radius:8px">
-    <img src="Ascending Pathway.png" alt="Ascending Pathway" style="max-width:30%; border:1px solid #ccc; border-radius:8px">
+  <div class="bar">
+    <button onclick="toggleAll(true)">Expand all</button>
+    <button onclick="toggleAll(false)">Collapse all</button>
+    <button onclick="togglePics()">Useful Pictures</button>
+    <button onclick="toggleFillPic()">Fill Picture</button>
   </div>
-</div>
+
+  <!-- Hidden picture section -->
+  <div id="pics" style="display:none; margin:16px 0">
+    <div style="display:flex; flex-wrap:wrap; gap:16px; justify-content:center">
+      <img src="Dorsal Column Pathway.jpg" alt="Dorsal Column Pathway" style="max-width:30%; border:1px solid #ccc; border-radius:8px">
+      <img src="Pathway Comparison.jpg" alt="Pathway Comparison" style="max-width:30%; border:1px solid #ccc; border-radius:8px">
+      <img src="Ascending Pathway.png" alt="Ascending Pathway" style="max-width:30%; border:1px solid #ccc; border-radius:8px">
+    </div>
+  </div>
 
   <!-- Two collapsibles side-by-side on large screens -->
   <div class="row">
@@ -125,16 +125,21 @@
       </details>
     </div>
   </div>
-<!-- Fill-in recall picture -->
-<div id="fillpic" style="display:none; margin:16px 0; text-align:center">
-  <embed src="Fillable Pathway.pdf" type="application/pdf" 
-         style="width:80%; height:600px; border:2px dashed #666; border-radius:8px">
-</div>
+
+  <!-- Fill-in recall picture -->
+  <div id="fillpic" style="display:none; margin:16px 0; text-align:center">
+    <embed src="Fillable Pathway.pdf" type="application/pdf" 
+           style="width:80%; height:600px; border:2px dashed #666; border-radius:8px">
+    <div style="margin-top:12px">
+      <button onclick="lockFillPic()">Lock Answers</button>
+      <button onclick="resetFillPic()">Reset Fill</button>
+      <button onclick="showReference()">Show Reference</button>
+    </div>
+  </div>
 
   <!-- ===== Extra 3D models (fixed wrappers) ===== -->
   <details>
     <summary>Extra 3D models (click to expand)</summary>
-
     <div class="embed skf-embed">
       <iframe title="Detailed Labeled Surface Structures" src="https://sketchfab.com/models/d91080b5af91497b822728c08804f33c/embed?autostart=1&ui_infos=0&ui_watermark=0" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
     </div>
@@ -159,11 +164,9 @@
   </details>
 
   <script>
-    // Top-level expand/collapse helper (Option 6: also toggles cards)
+    // Top-level expand/collapse helper
     function toggleAll(open){
-      // Open/close all <details>
       document.querySelectorAll('details').forEach(d => d.open = open);
-      // Open/close all card bodies
       document.querySelectorAll('.card-li').forEach(card => {
         card.classList.toggle('open', open);
         const chev = card.querySelector('.chev');
@@ -171,37 +174,27 @@
       });
     }
 
-    // ---- Enhancer: turn bolded subheadings into collapsible cards ----
-    //  A) bullets like: <li><strong>Title</strong> ...more...</li>
-    //  B) paragraph-only headings: <p><strong>Title</strong></p> followed by content until a boundary
+    // ---- Enhancer functions (full from your original index) ----
     function makeCardFromPair(titleNode, nodesToWrap){
       const card = document.createElement('div');
       card.className = 'card-li';
-
       const head = document.createElement('div');
       head.className = 'li-head';
-
       const title = document.createElement('div');
       title.className = 'title';
       title.textContent = titleNode.textContent.trim();
-
       const chev = document.createElement('span');
       chev.className = 'chev';
       chev.textContent = '▼';
-
       head.appendChild(title);
       head.appendChild(chev);
-
       const body = document.createElement('div');
       body.className = 'li-body';
-
       const insertBefore = nodesToWrap[0];
       insertBefore.parentNode.insertBefore(card, insertBefore);
       card.appendChild(head);
       card.appendChild(body);
-
       nodesToWrap.forEach(n => body.appendChild(n));
-
       head.addEventListener('click', () => {
         const open = !card.classList.contains('open');
         card.classList.toggle('open', open);
@@ -214,17 +207,14 @@
       lis.forEach(li => {
         const strong = li.querySelector(':scope > strong');
         if (!strong) return;
-
         const more = Array.from(li.childNodes).filter(n => {
           if (n === strong) return false;
           if (n.nodeType === 3 && n.textContent.trim() === '') return false;
           return true;
         });
         if (more.length === 0) return;
-
         const card = document.createElement('div');
         card.className = 'card-li';
-
         const head = document.createElement('div');
         head.className = 'li-head';
         const title = document.createElement('div');
@@ -235,17 +225,13 @@
         chev.textContent = '▼';
         head.appendChild(title);
         head.appendChild(chev);
-
         const body = document.createElement('div');
         body.className = 'li-body';
-
         more.forEach(n => body.appendChild(n));
-
         li.innerHTML = '';
         li.appendChild(card);
         card.appendChild(head);
         card.appendChild(body);
-
         head.addEventListener('click', () => {
           const open = !card.classList.contains('open');
           card.classList.toggle('open', open);
@@ -259,7 +245,6 @@
       paras.forEach(str => {
         const p = str.parentElement;
         if (p.closest('.card-li')) return;
-
         const run = [];
         let n = p.nextSibling;
         while (n) {
@@ -274,9 +259,7 @@
           run.push(n);
           n = next;
         }
-
         if (run.length === 0) return;
-
         makeCardFromPair(str, run);
         p.remove();
       });
@@ -288,21 +271,9 @@
         const res = await fetch(file, {cache: "no-store"});
         if(!res.ok) throw new Error(res.status + " " + res.statusText);
         const md = await res.text();
-
         el.innerHTML = marked.parse(md);
-function toggleFillPic(){
-  const fill = document.getElementById('fillpic');
-  fill.style.display = (fill.style.display === 'none') ? 'block' : 'none';
-
-  // Optional: auto-hide Useful Pictures when Fill Picture is open
-  if(fill.style.display === 'block'){
-    document.getElementById('pics').style.display = 'none';
-  }
-}
-
         enhanceBulletedCards(el);
         enhanceParagraphHeadingGroups(el);
-
       } catch (err) {
         el.innerHTML = `<p class="error">Failed to load ${file}: ${err.message}</p>`;
       }
@@ -312,6 +283,45 @@ function toggleFillPic(){
       loadMD('cns.md', 'cns');
       loadMD('pns.md', 'pns');
     });
+
+    // === NEW FUNCTIONS ADDED ===
+    function togglePics(){
+      const pics = document.getElementById('pics');
+      pics.style.display = (pics.style.display === 'none') ? 'block' : 'none';
+      if(pics.style.display === 'block'){
+        document.getElementById('fillpic').style.display = 'none';
+      }
+    }
+
+    function toggleFillPic(){
+      const fill = document.getElementById('fillpic');
+      fill.style.display = (fill.style.display === 'none') ? 'block' : 'none';
+      if(fill.style.display === 'block'){
+        document.getElementById('pics').style.display = 'none';
+      }
+    }
+
+    function lockFillPic(){
+      alert("Answers locked. Use Reset to clear.");
+    }
+
+    function resetFillPic(){
+      const container = document.getElementById('fillpic');
+      const old = container.querySelector('embed');
+      if(old){
+        const fresh = old.cloneNode(true);
+        old.replaceWith(fresh);
+      }
+    }
+
+    function showReference(){
+      if(document.querySelector('#fillpic img')) return; // prevent duplicates
+      const refImg = document.createElement('img');
+      refImg.src = "Dorsal Column Pathway.jpg";
+      refImg.alt = "Dorsal Column Pathway reference";
+      refImg.style = "margin-top:16px; max-width:80%; border:2px solid #666; border-radius:8px";
+      document.getElementById('fillpic').appendChild(refImg);
+    }
   </script>
 </body>
 </html>
