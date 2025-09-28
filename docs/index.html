@@ -321,14 +321,14 @@ function toggleFillPic(){
       alert("Answers locked. Use Reset to clear.");
     }
 
-    function resetFillPic(){
-      const container = document.getElementById('fillpic');
-      const old = container.querySelector('embed');
-      if(old){
-        const fresh = old.cloneNode(true);
-        old.replaceWith(fresh);
-      }
-    }
+function resetFillPic() {
+  const container = document.getElementById('fillpic');
+  const old = container.querySelector('iframe'); // now looks for iframe
+  if (old) {
+    const fresh = old.cloneNode(true);
+    old.replaceWith(fresh);
+  }
+}
 
 function toggleReference(){
   const btn = document.getElementById('refBtn');
