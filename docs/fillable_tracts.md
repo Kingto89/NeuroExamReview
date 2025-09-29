@@ -90,4 +90,22 @@
 
 - **Posterior Spinocerebellar**  
   - 1st order → synapse at  <u data-answer="nucleus dorsalis of Clarke (T1–L2)"></u>
-  - Ascend  <u data-answ
+  - Ascend  <u data-answer="ipsilaterally"></u> → enter via  <u data-answer="inferior"></u> cerebellar peduncle
+
+- **Cuneocerebellar**  
+  - 1st order → synapse at  <u data-answer="lateral accessory (accessory cuneate) nucleus"></u> (medulla)
+  - Ascend  <u data-answer="ipsilaterally"></u> → enter via  <u data-answer="inferior"></u> cerebellar peduncle
+
+- **Anterior Spinocerebellar**  
+  - Input:  <u data-answer="thoracolumbar spinal cord"></u>
+  - Double decussation:  <u data-answer="spinal cord"></u> and  <u data-answer="cerebellum"></u> (functionally ipsilateral)
+  - Enter via  <u data-answer="superior"></u> cerebellar peduncle
+
+- **Rostrospinocerebellar**  
+  - Input:  <u data-answer="cervical spinal cord"></u>
+  - Ascends mostly  <u data-answer="ipsilaterally"></u>
+  - Enter via  <u data-answer="superior"></u> and  <u data-answer="inferior"></u> cerebellar peduncles
+
+
+
+</details>
