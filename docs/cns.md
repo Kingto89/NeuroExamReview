@@ -193,7 +193,7 @@ Slow pain= spinolimbic - Fast pain= Spinothalamic - discriminative= Fast
 **Fast Pain from Body (PDSLAVS)** 
 - Peripheral axon → DRG → dorsal horn lamina I, II, V → decussate at anterior white commissure → ascend → VPL thalamus → somatosensory cortex  
 
-Better mnemonic: Paul Drove Slowly, Larry <span style="color:red">Ate</span> Very Spicy
+Better mnemonic: Paul Drove Slowly, Larry <span style="color:red">Ate</span> Very Slowly 
 
 ---
 
