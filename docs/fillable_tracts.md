@@ -29,7 +29,7 @@
 
 - Origin: <u data-answer="primary motor cortex"></u>  
 - Synapse: <u data-answer="cranial nerve"></u> motor nuclei (brainstem)  
-- Innervation: <u data-answer="bilateral"></u> (except lower face)
+- Function: muscles of <u data-answer="superficial neck"></u> head and  <u data-answer="face"></u>
 
 </details>
 
