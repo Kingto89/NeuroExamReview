@@ -5,7 +5,6 @@
 <details open>
 <summary><b>Pyramidal (Corticospinal + Corticobulbar)</b></summary>
 
-<details>
 <summary><b>Lateral corticospinal</b></summary>
 
 - Origin: <u data-answer="primary motor cortex"></u>  
