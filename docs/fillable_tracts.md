@@ -23,10 +23,9 @@ Function: Voluntary movement, fractionation
 <details>
 <summary>Medial Corticospinal Tract</summary>
 
-Origin: <u data-answer="primary motor cortex"></u> (cortex)
-Descends: <u data-answer="ipsilateral"></u> (ipsilateral)
-Function: <u data-answer="axial and proximal"></u> movements (neck, shoulder, trunk)
-
+Function: <u data-answer="posture"></u> and <u data-answer="gross"></u> movement
+<u data-answer="bilateral"></u> projection to <u data-answer="trunk"></u>, <u data-answer="neck"></u>, <u data-answer="shoulders"></u>
+Direct connection <u data-answer="cortex"></u> → <u data-answer="cord"></u>
 </details>
 
 <details>
