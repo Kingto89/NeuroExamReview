@@ -1,12 +1,6 @@
----
 
 <details open>
-<summary><b>🌐 Central Nervous System (CNS)</b></summary>
-
----
-
-<details open>
-<summary><b>🔽 Motor Pathways (Descending)⭐️</b></summary>
+<summary><b>🔽 Pathways </b></summary>
 
 **Corticospinal System (Pyramidal)**  
 - **Lateral corticospinal**  
