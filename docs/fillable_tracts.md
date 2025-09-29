@@ -28,8 +28,8 @@
 <summary><b>Corticobulbar (Corticobrainstem)</b></summary>
 
 - Origin: <u data-answer="primary motor cortex"></u>  
-- Synapse: <u data-answer="cranial nerve"></u> motor nuclei (brainstem)  
-- Function: muscles of <u data-answer="superficial neck"></u> head and  <u data-answer="face"></u>
+- Synapse: <u data-answer="cranial nerve"></u> motor nuclei (brainstem)   
+- Function: muscles of head and <u data-answer="face"></u> (bilateral except lower face), <u data-answer="superficial neck"></u> muscles
 
 </details>
 
