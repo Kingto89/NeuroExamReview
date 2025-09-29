@@ -107,22 +107,19 @@
 <summary><b>ALS (Anterolateral System)</b></summary>
 
 <details>
-<summary><b>Fast Pain – Body</b></summary>
+<summary><b>Fast Pain from Body</b></summary>
 
-- 1st order: start in <u data-answer="nociceptors/DRG"></u> → synapse at dorsal horn (lamina I, II, V)  
-- 2nd order: decussation at <u data-answer="anterior white commissure"></u> (spinal cord) → ascend spinothalamic tract → synapse at <u data-answer="VPL"></u>  
-- 3rd order: ascend to internal capsule → termination in <u data-answer="primary somatosensory cortex"></u>
+- Path: Peripheral axon → DRG → dorsal horn lamina I, II, V → decussation at <u data-answer="anterior white commissure"></u> → ascend → <u data-answer="VPL"></u> thalamus → somatosensory cortex
 
 </details>
 
 <details>
-<summary><b>Fast Pain – Face</b></summary>
+<summary><b>Fast Pain from Face</b></summary>
 
-- 1st order: start in <u data-answer="CN V (± VII, IX, X)"></u> → synapse at spinal trigeminal nucleus (brainstem/upper cervical)  
-- 2nd order: decussation at <u data-answer="pons"></u> → ascend trigeminal lemniscus → synapse at <u data-answer="VPM"></u>  
-- 3rd order: ascend to internal capsule → termination in <u data-answer="primary somatosensory cortex (face area)"></u>
+- Path: Trigeminal nerve → spinal trigeminal nucleus (brainstem/upper cervical) → decussation at <u data-answer="pons"></u> → ascend via trigeminal lemniscus → <u data-answer="VPM"></u> thalamus → somatosensory cortex
 
 </details>
+
 
 <details>
 <summary><b>Slow Pain – Face (TRIM)</b></summary>
