@@ -89,6 +89,8 @@
     }
     .fill-blank.correct input{ background:#d1fae5; }
     .fill-blank.incorrect input{ background:#fee2e2; }
+    .sec-bar{ display:flex; gap:8px; align-items:center; margin:6px 0 10px; }
+    .sec-bar .sec-score{ color:#6b7280; font-size:.9rem; }
   </style>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -258,10 +260,51 @@
           if (accept) input.dataset.accept = accept;
           wrap.appendChild(input); u.replaceWith(wrap);
         });
+        if (targetId === 'tracts') addSectionControls(el);
       }catch(err){
         el.innerHTML=`<p class="error">Failed to load ${file}: ${err.message}</p>`;
       }
     }
+    function addSectionControls(container){
+  container.querySelectorAll(':scope > details').forEach(sec=>{
+    const summary = sec.querySelector(':scope > summary');
+    if(!summary) return;
+
+    const bar = document.createElement('div');
+    bar.className = 'sec-bar';
+    bar.innerHTML = `
+      <button class="sec-check">Check section</button>
+      <button class="sec-reset">Reset</button>
+      <span class="sec-score"></span>`;
+    summary.insertAdjacentElement('afterend', bar);
+
+    const score = bar.querySelector('.sec-score');
+
+    bar.querySelector('.sec-check').addEventListener('click', ()=>{
+      let correct=0,total=0;
+      sec.querySelectorAll('input').forEach(inp=>{
+        inp.parentElement.classList.remove('correct','incorrect');
+        const hasKey = (inp.dataset.answer?.length||0) + (inp.dataset.accept?.length||0) > 0;
+        if(!hasKey) return;
+        total++;
+        const ok = isCorrect(inp.value, inp);
+        if (inp.value.trim()){
+          inp.parentElement.classList.add(ok ? 'correct' : 'incorrect');
+          if (ok) correct++;
+        }
+      });
+      score.textContent = total ? `${correct}/${total}` : '';
+    });
+
+    bar.querySelector('.sec-reset').addEventListener('click', ()=>{
+      sec.querySelectorAll('input').forEach(inp=>{
+        inp.value='';
+        inp.parentElement.classList.remove('correct','incorrect');
+      });
+      score.textContent = '';
+    });
+  });
+}
     document.addEventListener('DOMContentLoaded',()=>{
       loadMD('cns.md','cns');
       loadMD('pns.md','pns');
@@ -305,7 +348,6 @@ function isCorrect(userValue, inputEl){
     if (inp.value.trim()) {
     inp.parentElement.classList.add(ok ? 'correct' : 'incorrect');
 }
-
       });
     }
     function resetTracts(){
