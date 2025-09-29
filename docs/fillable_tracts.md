@@ -9,7 +9,7 @@
 
 - Origin: <u data-answer="primary motor cortex"></u>  
 - Path: <u data-answer="internal capsule"></u> → pyramids (medulla)  
-- 🔴 Decussates: <u data-answer="pyramidal decussation"></u> (medulla)  
+- 🔴 Decussates: <u data-answer="pyramidal"></u> (medulla)  
 - 🔵 Synapse: <u data-answer="anterior horn LMN"></u> → skeletal muscle  
 - Function: <u data-answer="voluntary movement"></u> (fractionation, fine distal control)
 
@@ -93,7 +93,7 @@
 <details>
 <summary><b>Face (VPM)</b></summary>
 
-- 1st order: start in <u data-answer="trigeminal (CN V) primary neurons"></u> → synapse at principal (chief) sensory nucleus of V (pons)  
+- 1st order: start in <u data-answer="trigeminal nerve"></u> → synapse at main sensory nucleus of V (pons)  
 - 2nd order: decussation at <u data-answer="pons"></u> → ascend trigeminal lemniscus → synapse at <u data-answer="VPM"></u>  
 - 3rd order: ascend to internal capsule → termination in <u data-answer="postcentral gyrus"></u>
 
@@ -138,7 +138,7 @@
 <details>
 <summary><b>Posterior Spinocerebellar</b></summary>
 
-- 1st order → synapse at <u data-answer="nucleus dorsalis of Clarke (T1–L2)"></u>  
+- 1st order → synapse at <u data-answer="nucleus dorsalis"></u>  
 - Ascend <u data-answer="ipsilaterally"></u> → enter via <u data-answer="inferior"></u> cerebellar peduncle
 
 </details>
@@ -146,7 +146,7 @@
 <details>
 <summary><b>Cuneocerebellar</b></summary>
 
-- 1st order → synapse at <u data-answer="lateral accessory (accessory cuneate) nucleus"></u> (medulla)  
+- 1st order → synapse at <u data-answer="lateral accessory nucleus"></u> (medulla)  
 - Ascend <u data-answer="ipsilaterally"></u> → enter via <u data-answer="inferior"></u> cerebellar peduncle
 
 </details>
@@ -154,8 +154,8 @@
 <details>
 <summary><b>Anterior Spinocerebellar</b></summary>
 
-- Input: <u data-answer="thoracolumbar spinal cord"></u>  
-- Double decussation: <u data-answer="spinal cord"></u> and <u data-answer="cerebellum"></u> (functionally ipsilateral)  
+- Input: <u data-answer="thoracolumbar sc"></u>  
+- Double decussation: <u data-answer="sc"></u> and <u data-answer="cerebellum"></u> (functionally ipsilateral)  
 - Enter via <u data-answer="superior"></u> cerebellar peduncle
 
 </details>
@@ -163,7 +163,7 @@
 <details>
 <summary><b>Rostrospinocerebellar</b></summary>
 
-- Input: <u data-answer="cervical spinal cord"></u>  
+- Input: <u data-answer="cervical sc"></u>  
 - Ascends mostly <u data-answer="ipsilaterally"></u>  
 - Enter via <u data-answer="superior"></u> and <u data-answer="inferior"></u> cerebellar peduncles
 
