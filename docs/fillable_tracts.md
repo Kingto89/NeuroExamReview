@@ -9,7 +9,7 @@
 
 - Origin: <u data-answer="primary motor cortex"></u>  (Clue: 3 words)
 - Path: <u data-answer="internal capsule"></u> → pyramids (medulla)  (___ ___)
-- 🔴 Decussates: <u data-answer="pyramidal"></u> (medulla)   (2 words)
+- 🔴 Decussates: <u data-answer="pyramidal"></u> (medulla)   (1 word)
 - 🔵 Synapse: <u data-answer="anterior horn LMN"></u> → skeletal muscle   (___ ___)
 - Function: <u data-answer="voluntary movement"></u> (fractionation, fine distal control)  (____ ____)
 
