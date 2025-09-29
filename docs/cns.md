@@ -181,7 +181,7 @@ discriminative touch, vibration, proprioception
 <details>
 <summary><b>Anterolateral System (Spinothalamic)⭐️</b></summary>
 
-Slow pain= spinolimbic - Fast pain= Spinothalamic - discriminative= Fast
+Regulates Pain + Tempreture  Slow pain= spinolimbic - Fast pain= Spinothalamic - discriminative= Fast
 
 **Two Tracts**
 - Lateral Spinothalamic Tract → nociception & temperature  
