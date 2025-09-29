@@ -84,7 +84,7 @@
 <details>
 <summary><b>Body (VPL)</b></summary>
 
-- 1st order: start in <u data-answer="dorsal root ganglion"></u> → ascend in dorsal columns (gracilis/cuneatus) → synapse at gracile & cuneate nuclei (medulla)  
+- 1st order: start in <u data-answer="drg"></u> → ascend in dorsal columns (fasciculus gracilis/cuneatus) → synapse at <u data-answer="gracilis"></u> for T7 and below & <u   data-answer="cuneatus"></u> nuclei (medulla) T6 and above
 - 2nd order: decussation at <u data-answer="internal arcuate fibers"></u> (medulla) → ascend medial lemniscus → synapse at <u data-answer="VPL"></u>  
 - 3rd order: ascend to internal capsule → termination in <u data-answer="primary somatosensory cortex"></u>
 
