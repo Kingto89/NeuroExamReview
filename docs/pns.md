@@ -65,11 +65,11 @@
     - Na⁺ inactivation  
   2. Repolarization: K⁺ efflux or Cl− influx
 
-- **Resting potential**
-  - ⭐️~ –70 mV (maintained by Na⁺/K⁺ ATPase → 3 Na⁺ out, 2 K⁺ in)  
+- **Resting potential⭐️**
+  - ~ –70 mV (maintained by Na⁺/K⁺ ATPase → 3 Na⁺ out, 2 K⁺ in)  
 
-- **Threshold**
-  - ⭐️~ –55 mV → Na⁺ channels open  (no action potential if not met)
+- **Threshold⭐️**
+  - ~ –55 mV → Na⁺ channels open  (no action potential if not met)
 
 - **Refractory Periods⭐️**  
   - Absolute → no AP possible (Na+ channels inactivated)  
@@ -204,7 +204,7 @@
     -  myelination (starts 4th fetal month, ends 3rd year of life)
     -  myelination: a sheath of proteins and fats surrounding an axon
 
-- **Neural Tube Formation (Day 18–26)**
+- **Neural Tube Formation⭐️(Day 18–26)**
   - ⭐️Tube: closure begins in future cervical region → proceeds rostral & caudal
   - ⭐️Groove: edges of neural plate fold upward
   - ⭐️Plate: surface ectoderm thickening in contact with amniotic fluid
@@ -218,7 +218,7 @@
     - ⭐️Neural crest (from tube edges) → PNS sensory neurons
       - 2 projections: SC & somite (dermis via mesoderm)
 
-- **Somite Development (Mesoderm, Day 20+)**
+- **Somite Development⭐️ (Mesoderm, Day 20+)**
   - ⭐️First appear in occipital region → added caudally
   - Divide into sclerotome (vertebrae/skull), myotome (muscle), dermatome (dermis)
   - Each somite differentiates into 3 regions:
@@ -252,27 +252,27 @@
 <summary><b>🔽 Synaptic Neurochemistry⭐️</b></summary>
 
 Neurotransmitters 
-- **Acetylcholine (ACh)**
+- **Acetylcholine (ACh)⭐️**
   - Neuromuscular junction; autonomic ganglia; parasympathetic effector
   - Receptors: nicotinic (ionotropic), muscarinic (metabotropic)
   - ↑AChE inhibitors (donepezil, neostigmine) → ↑ACh
   - Blocked by botulinum (↓release), curare (Nm antagonist)
   - ⭐️Used by all neurons that synapse with muscle fibers: fast acting
 
-- **Glutamate**
+- **Glutamate⭐️**
   - Amino Acid
   - Major CNS excitatory transmitter
   - ⭐️Pain: acts a NT for primary neuron/ Fast Pain in PNS
   - Receptors: NMDA, AMPA, kainate (ionotropic), mGluR (metabotropic)
   - NMDA overactivation → excitotoxicity (stroke, trauma)
 
-- **GABA**
+- **GABA⭐️**
   - Amino Acid
   - ⭐️Major CNS inhibitory transmitter
   - Receptors: GABA_A (Cl⁻ channel), GABA_B (Gi)
   - ↑GABA effect: benzodiazepines, barbiturates, propofol
 
-- **Glycine**
+- **Glycine⭐️**
   - Amino Acid
   - ⭐️Inhibitory in spinal cord/brainstem (Cl⁻ influx)
   - Blocked by strychnine → severe muscle spasms
@@ -297,7 +297,7 @@ Neurotransmitters
   - Wakefulness, appetite (tuberomammillary nucleus)
   - H₁ blockers (1st gen) → sedation
 
-- **Substance P (Peptide)**
+- **Substance P (Peptide)⭐️**
   - **Pain transmission** (nociceptive C fibers) to dorsal horn
   - Elevated in inflammation; blocked indirectly by descending inhibition
   - ⭐️Slow pain
@@ -306,7 +306,7 @@ Neurotransmitters
   - Descending **antinociception** (PAG → raphe → dorsal horn)
   - μ/δ/κ receptors; mimicked by opioids (morphine, fentanyl)
 
-- **Nitric Oxide (NO)**
+- **Nitric Oxide⭐️ (NO)**
   - Diffusible gas; retrograde modulator; ↑cGMP
   - Vasodilation; involved in long-term potentiation (memory)
   - ⭐️Higher release at skin acupoints (enzymatic + bacterial generation)  
