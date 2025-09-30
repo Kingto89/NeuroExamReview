@@ -87,7 +87,7 @@
 
 - 1st order: start in <u data-answer="drg"></u> → ascend in dorsal columns (fasciculus gracilis/cuneatus) → synapse at <u data-answer="gracilis"></u> nuclei for T7 and below & <u   data-answer="cuneatus"></u> nuclei (medulla) T6 and above (1 word each)
 - 2nd order: decussation at <u data-answer="internal arcuate fibers"></u> (medulla) → ascend medial lemniscus → synapse at <u data-answer="VPL"></u>  (3 words + 1 word)
-- 3rd order: ascend to internal capsule → termination in <u data-answer="primary somatosensory cortex"></u> (_____  ______   _____)
+- 3rd order: ascend to internal capsule → termination in <u data-answer="postcentral gyrus"></u> (_____  ______   _____)
 
 </details>
 
