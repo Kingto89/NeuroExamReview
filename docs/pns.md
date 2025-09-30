@@ -157,19 +157,19 @@
   - relays tension to CNS
 
 - **Joint Receptors⭐️**
-  - **Ruffini endings (Type I)**
+  - **Ruffini endings**
     - ⭐️Afferents: Group II
     - Slowly adapting, low threshold
     - Signal joint position, static tension, direction of movement  
-  - **Paciniform (Pacinian) corpuscles (Type II)**
+  - **Paciniform (Pacinian) corpuscles**
     - ⭐️Afferents: Group II
     - Rapidly adapting
     - Detect acceleration / deceleration of movement  
-  - **Golgi-like ligament endings (Type III)**
+  - **Golgi-like ligament endings **
     - ⭐️Afferents: Group Ib
     - High threshold, slowly adapting
     - Active at extreme joint ranges, protective role  
-  - **Free nerve endings (Type IV)**
+  - **Free nerve endings**
     - ⭐️Afferents: Group III & IV (A-delta and C fibers)
     - High threshold, nociceptive
     - Signal pain, inflammation  
