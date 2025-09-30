@@ -45,7 +45,7 @@
 
 - Origin: <u data-answer="red nucleus"></u> (midbrain)   (___ ____)
 - 🔴 Decussates: <u data-answer="midbrain"></u>  (____)
-- Function: contributes to <u data-answer="finger/wrist extensor"></u> control (___/___  __)
+- Function: contributes to <u data-answer="wrist/finger extensors"></u> control (W___/F___  __)
 
 </details>
 
@@ -53,7 +53,7 @@
 <summary><b>Reticulospinal – Medial</b></summary>
 
 - Origin: <u data-answer="reticular formation"></u>  ( ___ ___)
-- Function: posture, locomotion, reflex modulation (<u data-answer="bilateral"></u>) (___)
+- Function: <u data-answer="bilateral"></u> posture, locomotion, reflex modulation
 
 </details>
 
