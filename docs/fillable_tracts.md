@@ -45,6 +45,7 @@
 
 - Origin: <u data-answer="red nucleus"></u> (midbrain)   (___ ____)
 - 🔴 Decussates: <u data-answer="midbrain"></u>  (____)
+- Synapses: <u data-answer="contralateral"></u>  MN (____)
 - Function: contributes to <u data-answer="wrist/finger extensors"></u> control (W___/F___  __)
 
 </details>
