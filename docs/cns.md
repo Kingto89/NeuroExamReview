@@ -222,7 +222,7 @@ Pathways reach the brainstem and brain structures
 
 <details>
 <summary><b>Nonconscious Relay Pathways⭐️ (Cerebellum)</b></summary>
-Pathways that project to the cerebellum
+Pathways that project to the cerebellum. Adjusting movement & posture 
 
 - **Posterior spinocerebellar (High Fidelity)**  
   → input: lower extremity  
