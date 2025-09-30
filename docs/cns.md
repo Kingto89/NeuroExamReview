@@ -149,7 +149,7 @@ Pathways that reach the primary Somatosensory Cortex
   - Lower body (T7 and below) → fasciculus gracilis → synapse in nucleus gracilis (medulla)  
   - Upper body (T6 and above) → fasciculus cuneatus → synapse in nucleus cuneatus (medulla)  
 - 2nd order neuron: gracilis/cuneatus → 🔴 decussate as internal arcuate fibers → ascend in medial lemniscus [= tract formed by these crossed axons, acts like a highway] → synapse in VPL thalamus
-- 3rd order neuron: VPL cell bodies → ascends through internal capsule → postcentral gyrus (somatosensory cortex)
+- 3rd order neuron: VPL cell bodies → ascends through internal capsule → postcentral gyrus (primary somatosensory cortex)
 - Carries: fine touch, vibration, proprioception
 
 --- 
