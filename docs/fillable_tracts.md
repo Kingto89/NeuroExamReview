@@ -2,7 +2,7 @@
 
 ---
 
-<details open>
+<details open> 
 <summary><b>Pyramidal (Corticospinal + Corticobulbar)</b></summary>
 <details>
 <summary><b>Lateral corticospinal</b></summary>
