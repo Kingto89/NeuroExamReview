@@ -117,7 +117,7 @@
 <details>
 <summary><b>Fast Pain from Face</b></summary>
 
-- Path: Trigeminal nerve → spinal trigeminal nucleus (brainstem/upper cervical) → decussation at <u data-answer="pons"></u> → ascend via trigeminal lemniscus → <u data-answer="VPM"></u> thalamus → somatosensory cortex  (1 word each)
+- Path: Trigeminal nerve → spinal trigeminal nucleus (brainstem/upper cervical) → decussation at <u data-answer="anterior white matter"></u> → ascend via trigeminal lemniscus → <u data-answer="VPM"></u> thalamus → somatosensory cortex  (1 word each)
 
 </details>
 
