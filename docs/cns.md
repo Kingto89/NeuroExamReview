@@ -198,7 +198,7 @@ Better mnemonic: Paul Drove Slowly, Larry <span style="color:red">Ate</span> Ver
 ---
 
 **Fast Pain from Face (TBUAVS)** 
-- Trigeminal nerve → spinal trigeminal nucleus (brainstem/upper cervical) → decussate at anterior white commissure → ascend via trigeminal lemniscus → VPM thalamus → somatosensory cortex  
+- Trigeminal nerve → spinal trigeminal nucleus (brainstem/upper cervical) → decussate at anterior white matter → ascend via trigeminal lemniscus → VPM thalamus → somatosensory cortex  
 
 Mnemonic: The Brainstem usually <span style="color:red">Ascends</span> Via Somatosensory  
 
